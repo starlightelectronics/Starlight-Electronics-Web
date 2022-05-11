@@ -1,4 +1,4 @@
-# Startlight Electronics Site 🔵
+# Starlight Electronics Site 🔵
 
 ## Running the app 🚀
 + Rebuild the node modules, with the following command in the project folder 📂
