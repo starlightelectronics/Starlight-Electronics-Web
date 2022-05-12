@@ -197,7 +197,7 @@ const App = () => {
 					<p className="section-paragraph"> Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consectetur. </p>
 
 					<div className="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">
-						<div className="space-y-12">
+						<form className="space-y-12" netlify>
 							<div>
 								<label className="text-white block mb-6 text-xl font-bold">Name</label>
 								<input className="w-full border border-input-border bg-input px-4 py-4" />
@@ -211,7 +211,7 @@ const App = () => {
 								<textarea type="email" className="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"></textarea>
 							</div>
 							<button className="px-6 py-2 bg-theme text-white font-bold">Send it!</button>
-						</div>
+						</form>
 
 						<div className="mt-12">
 							{/* <!-- Contact info --> */}
