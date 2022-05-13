@@ -4,9 +4,6 @@ import logo1 from './assets/img/logo1.png';
 import logo2 from './assets/img/logo2.png';
 import globalposition from './assets/img/global-position.png';
 
-import './index.css';
-// import './app.css';
-
 
 const App = () => {
 
@@ -121,7 +118,7 @@ const App = () => {
 			<div className="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
 				<section className="w-full">
 					<h2 id="clients" className="secondary-title">Empresas que confian en nosotros</h2>
-					<p className="section-paragraph">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
+					<p className="section-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatem doloremque alias deleniti impedit pariatur tempora quaerat!</p>
 
 					{/* <!-- Clients --> */}
 					<div className="space-y-12 my-16">
@@ -137,10 +134,10 @@ const App = () => {
 								<h3 className="text-white text-3xl font-semibold">Apple, inc.</h3>
 								<div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
 									<div className="badge">UI/UX</div>
-									<div className="badge">Frontend development</div>
+									<div className="badge">Software Engineer</div>
 								</div>
 
-								<p className="text-secondary">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
+								<p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatem doloremque alias deleniti impedit pariatur tempora quaerat!</p>
 							</div>
 
 						</div>
@@ -157,10 +154,10 @@ const App = () => {
 
 								<div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
 									<div className="badge">UI/UX</div>
-									<div className="badge">Frontend development</div>
+									<div className="badge">Software Engineer</div>
 								</div>
 
-								<p className="text-secondary">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
+								<p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatem doloremque alias deleniti impedit pariatur tempora quaerat!</p>
 							</div>
 
 						</div>
@@ -177,10 +174,10 @@ const App = () => {
 
 								<div className="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
 									<div className="badge">UI/UX</div>
-									<div className="badge">Frontend development</div>
+									<div className="badge">Software Engineer</div>
 								</div>
 
-								<p className="text-secondary">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
+								<p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatem doloremque alias deleniti impedit pariatur tempora quaerat!</p>
 						</div>
 
 						</div>
@@ -198,8 +195,7 @@ const App = () => {
 
 					<div className="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">
 
-						<form className="space-y-12" method="POST" name="contact" onSubmit="submit" data-netlify="true" >
-							<input type="hidden" name="form-name" value="contact" />
+						<form className="space-y-12" method="POST" name="contact" data-netlify="true" >
 							<div>
 								<label className="text-white block mb-6 text-xl font-bold">Name</label>
 								<input type="text" id="name" name="name" className="w-full border border-input-border bg-input px-4 py-4" />

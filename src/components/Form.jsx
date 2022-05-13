@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Header = () => {
+export const Form = () => {
 	return (
 		<>
-			<div>Header</div>
+			<div>Form</div>
 		</>
 	);
 };
