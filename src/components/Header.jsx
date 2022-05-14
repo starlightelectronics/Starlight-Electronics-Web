@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo1 from '../assets/img/logo1.png';
+import logo1 from '../assets/img/logo3.png';
 
 export const Header = () => {
 	return (
@@ -8,7 +8,7 @@ export const Header = () => {
 		<header className="py-6">
 			<div className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
 				<div className='flex justify-items-center items-center'>
-					<img src={logo1} alt="logo" className="h-12 mr-2" />
+					<img src={ logo1 } alt="logo" className="h-12 mr-2" />
 					<div className="text-lg font-bold">Starlight Electronics</div>
 				</div>				
 

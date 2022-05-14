@@ -7,6 +7,7 @@ import { Portfolio } from './components/Portfolio';
 import { ClientCompanies } from './components/ClientCompanies';
 import { FormContact } from './components/FormContact';
 import { Footer } from './components/Footer';
+import { Services } from './components/Services';
 
 const App = () => {
 	
@@ -24,8 +25,12 @@ const App = () => {
 				</div>
 			</div>
 
+				{/* <!-- Offer services --> */}
+				<Services />
+
 				{/* <!-- My work --> */}
 				<Portfolio />
+
 
 				{/* <!-- Clients --> */}
 				<ClientCompanies />

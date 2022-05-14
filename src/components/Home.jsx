@@ -1,8 +1,7 @@
 import React from 'react';
 
-
-import globalposition from '../assets/img/global-position.png';
 import globalpositionwhite from '../assets/img/global-position-white.png';
+import logoPSE from '../assets/img/icons/logo-pse.png';
 
 export const Home = () => {
 	return (
@@ -19,11 +18,17 @@ export const Home = () => {
                         </div>
                         <span> Comunícate! </span>
                     </button>
-                </div>				
+                    
+                </div>
+
+                <button type="button" className="text-gray-900 mt-5 bg-[#F7BE38] ml-2 md:ml-0 hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 mr-2 mb-2">
+                        <img className='mr-2 align-middle' src={ logoPSE } alt="logo pse" width='20' />
+                        Check out with PSE
+                </button>
+                			
             </div>
 
-
-            <img src={ globalpositionwhite } alt="logo2" className=" w-4/4 md:w-2/4 mt-12 md:absolute -mt-6 mt-5 md:mt-0 right-0 -z-1 md:mr-10" useMap='#positionglobal' />
+            <img src={ globalpositionwhite } alt="logo2" className=" w-4/4 md:w-2/4 mt-12 md:absolute -mt-6 mt-8 md:mt-5 right-0 -z-1 md:mr-10" useMap='#positionglobal' />
 
             <map name="positionglobal">
                 <area shape="circle" coords="840, 1250, 120" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
