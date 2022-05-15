@@ -4,15 +4,19 @@ import { Header } from './components/Header';
 import { SideNavbar } from './components/SideNavbar';
 import { Home } from './components/Home';
 import { Portfolio } from './components/Portfolio';
-import { ClientCompanies } from './components/ClientCompanies';
 import { FormContact } from './components/FormContact';
 import { Footer } from './components/Footer';
-import { Services } from './components/Services';
+import { OurClients } from './components/OurClients';
+import { SideSocialNetwork } from './components/SideSocialNetwork';
+
+import updateListNavarSide from './helpers/updateList.js';
 
 const App = () => {
-	
+
 	return (
 		<>
+			<SideSocialNetwork />
+			
 			<Header />
 
 			<div className="container mt-10 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
@@ -21,25 +25,18 @@ const App = () => {
 					<SideNavbar />
 
 					<Home />
-				
+
 				</div>
 			</div>
 
-				{/* <!-- Offer services --> */}
-				<Services />
-
-				{/* <!-- My work --> */}
 				<Portfolio />
 
-
-				{/* <!-- Clients --> */}
-				<ClientCompanies />
-
-				{/* <!-- Hire me --> */}
 				<FormContact />
 
+				<OurClients />
+
 				<Footer />
-		
+
 		</>
 	)
 }

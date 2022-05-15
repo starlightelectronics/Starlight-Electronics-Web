@@ -1,7 +1,7 @@
 import React from 'react';
 
-import globalpositionwhite from '../assets/img/global-position-white.png';
 import logoPSE from '../assets/img/icons/logo-pse.png';
+import { Carusel } from './Carusel';
 
 export const Home = () => {
 	return (
@@ -9,7 +9,7 @@ export const Home = () => {
             <div className="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
                 <h1 className="font-bold text-5xl md:text-6xl lg:text-6xl text-center md:text-left">Starlight <br /> construyendo experiencias.</h1>
                 <div className="w-full flex justify-center md:justify-start">
-                    <button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
+                    <button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3 hover:scale-110 transition duration-300 hover:bg-sky-800">
                         <div>
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.4375 11C14.4375 11.9117 14.0753 12.786 13.4307 13.4307C12.786 14.0753 11.9117 14.4375 11 14.4375C10.0883 14.4375 9.21398 14.0753 8.56932 13.4307C7.92466 12.786 7.5625 11.9117 7.5625 11C7.5625 10.0883 7.92466 9.21398 8.56932 8.56932C9.21398 7.92466 10.0883 7.5625 11 7.5625C11.9117 7.5625 12.786 7.92466 13.4307 8.56932C14.0753 9.21398 14.4375 10.0883 14.4375 11Z" fill="white"/>
@@ -28,12 +28,11 @@ export const Home = () => {
                 			
             </div>
 
-            <img src={ globalpositionwhite } alt="logo2" className=" w-4/4 md:w-2/4 mt-12 md:absolute -mt-6 mt-8 md:mt-5 right-0 -z-1 md:mr-10" useMap='#positionglobal' />
+            <div className='my-auto'>
+                <Carusel />
+            </div>
 
-            <map name="positionglobal">
-                <area shape="circle" coords="840, 1250, 120" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
-                <area shape="circle" coords="910, 1510, 120" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
-            </map>
+            
         </>
     );
 };

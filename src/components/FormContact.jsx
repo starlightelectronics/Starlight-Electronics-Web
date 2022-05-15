@@ -1,17 +1,18 @@
 import React from 'react'
 
+import globalpositionwhite from '../assets/img/global-position-white.webp';
+
 export const FormContact = () => {
 
-
     return (
-        <div className="container mt-32 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <div className="container mt-24 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
             <section className="w-full">
                 <h2 id="hire" className="secondary-title">Contáctanos</h2>
                 <p className="section-paragraph"> Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consectetur. </p>
 
-                <div className="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-16">
+                <div className="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 ">
 
-                    <form className="space-y-10" method="POST" name="contact" data-netlify="true" >
+                    <form className="space-y-10 mt-16" method="POST" name="contact" data-netlify="true" >
                         <div>
                             <label className="text-white block mb-2 text-xl font-bold">Nombre</label>
                             <input type="text" id="name" name="name" className="w-full border border-input-border bg-input px-4 py-4" placeholder='Your name' required />
@@ -27,7 +28,14 @@ export const FormContact = () => {
                         <button type='submit' className="px-6 py-2 bg-theme text-white font-bold">Enviar</button>
                     </form>
                 
-                    <div className="mt-12">
+                        <img src={ globalpositionwhite } alt="logo2" className="w-4/4 md:w-2/4 md:absolute md:mt-5 right-0 -z-1 md:mr-10" useMap='#positionglobal' />
+
+                        <map name="positionglobal">
+                            <area shape="circle" coords="840, 1250, 120" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
+                            <area shape="circle" coords="910, 1510, 120" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
+                        </map>
+                    <div className="mt-0">
+
                         {/* <!-- Contact info --> */}
                         <p className="text-secondary"> +57 000-000-0000</p>
                         <a href="mailto:email@mydomain.com" className="text-secondary underline mt-3 block">starlight@starlight.com</a>
@@ -42,8 +50,9 @@ export const FormContact = () => {
                             <a href="#">
                                 <svg className="w-8 h-8 lg:w-12 lg:h-12" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 0C9.40313 0 0 9.40313 0 21C0 32.5969 9.40313 42 21 42C32.5969 42 42 32.5969 42 21C42 9.40313 32.5969 0 21 0ZM31.0922 15.8297C31.1062 16.05 31.1062 16.2797 31.1062 16.5047C31.1062 23.3859 25.8656 31.3125 16.2891 31.3125C13.3359 31.3125 10.5984 30.4547 8.29219 28.9781C8.71406 29.025 9.11719 29.0437 9.54844 29.0437C11.9859 29.0437 14.2266 28.2188 16.0125 26.8219C13.725 26.775 11.8031 25.275 11.1469 23.2125C11.9484 23.3297 12.6703 23.3297 13.4953 23.1188C12.3175 22.8795 11.2588 22.2398 10.4991 21.3084C9.73949 20.377 9.32572 19.2113 9.32812 18.0094V17.9437C10.0172 18.3328 10.8281 18.5719 11.6766 18.6047C10.9633 18.1293 10.3784 17.4854 9.97365 16.7298C9.5689 15.9743 9.35683 15.1306 9.35625 14.2734C9.35625 13.3031 9.60938 12.4172 10.0641 11.6484C11.3714 13.2578 13.0028 14.5741 14.8522 15.5117C16.7016 16.4493 18.7275 16.9873 20.7984 17.0906C20.0625 13.5516 22.7063 10.6875 25.8844 10.6875C27.3844 10.6875 28.7344 11.3156 29.6859 12.3281C30.8625 12.1078 31.9875 11.6672 32.9906 11.0766C32.6016 12.2812 31.7859 13.2984 30.7031 13.9406C31.7531 13.8281 32.7656 13.5375 33.7031 13.1297C32.9953 14.1703 32.1094 15.0938 31.0922 15.8297Z" fill="white"/></svg>								
                             </a>
-
+                        
                         </div>
+
 
                         {/* <div id="toast-simple" className="flex items-center w-full max-w-xs p-4 mt-10 space-x-4 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
                             <svg className="w-5 h-5 text-blue-600 dark:text-blue-500" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paper-plane" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l-50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"></path></svg>

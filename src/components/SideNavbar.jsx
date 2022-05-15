@@ -1,6 +1,8 @@
 import React from 'react';
 
+
 export const SideNavbar = () => {
+
 	return (
             
             <nav className="md:inline-block lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">

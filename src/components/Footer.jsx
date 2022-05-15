@@ -1,33 +1,40 @@
 import React from 'react'
 
-import logo from '../assets/img/logo3.png';
+import facebook from '../assets/img/icons/facebook.png'
+import whatsapp from '../assets/img/icons/whatsapp.png'
+import instagram from '../assets/img/icons/instagram.png'
+import linkedin from '../assets/img/icons/linkedin.png'
 
 export const Footer = () => {
     return (
-        <footer className="p-4 mt-10 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
-            <div className="sm:flex sm:items-center sm:justify-between">
-                <a className="flex items-center mb-4 sm:mb-0">
-                    <img src={ logo } className="mr-3 h-8" alt="logo Starlight Electronics" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Starlight Electronics</span>
-                </a>
-                <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
-                    <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6 ">About</a>
-                    </li>
-                    <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6 ">Licensing</a>
-                    </li>
-                    <li>
-                        <a href="#" className="hover:underline">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a className="hover:underline">Starlight Electronics</a>. All Rights Reserved.
-            </span>
-        </footer>
+            <footer className="text-gray-700 bg-white body-font mt-5">
+                <div className="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
+                    <a href="#" className="text-xl font-black leading-none text-gray-900 select-none logo"> Starlight Electronics <span className="text-indigo-600">.</span></a>
+                    <p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2022 - Todos los derechos reservados</p>
+                    <span className="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
+                        
+                        <a href="#" className="text-gray-400 hover:text-gray-500">
+                            <span className="sr-only">Whatsapp</span>
+                            <img src={ whatsapp }  className='w-6 h-6' alt="" />
+                        </a>
+                        
+                        <a href="#" className="text-gray-400 hover:text-gray-500">
+                            <span className="sr-only">Facebook</span>
+                            <img src={ facebook }  className='w-6 h-6' alt="" />
+                        </a>
+
+                        <a href="#" className="text-gray-400 hover:text-gray-500">
+                            <span className="sr-only">Instagram</span>
+                            <img src={ instagram }  className='w-6 h-6' alt="" />
+                        </a>
+
+                        <a href="#" className="text-gray-400 hover:text-gray-500">
+                            <span className="sr-only">Linkedin</span>
+                            <img src={ linkedin }  className='w-6 h-6' alt="" />
+                         </a>
+
+                    </span>
+                </div>
+            </footer>
     )
 }
