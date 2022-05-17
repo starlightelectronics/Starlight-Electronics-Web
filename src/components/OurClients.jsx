@@ -6,8 +6,8 @@ import client3 from '../assets/img/clients/logo-bolidt.webp';
 import client4 from '../assets/img/clients/logo-carnival-cruises.webp';
 import client5 from '../assets/img/clients/logo-cav.webp';
 import client6 from '../assets/img/clients/logo-celebrity-cruises.webp';
-// import client7 from '../assets/img/clients/logo-crystal-cruises.webp';
-// import client8 from '../assets/img/clients/logo-ncl.webp';
+import client7 from '../assets/img/clients/logo-crystal-cruises.webp';
+import client8 from '../assets/img/clients/logo-ncl.webp';
 // import client9 from '../assets/img/clients/logo-oceania-cruises.webp';
 // import client10 from '../assets/img/clients/logo-princess-cruises.webp';
 // import client11 from '../assets/img/clients/logo-regent.webp';
@@ -17,31 +17,44 @@ import client6 from '../assets/img/clients/logo-celebrity-cruises.webp';
 export const OurClients = () => {
     return (
         <>
-            <section className="mt-10 pt-7 pb-14">
-                <div className="container px-8 mx-auto sm:px-12 lg:px-20">
-                    <h1 className="text-sm font-bold tracking-wide text-center uppercase mb-7 text-white">Nuestros clientes.</h1>
-                    <div className="flex grid items-center justify-center grid-cols-4 grid-cols-12 gap-y-8">
-                        <div className="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-2">
-                            <img src={ client1 } alt="Disney Plus" className="block object-contain h-12" />
-                        </div>
-                        <div className="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-2">
-                            <img src={ client2 } alt="Google" className="block object-contain h-9" />
-                        </div>
-                        <div className="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-2">
-                            <img src={ client3 } alt="Hubspot" className="block object-contain h-9" />
-                        </div>
-                        <div className="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-2">
-                            <img src={ client4 } alt="Youtube" className="block object-contain h-7 lg:h-8" />
-                        </div>
-                        <div className="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-6 xl:col-span-2">
-                            <img src={ client5 } alt="Slack" className="block object-contain h-9" />
-                        </div>
-                        <div className="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-6 xl:col-span-2">
-                            <img src={ client6 } alt="Shopify" className="block object-contain h-9" />
-                        </div>
+            <h3 className="text-white p-3 md:text-2xl lg:text-2xl text-lg text-center">Nuestros clientes</h3>
+            <div className="p-5 pt-1 flex-wrap flex items-center gap-3 justify-center">
+                <div className="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                    <div className="md:p-7 p-4 flex items-center justify-center">
+                        <img src={ client1 } alt="Disney Plus" className="block object-contain h-12" />
                     </div>
                 </div>
-            </section>
+                <div className="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                    <div className="md:p-7 p-4 flex items-center justify-center">
+                        <img src={ client2 } alt="Disney Plus" className="block object-contain h-12" />
+                    </div>
+                </div>
+                <div className="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                    <div className="md:p-7 p-4 flex items-center justify-center">
+                        <img src={ client8 } alt="Disney Plus" className="block object-contain h-12" />
+                    </div>
+                </div>
+                <div className="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                    <div className="md:p-7 p-4 flex items-center justify-center">
+                        <img src={ client4 } alt="Disney Plus" className="block object-contain h-12" />
+                    </div>
+                </div>
+                <div className="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                    <div className="md:p-7 p-4 flex items-center justify-center">
+                        <img src={ client5 } alt="Disney Plus" className="block object-contain h-12" />
+                    </div>
+                </div>
+                <div className="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                    <div className="md:p-7 p-4 flex items-center justify-center">
+                        <img src={ client6 } alt="Disney Plus" className="block object-contain h-12" />
+                    </div>
+                </div>
+                <div className="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                    <div className="md:p-7 p-4 flex items-center justify-center">
+                        <img src={ client7 } alt="Disney Plus" className="block object-contain h-12" />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

@@ -13,22 +13,38 @@ export const Footer = () => {
                     <p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2022 - Todos los derechos reservados</p>
                     <span className="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
                         
-                        <a href="#" className="text-gray-400 hover:text-gray-500">
+                        <a 
+                            href="https://api.whatsapp.com/message/S5CMKVFJ7PDSM1?autoload=1&app_absent=0" 
+                            className="text-gray-400 hover:text-gray-500"
+                            target="_blank"
+                            >
                             <span className="sr-only">Whatsapp</span>
                             <img src={ whatsapp }  className='w-6 h-6' alt="" />
                         </a>
                         
-                        <a href="#" className="text-gray-400 hover:text-gray-500">
+                        <a 
+                            href="https://www.facebook.com/StarlightElectronics" 
+                            className="text-gray-400 hover:text-gray-500"
+                            target="_blank"
+                            >
                             <span className="sr-only">Facebook</span>
                             <img src={ facebook }  className='w-6 h-6' alt="" />
                         </a>
 
-                        <a href="#" className="text-gray-400 hover:text-gray-500">
+                        <a 
+                            href="https://www.instagram.com/starlightelectronics/" 
+                            className="text-gray-400 hover:text-gray-500"
+                            target="_blank"
+                            >
                             <span className="sr-only">Instagram</span>
                             <img src={ instagram }  className='w-6 h-6' alt="" />
                         </a>
 
-                        <a href="#" className="text-gray-400 hover:text-gray-500">
+                        <a 
+                            href="https://www.linkedin.com/in/starlight-electronics-s-a-s-421a2a190/" 
+                            className="text-gray-400 hover:text-gray-500"
+                            target="_blank"
+                            >
                             <span className="sr-only">Linkedin</span>
                             <img src={ linkedin }  className='w-6 h-6' alt="" />
                          </a>
