@@ -4,7 +4,6 @@ import {
   FaInstagram,
   FaLinkedin,
   FaFacebook,
-  FaLinkedinIn,
 } from 'react-icons/fa';
 
 export const SideSocialNetwork = () => {
@@ -12,7 +11,7 @@ export const SideSocialNetwork = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-      <div className='hidden lg:flex fixed flex-col top-[35%] right-[-100px]'>
+      <div className='hidden lg:flex fixed flex-col top-[35%] right-[-100px]  animate__animated animate__bounceInRight z-10'>
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center hover:ml-[-100px] ml-[0px] duration-300 bg-sky-700'>
             <a
@@ -47,7 +46,7 @@ export const SideSocialNetwork = () => {
               target="_blank"
               href='https://www.linkedin.com/in/starlight-electronics-s-a-s-421a2a190/'
             >
-              <FaLinkedin size={30} /> Linkedin 
+              <FaLinkedin size={30} /> LinkedIn 
             </a>
           </li>
         </ul>

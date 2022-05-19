@@ -63,10 +63,10 @@ export const Services = () => {
           ))}
         </Tab.List>
         <Tab.Panels className="mt-2">
-        <div className="bg-white">
+        <div className="">
               <div className="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
                 <div>
-                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Especificaciones técnicas</h2>
+                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-9=100 sm:text-4xl">Especificaciones técnicas</h2>
                   <p className="mt-4 text-gray-500">En la línea de audio manejamos excelentes marcas aliadas que nos ofrecen desempeño y control profesional, Las Bocinas de nuestros aliados cuentan con un diseño que se adapta a su aplicación, alineándose a los espacios.</p>
 
                   <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">

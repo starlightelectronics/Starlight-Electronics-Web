@@ -1,13 +1,11 @@
 import React from 'react'
 
 import globalpositionwhite from '../assets/img/global-position-white.png';
-import work from '../assets/img/content/workplace.jpg';
-import prueba from '../assets/img/content/prueba.jpg';
 
 export const FormContact = () => {
 
     return (
-        <div className="container mt-24 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <div className="container mt-24 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-28 w-full">
             <section className="w-full">
                 <h2 id="hire" className="secondary-title">Contáctanos</h2>
                 <p className="section-paragraph"> Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consectetur. </p>
