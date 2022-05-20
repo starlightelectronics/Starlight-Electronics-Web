@@ -20,6 +20,14 @@ export const Header = ({ setPage = 'home' }) => {
 				</div>				
 
 				<div className="hidden md:flex space-x-4 lg:space-x-10 items-center">
+					<button className='hover:scale-110 transition duration-200'>
+						<a href="#work" className='hover:scale-110 transition duration-200 hover:text-white'>Inicio</a>
+					</button>
+					
+					<button className='hover:scale-110 transition duration-200'>
+						<a href="#nosotros" className='hover:scale-110 transition duration-200 hover:text-white'>Nosotros</a>
+					</button>
+					
 					<button 
 						className='hover:text-white hover:scale-110 transition duration-200'
 						value='services'
@@ -34,9 +42,6 @@ export const Header = ({ setPage = 'home' }) => {
 						Mercados
 					</button>
 					
-					<button className='hover:scale-110 transition duration-200'>
-						<a href="#work" className='hover:scale-110 transition duration-200 hover:text-white'>Portafolio</a>
-					</button>
 					
 					<button 
 						className='hover:scale-110 transition duration-200 hover:text-white'
@@ -45,9 +50,6 @@ export const Header = ({ setPage = 'home' }) => {
 						Galería
 					</button>
 					
-					<button className='hover:scale-110 transition duration-200'>
-						<a href="#nosotros" className='hover:scale-110 transition duration-200 hover:text-white'>Nosotros</a>
-					</button>
 					
 					<a href="#hire"><button className="px-6 py-2 bg-theme font-bold hover:scale-110 transition duration-300 hover:bg-sky-800">Contáctanos</button></a>
 

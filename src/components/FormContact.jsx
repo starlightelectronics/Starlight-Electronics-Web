@@ -15,14 +15,14 @@ export const FormContact = () => {
                     <form className="space-y-10 mt-16" method="POST" name="contact" data-netlify="true" >
                         <div>
                             <label className="text-white block mb-2 text-xl font-bold">Nombre</label>
-                            <input type="text" id="name" name="name" className="w-full border border-input-border bg-input px-4 py-4" placeholder='Your name' required />
+                            <input type="text" id="name" name="name" className="w-full border border-input-border bg-input px-4 py-4" placeholder='Tú nombre' required />
                         </div>
                         <div>
                             <label className="text-white block mb-2 text-xl font-bold">Email</label>
                             <input type="email" id="email" name="email" className="w-full border border-input-border bg-input px-4 py-4" placeholder='example@starlight.com' required />
                         </div>
                         <div>
-                            <label className="text-white block mb-2 text-xl font-bold">Mensaje</label>
+                            <label className="text-white block mb-2 text-xl font-bold"> ¿Cómo podemos ayudarte? </label>
                             <textarea type="text" id="message" name="message" className="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none" required ></textarea>
                         </div>
                         <button type='submit' className="px-6 py-2 bg-theme text-white font-bold">Enviar</button>
@@ -40,8 +40,8 @@ export const FormContact = () => {
 
                         {/* <!-- Contact info --> */}
                         <div className='flex gap-4'>
-                            <p className="text-secondary"> (571) 508 2646 </p>
-                            <p className="text-secondary"> 313 690 5860 </p>
+                            <p className="text-secondary"> +57 3173759475 </p>
+                            <p className="text-secondary"> +57 3166905860 </p>
                         </div>
                         <a href="mailto:email@mydomain.com" className="text-secondary underline mt-3 block"> ventast@starlightelectronics.com </a>
 

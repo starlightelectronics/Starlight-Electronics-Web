@@ -16,8 +16,8 @@ import client8 from '../assets/img/clients/logo-ncl.webp';
 
 export const OurClients = () => {
     return (
-        <>
-            <h3 className="text-white p-3 md:text-2xl lg:text-2xl text-lg text-center">Nuestros clientes</h3>
+        <div className='mx-20'>
+            <h2 id="galeria" className="secondary-title sm:ml-5">Nuestros <span className='text-sky-600'>clientes</span></h2>
             <div className="p-5 pt-1 flex-wrap flex items-center gap-3 justify-center">
                 <div className="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
                     <div className="md:p-7 p-4 flex items-center justify-center">
@@ -55,6 +55,6 @@ export const OurClients = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
