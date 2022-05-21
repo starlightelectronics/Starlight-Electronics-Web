@@ -1,6 +1,6 @@
 import React from 'react'
 
-import globalpositionwhite from '../assets/img/global-position-white.png';
+import globalpositionwhite from '../assets/img/content/global-position-white.png';
 
 export const FormContact = () => {
 

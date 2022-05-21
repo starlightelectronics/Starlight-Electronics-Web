@@ -8,7 +8,7 @@ import { FormContact } from './components/FormContact';
 import { Footer } from './components/Footer';
 import { OurClients } from './components/OurClients';
 import { SideSocialNetwork } from './components/SideSocialNetwork';
-import { Nosotros } from './components/Nosotros';
+import { AboutAs } from './components/AboutAs';
 import { OurServices } from './components/OurServices';
 import { OurMarkets } from './components/OurMarkets';
 
@@ -44,7 +44,7 @@ const App = () => {
 
 							</div>
 						</div>
-							<Nosotros />
+							<AboutAs />
 							<FormContact />
 							<OurClients />
 							<Footer />

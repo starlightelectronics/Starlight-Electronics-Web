@@ -1,6 +1,6 @@
 import React from 'react';
 
-import starlight from '../assets/img/logo-starlight.webp';
+import logo_sle_white from '../assets/img/content/logo-sle-white.png';
 
 export const Header = ({ setPage = 'home' }) => {
 
@@ -13,15 +13,18 @@ export const Header = ({ setPage = 'home' }) => {
 		<header className="py-6">
 			<div className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
 				<div className='flex justify-items-center items-center'>
-					<img src={ starlight } alt="logo" className="h-12 mr-2" />
-					<button className='text-xl font-bold' onClick={ handleInputHeader } value='home' >
-						Starlight Electronics
-					</button>
-				</div>				
+					<img src={ logo_sle_white } className="h-20" alt="logo starlight electronics" />
+				</div>
+
+
 
 				<div className="hidden md:flex space-x-4 lg:space-x-10 items-center">
-					<button className='hover:scale-110 transition duration-200'>
-						<a href="#work" className='hover:scale-110 transition duration-200 hover:text-white'>Inicio</a>
+				<button 
+						className='hover:scale-110 transition duration-200 hover:text-white'
+						value='home'
+						onClick={ handleInputHeader }
+						>
+						Inicio
 					</button>
 					
 					<button className='hover:scale-110 transition duration-200'>

@@ -1,8 +1,8 @@
 import React from 'react'
 
-import logo_sle from '../assets/img/content/logo_sle.png'
+import logo_sle_blue from '../assets/img/content/logo-sle-blue.png'
 
-export const Nosotros = () => {
+export const AboutAs = () => {
     return (
         <>            
             {/* <!-- Section 2 --> */}
@@ -12,19 +12,19 @@ export const Nosotros = () => {
 
                         {/* <!-- Top Text --> */}
                         <div className="flex justify-between">
-                            <h1 id="nosotros" className="relative flex flex-col text-6xl font-extrabold text-left text-white">
+                            <h1 id="nosotros" className="relative flex flex-col text-6xl font-extrabold text-center mx-auto md:text-left text-white">
                                 Quiénes 
                                 <span className='text-sky-600'>Somos</span>
                             </h1>
                         </div>
                         {/* <!-- Right Image --> */}
-                        <div className="relative top-0 right-0 h-64 mt-12 md:-mt-16 md:absolute md:h-96">
-                            <img src={ logo_sle } className="object-cover mt-3 mr-5 h-80 lg:h-64" alt='logo starlight electronics' />
+                        <div className="relative top-0 right-0 h-24 mt-12 md:mt-0 md:h-10 mx-auto">
+                            <img src={ logo_sle_blue } className="object-cover mt-3 mr-5 h-30 lg:h-32 md:my-auto md:mr-0" alt='logo starlight electronics' />
                         </div>
                     </div>
 
                     {/* <!-- Separator --> */}
-                    <div className="my-16 border-b border-gray-300 lg:my-24"></div>
+                    <div className="my-12 border-b border-gray-300 lg:my-14"></div>
 
                     {/* <!-- Bottom Text --> */}
                     <div className='grid gap-y-4 text-justify '>
@@ -72,25 +72,24 @@ export const Nosotros = () => {
                     {/* <!-- Content --> */}
                     <div className="box-border order-first w-full text-white border-solid md:w-1/2 md:pl-10 md:order-none">
                         <h3 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
-                            Propósito <span className='text-sky-600'> central </span>
+                            Nuestra <span className='text-sky-600'> misión </span>
                         </h3>
                         <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
-                            Brindamos a las compañías y clientes individuales servicios de automatización y soluciones de control en sistemas de
-                            audio, video e iluminación o sistemas integrales que se adapten a mejorar la calidad de vida, a través de los
-                            avances tecnológicos, así mismo contribuimos en el desarrollo sostenible del planeta integrando eficiencia
-                            energética en la prestación de nuestros servicios.
+                            Starlight Electronics SAS es una empresa
+                            dedicada al <span className='text-white'>sector tecnológico, con
+                            énfasis en el mercado del entretenimiento
+                            y automatización,</span>  para el sector turístico,
+                            comercial y residencial, orientada al
+                            mejoramiento continuo.
                         </p>
-                        <ul className="p-0 m-0 leading-6 border-0 border-gray-300">
-                            <li className="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-sky-800 rounded-full"><span className="text-sm font-bold">✓</span></span> Descripción de objetivo general
-                            </li>
-                            <li className="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-sky-800 rounded-full"><span className="text-sm font-bold">✓</span></span> Texto descripción de objetivo
-                            </li>
-                            <li className="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-sky-800 rounded-full"><span className="text-sm font-bold">✓</span></span> Mas información texto
-                            </li>
-                        </ul>
+                        <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
+                            Starlight Electronics SAS cuenta con la
+                            capacidad de <span className='text-white'> planificar, diseñar, ejecutar
+                            y dar soporte </span> a proyectos en cualquier
+                            parte del mundo implementando una
+                            gran variedad de tecnologías de acuerdo
+                            con las necesidades del cliente.
+                        </p>
                     </div>
                     {/* <!-- End  Content --> */}
                 </div>
@@ -99,31 +98,20 @@ export const Nosotros = () => {
                     {/* <!-- Content --> */}
                     <div className="box-border w-full text-white border-solid md:w-1/2 md:pl-6 xl:pl-32">
                         <h3 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
-                            Objetivo <span className='text-sky-600'> retador </span>
+                            Nuestra <span className='text-sky-600'> visión </span>
                         </h3>
-                        <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-10 lg:text-lg">
-                            Starlight Electronics para el 2025, será una de las
-                            compañías icono en la innovación y prestación de
-                            servicios de integración de tecnologías emergentes
-                            para sistemas de audio, video e iluminación
-                            cumpliendo con los estándares que nos caracterizan,
-                            con sedes en las principales ciudades de Colombia y
-                            buscando su expansión por América Latina y el mundo,
-                            será una empresa certificada en calidad y normas
-                            internacionales que respalden el trabajo que realizamos
-                            con las compañías y clientes individuales.
+                        <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-10 lg:text-lg text-justify">
+                            En el 2023, Starlight Electronics SAS
+                            será una empresa reconocida en la
+                            industria del entretenimiento y
+                            automatización a nivel internacional y
+                            en el 2025 a nivel regional, gracias a
+                            su experiencia, efectividad,
+                            cumplimento y mejoramiento de sus
+                            procesos permitiendo afianzar las
+                            relaciones con los clientes y demás
+                            partes interesadas.
                         </p>
-                        <ul className="p-0 m-0 leading-6 border-0 border-gray-300">
-                            <li className="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-sky-800 rounded-full"><span className="text-sm font-bold">✓</span></span> Descripción de objetivo general
-                            </li>
-                            <li className="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-sky-800 rounded-full"><span className="text-sm font-bold">✓</span></span> Texto descripción de objetivo
-                            </li>
-                            <li className="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                                <span className="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-sky-800 rounded-full"><span className="text-sm font-bold">✓</span></span> Mas información texto
-                            </li>
-                        </ul>
                     </div>
                     {/* <!-- End  Content --> */}
 
