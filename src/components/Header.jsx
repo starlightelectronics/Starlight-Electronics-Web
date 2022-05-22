@@ -13,27 +13,29 @@ export const Header = ({ setPage = 'home' }) => {
 		<header className="py-6">
 			<div className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
 				<div className='flex justify-items-center items-center'>
-					<img src={ logo_sle_white } className="h-20" alt="logo starlight electronics" />
+					<a href="">
+						<img src={ logo_sle_white } className="h-20" alt="logo starlight electronics" />
+					</a>
 				</div>
-
-
 
 				<div className="hidden md:flex space-x-4 lg:space-x-10 items-center">
 					<button 
 						className='hover:scale-110 transition duration-200 hover:text-white font-bold'
 						value='home'
-						onClick={ handleInputHeader }
-						>
+						onClick={ handleInputHeader } >
 						Inicio
-					</button>
-					
-					<button className='hover:scale-110 transition duration-200 font-bold'>
-						<a href="#nosotros" className='hover:scale-110 transition duration-200 hover:text-white'>Nosotros</a>
 					</button>
 					
 					<button 
 						className='hover:text-white hover:scale-110 transition duration-200 font-bold'
-						value='services'
+						value='about'
+						onClick={ handleInputHeader } >
+						Nosotros
+					</button>
+
+					<button 
+						className='hover:text-white hover:scale-110 transition duration-200 font-bold'
+						value='our-services'
 						onClick={ handleInputHeader } >
 						Servicios
 					</button>
@@ -53,8 +55,14 @@ export const Header = ({ setPage = 'home' }) => {
 						Galería
 					</button>
 					
-					
-					<a href="#hire"><button className="px-6 py-2 bg-theme font-bold hover:scale-110 transition duration-300 hover:bg-sky-800">Contáctanos</button></a>
+					<a href="#hire">
+						<button 
+							className="px-6 py-2 bg-theme font-bold hover:scale-110 transition duration-300 hover:bg-sky-800"
+							value='home'
+							onClick={ handleInputHeader } >
+							Contáctanos
+						</button>
+					</a>
 
 
 					{/* Toggle for enable and disable the menu dark mode */}

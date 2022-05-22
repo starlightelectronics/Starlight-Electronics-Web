@@ -19,6 +19,9 @@ module.exports = {
         'poppins': ['Century Gothic',"'Poppins'", 'sans-serif']
       }
     },
+    // screens: {
+    //   '4xl': '2000px',
+    // }
   },
   plugins: [],
   variants: {

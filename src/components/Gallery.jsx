@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { RViewer, RViewerTrigger } from 'react-viewerjs'
 
 import { images } from '../data/images'
 
 export const Gallery = () => {
-
-    // const sourceImage = 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80';
 
     return (
 
@@ -23,8 +21,8 @@ export const Gallery = () => {
                         { 
                             images.map(( image, index ) => {
                                 return (
-                                    <RViewerTrigger key={ index }>
-                                        <img src={ image } alt='imagen de galeria' className="w-full bg-nav h-36 lg:h-72 object-cover hover:scale-110 transition duration-300" />
+                                    <RViewerTrigger index={ index } key={ index } >
+                                        <img src={ image } alt='imagen de galeria' className="cursor-pointer w-full bg-nav h-36 lg:h-72 object-cover hover:scale-110 transition duration-300" />
                                     </RViewerTrigger>
                                 )
                             })

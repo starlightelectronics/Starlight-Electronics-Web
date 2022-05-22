@@ -8,11 +8,11 @@ export const FormContact = () => {
         <div className="container mt-24 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-28 w-full">
             <section className="w-full">
                 <h2 id="hire" className="secondary-title">Contáctanos</h2>
-                <p className="section-paragraph"> Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consectetur. </p>
+                <p className="section-paragraph"> Recibiremos tu información y nos contactaremos contigo en el menor tiempo posible! </p>
 
-                <div className="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 ">
+                <div className="w-full md:flex justify-between lg:grid-cols-2 gap-18 lg:gap-5">
 
-                    <form className="space-y-10 mt-16" method="POST" name="contact" data-netlify="true" >
+                    <form className="space-y-10 mt-16 mb-8 md:w-2/4" method="POST" name="contact" data-netlify="true" >
                         <div>
                             <label className="text-white block mb-2 text-xl font-bold">Nombre</label>
                             <input type="text" id="name" name="name" className="w-full border border-input-border bg-input px-4 py-4" placeholder='Tú nombre' required />
@@ -34,9 +34,15 @@ export const FormContact = () => {
                             <area shape="rect" coords="420,320,460,360" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
                             <area shape="rect" coords="485,235,525,275" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
                         </map>
-                        <img src={ globalpositionwhite } alt="logo2" className="w-4/4 md:w-2/4 md:absolute md:mt-5 right-0 -z-1 md:mr-10" useMap='#globalposition' />
 
-                    <div className="mt-0 pb-5 sm:pb-16">
+                        <figure className='my-auto w-full border-dashed border-2  rounded-xl'>
+                            <img src={ globalpositionwhite } alt="mapa de posicion global" className="md:h-2/4  md:mt-5 md:mr-10" useMap='#globalposition' />
+                        </figure>
+
+                    
+                </div>
+
+                    <div className="my-10 pb-5 sm:pb-16">
 
                         {/* <!-- Contact info --> */}
                         <div className='flex gap-4'>
@@ -51,8 +57,6 @@ export const FormContact = () => {
                         </div> */}
 
                     </div>
-                    
-                </div>
 
             </section>
         </div>

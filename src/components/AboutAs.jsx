@@ -6,7 +6,7 @@ export const AboutAs = () => {
     return (
         <>            
             {/* <!-- Section 2 --> */}
-            <section className="flex items-center justify-center mt-10 sm:mt-auto py-10 text-white sm:py-16 md:py-24 lg:py-32">
+            <section className="flex items-center justify-center mt-10 sm:mt-auto py-10 text-white sm:py-16 md:py-24 lg:py-32 animate__animated animate__fadeIn">
                 <div className="relative max-w-3xl px-10 text-center text-white auto lg:px-0">
                     <div className="flex flex-col w-full md:flex-row">
 

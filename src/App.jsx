@@ -33,18 +33,17 @@ const App = () => {
 			
 			{
 				page === 'home' ?
-					<div data-aos="fade-up">
+					<div>
 						<SideSocialNetwork />
 					
 						<div className="container mt-10 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-							<div className="flex flex-wrap md:flex-nowrap">
+							<div className="flex flex-wrap md:flex-nowrap" data-aos="fade-up">
 
 								<SideNavbar />
 								<Home />
 
 							</div>
 						</div>
-							<AboutAs />
 							<FormContact />
 							<OurClients />
 							<Footer />
@@ -52,25 +51,36 @@ const App = () => {
 				
 				:
 
-					page === 'gallery' ?
+					page === 'about' ?
 						<>
-							<Gallery />
+							<AboutAs />
 							<SideSocialNetwork />
 						</>
 
 				:
 
-					page === 'services' ?
+					page === 'gallery' ?
+						<>
+							<Gallery />
+							<SideSocialNetwork />
+							<Footer />
+						</>
+
+				:
+
+					page === 'our-services' ?
 						<>
 							<OurServices />
 							<SideSocialNetwork />
 						</>
+
 				: 
 					page === 'our-markets' ?
 						<>
 							<OurMarkets />
 							<SideSocialNetwork />
 						</>
+
 				: null
 					
 

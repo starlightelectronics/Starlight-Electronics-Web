@@ -1,25 +1,57 @@
 import React from 'react'
 
-import img_galeria_1 from '../assets/img/content/img-galeria-1.webp';
-import img_galeria_3 from '../assets/img/content/img-galeria-3.webp';
+import imagen_1 from '../assets/img/gallery/img_1.webp';
+import imagen_2 from '../assets/img/gallery/img_36.webp';
+import imagen_3 from '../assets/img/gallery/img_3.webp';
+import imagen_4 from '../assets/img/gallery/img_35.webp';
+import imagen_5 from '../assets/img/gallery/img_2.webp';
+import imagen_6 from '../assets/img/gallery/img_53.webp';
 
 export const Carusel = () => {
     return (
             <div id="carouselExampleControls" className="carousel slide relative " data-bs-ride="carousel">
                 <div className="carousel-inner relative max-w-screen-lg overflow-hidden rounded-lg">
                     <div className="carousel-item active relative float-left w-full">
-                    <img
-                        src={ img_galeria_1 }
-                        className="block w-full"
-                        alt="Wild Landscape"
-                    />
+                        <img
+                            src={ imagen_1 }
+                            className="block w-full"
+                            alt="Wild Landscape"
+                        />
                     </div>
                     <div className="carousel-item relative float-left w-full">
-                    <img
-                        src={ img_galeria_3 }
-                        className="block w-full"
-                        alt="Exotic Fruits"
-                    />
+                        <img
+                            src={ imagen_2 }
+                            className="block w-full"
+                            alt="Exotic Fruits"
+                        />
+                    </div>
+                    <div className="carousel-item relative float-left w-full">
+                        <img
+                            src={ imagen_3 }
+                            className="block w-full"
+                            alt="Exotic Fruits"
+                        />
+                    </div>
+                    <div className="carousel-item relative float-left w-full">
+                        <img
+                            src={ imagen_4 }
+                            className="block w-full"
+                            alt="Exotic Fruits"
+                        />
+                    </div>
+                    <div className="carousel-item relative float-left w-full">
+                        <img
+                            src={ imagen_5 }
+                            className="block w-full"
+                            alt="Exotic Fruits"
+                        />
+                    </div>
+                    <div className="carousel-item relative float-left w-full">
+                        <img
+                            src={ imagen_6 }
+                            className="block w-full"
+                            alt="Exotic Fruits"
+                        />
                     </div>
                 </div>
                 <button
