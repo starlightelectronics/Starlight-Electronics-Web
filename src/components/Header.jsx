@@ -19,27 +19,27 @@ export const Header = ({ setPage = 'home' }) => {
 
 
 				<div className="hidden md:flex space-x-4 lg:space-x-10 items-center">
-				<button 
-						className='hover:scale-110 transition duration-200 hover:text-white'
+					<button 
+						className='hover:scale-110 transition duration-200 hover:text-white font-bold'
 						value='home'
 						onClick={ handleInputHeader }
 						>
 						Inicio
 					</button>
 					
-					<button className='hover:scale-110 transition duration-200'>
+					<button className='hover:scale-110 transition duration-200 font-bold'>
 						<a href="#nosotros" className='hover:scale-110 transition duration-200 hover:text-white'>Nosotros</a>
 					</button>
 					
 					<button 
-						className='hover:text-white hover:scale-110 transition duration-200'
+						className='hover:text-white hover:scale-110 transition duration-200 font-bold'
 						value='services'
 						onClick={ handleInputHeader } >
 						Servicios
 					</button>
 
 					<button 
-						className='hover:text-white hover:scale-110 transition duration-200'
+						className='hover:text-white hover:scale-110 transition duration-200 font-bold'
 						value='our-markets'
 						onClick={ handleInputHeader } >
 						Mercados
@@ -47,7 +47,7 @@ export const Header = ({ setPage = 'home' }) => {
 					
 					
 					<button 
-						className='hover:scale-110 transition duration-200 hover:text-white'
+						className='hover:scale-110 transition duration-200 hover:text-white font-bold'
 						value='gallery'
 						onClick={ handleInputHeader } >
 						Galería

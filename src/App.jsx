@@ -55,6 +55,7 @@ const App = () => {
 					page === 'gallery' ?
 						<>
 							<Gallery />
+							<SideSocialNetwork />
 						</>
 
 				:
@@ -62,11 +63,13 @@ const App = () => {
 					page === 'services' ?
 						<>
 							<OurServices />
+							<SideSocialNetwork />
 						</>
 				: 
 					page === 'our-markets' ?
 						<>
 							<OurMarkets />
+							<SideSocialNetwork />
 						</>
 				: null
 					
