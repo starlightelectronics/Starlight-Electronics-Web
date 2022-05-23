@@ -19,6 +19,7 @@ import 'aos/dist/aos.css';
 import { Video } from './components/OurServices/Video';
 import { Ilumination } from './components/OurServices/Ilumination';
 import { Audio } from './components/OurServices/Audio';
+import { TextInfo } from './components/TextInfo';
 
 const App = () => {
 
@@ -27,7 +28,6 @@ const App = () => {
 	useEffect(() => {
 		AOS.init({ duration: 1000 });
 	}, []);
-	
 
 	return (
 		<>	
@@ -39,7 +39,7 @@ const App = () => {
 					<div>
 						<SideSocialNetwork />
 					
-						<div className="container mt-10 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+						<div className="container mt-10 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-6 w-full">
 							<div className="flex flex-wrap md:flex-nowrap" data-aos="fade-up">
 
 								<SideNavbar />
@@ -47,6 +47,7 @@ const App = () => {
 
 							</div>
 						</div>
+							<TextInfo />
 							<FormContact />
 							<OurClients />
 							<Footer />

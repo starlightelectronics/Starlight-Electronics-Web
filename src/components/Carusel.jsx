@@ -13,16 +13,9 @@ export const Carusel = () => {
                 <div className="carousel-inner relative max-w-screen-lg overflow-hidden rounded-lg">
                     <div className="carousel-item active relative float-left w-full">
                         <img
-                            src={ imagen_1 }
+                            src={ imagen_5 }
                             className="block w-full"
                             alt="Wild Landscape"
-                        />
-                    </div>
-                    <div className="carousel-item relative float-left w-full">
-                        <img
-                            src={ imagen_2 }
-                            className="block w-full"
-                            alt="Exotic Fruits"
                         />
                     </div>
                     <div className="carousel-item relative float-left w-full">
@@ -34,14 +27,21 @@ export const Carusel = () => {
                     </div>
                     <div className="carousel-item relative float-left w-full">
                         <img
-                            src={ imagen_4 }
+                            src={ imagen_2 }
                             className="block w-full"
                             alt="Exotic Fruits"
                         />
                     </div>
                     <div className="carousel-item relative float-left w-full">
                         <img
-                            src={ imagen_5 }
+                            src={ imagen_1 }
+                            className="block w-full"
+                            alt="Exotic Fruits"
+                        />
+                    </div>
+                    <div className="carousel-item relative float-left w-full">
+                        <img
+                            src={ imagen_4 }
                             className="block w-full"
                             alt="Exotic Fruits"
                         />
