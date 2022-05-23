@@ -7,7 +7,7 @@ export const FormContact = () => {
     return (
         <div className="container mt-24 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-28 w-full">
             <section className="w-full">
-                <h2 id="hire" className="secondary-title">Contáctanos</h2>
+                <h2 id="contact" className="secondary-title">Contáctanos</h2>
                 <p className="section-paragraph"> Recibiremos tu información y nos contactaremos contigo en el menor tiempo posible! </p>
 
                 <div className="w-full md:flex justify-between lg:grid-cols-2 gap-18 lg:gap-5">

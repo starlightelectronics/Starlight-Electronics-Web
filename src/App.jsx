@@ -55,6 +55,7 @@ const App = () => {
 						<>
 							<AboutAs />
 							<SideSocialNetwork />
+							<Footer />
 						</>
 
 				:
@@ -72,6 +73,7 @@ const App = () => {
 						<>
 							<OurServices />
 							<SideSocialNetwork />
+							<Footer />
 						</>
 
 				: 
@@ -79,6 +81,7 @@ const App = () => {
 						<>
 							<OurMarkets />
 							<SideSocialNetwork />
+							<Footer />
 						</>
 
 				: null

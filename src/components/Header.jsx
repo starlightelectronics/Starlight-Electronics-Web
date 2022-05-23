@@ -55,7 +55,7 @@ export const Header = ({ setPage = 'home' }) => {
 						Galería
 					</button>
 					
-					<a href="#hire">
+					<a href="#contact">
 						<button 
 							className="px-6 py-2 bg-theme font-bold hover:scale-110 transition duration-300 hover:bg-sky-800"
 							value='home'
