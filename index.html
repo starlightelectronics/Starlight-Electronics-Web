@@ -8,7 +8,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
   </head>
   <body>
+
+    <form name="contact" method="POST" hidden netlify>
+      <div>
+          <label>Nombre</label>
+          <input type="text" id="name" name="name" />
+      </div>
+      <div>
+          <label>Email</label>
+          <input type="email" id="email" name="email" />
+      </div>
+      <div>
+          <label> ¿Cómo podemos ayudarte? </label>
+          <textarea type="text" id="message" name="message" ></textarea>
+      </div>
+      <button type='submit'>Enviar</button>
+    </form>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>

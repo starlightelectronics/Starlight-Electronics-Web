@@ -12,7 +12,8 @@ export const FormContact = () => {
 
                 <div className="w-full md:flex justify-between lg:grid-cols-2 gap-18 lg:gap-5">
 
-                    <form className="space-y-10 mt-16 mb-8 md:w-2/4" method="POST" name="contact" data-netlify="true" >
+                    <form className="space-y-10 mt-16 mb-8 md:w-2/4" method="POST" name="contact" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact" />
                         <div>
                             <label className="text-white block mb-2 text-xl font-bold">Nombre</label>
                             <input type="text" id="name" name="name" className="w-full border border-input-border bg-input px-4 py-4" placeholder='Tú nombre' required />
