@@ -16,6 +16,9 @@ import updateListNavarSide from './helpers/updateList.js';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Video } from './components/OurServices/Video';
+import { Ilumination } from './components/OurServices/Ilumination';
+import { Audio } from './components/OurServices/Audio';
 
 const App = () => {
 
@@ -82,6 +85,24 @@ const App = () => {
 							<OurMarkets />
 							<SideSocialNetwork />
 							<Footer />
+						</>
+				: 
+					page === 'audio' ?
+						<>
+							<Audio />
+							<SideSocialNetwork />
+						</>
+				: 
+					page === 'video' ?
+						<>	
+							<Video />
+							<SideSocialNetwork />
+						</>
+				: 
+					page === 'ilumination' ?
+						<>	
+							<Ilumination />
+							<SideSocialNetwork />
 						</>
 
 				: null

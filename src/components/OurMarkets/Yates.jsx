@@ -10,7 +10,7 @@ export const Yates = () => {
                 <div className="flex flex-wrap items-center -mx-3">
                     <div className="order-1 w-full px-3 lg:w-1/2 lg:order-0">
                         <div className="w-full lg:max-w-md mx-auto">
-                            <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">YATES</h2>
+                            <h2 id='yates' className="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">YATES</h2>
                             <p className="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6 text-justify">
                                 Cada yate es un proyecto único que se construye para cumplir los
                                 sueños del propietario; nosotros entendemos lo importante que es

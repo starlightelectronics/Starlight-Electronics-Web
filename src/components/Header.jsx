@@ -33,19 +33,74 @@ export const Header = ({ setPage = 'home' }) => {
 						Nosotros
 					</button>
 
-					<button 
-						className='hover:text-white hover:scale-110 transition duration-200 font-bold'
-						value='our-services'
-						onClick={ handleInputHeader } >
-						Servicios
-					</button>
+					{/* Services and options dropdown */}
+					<div className='relative hover-trigger'>
+						<button 
+							className='hover:text-white hover:scale-110 transition duration-200 font-bold'
+							value='our-services'
+							onClick={ handleInputHeader } >
+							Servicios
+						</button>
+						<div className='absolute flex text-center rounded-lg backdrop-blur-sm bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
+							<button 
+								className='hover:text-white hover:scale-110 transition duration-200 font-bold'
+								value='audio'
+								onClick={ handleInputHeader } >
+								Audio
+							</button>
+							<br />
+							<button 
+								className='hover:text-white hover:scale-110 transition duration-200 font-bold'
+								value='video'
+								onClick={ handleInputHeader } >
+								Video
+							</button>
+							<button 
+								className='hover:text-white hover:scale-110 transition duration-200 font-bold'
+								value='ilumination'
+								onClick={ handleInputHeader } >
+								Iluminación
+							</button>
 
-					<button 
-						className='hover:text-white hover:scale-110 transition duration-200 font-bold'
-						value='our-markets'
-						onClick={ handleInputHeader } >
-						Mercados
-					</button>
+						</div>
+
+					</div>
+
+					<div className='relative hover-trigger'>
+						<button 
+							className='hover:text-white hover:scale-110 transition duration-200 font-bold'
+							value='our-markets'
+							onClick={ handleInputHeader } >
+							Mercados
+						</button>
+						<div className='absolute text-center rounded-lg backdrop-blur-sm bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
+							<a href="#cruceros">
+								<button 
+									className='hover:text-white hover:scale-110 transition duration-200 font-bold'
+									value='our-markets'
+									onClick={ handleInputHeader } >
+									Cruceros
+								</button>
+							</a>
+							<a href="#comercial">
+								<button 
+									className='hover:text-white hover:scale-110 transition duration-200 font-bold'
+									value='our-markets'
+									onClick={ handleInputHeader } >
+									Comercial
+								</button>
+							</a>
+							<a href="#yates">
+								<button 
+									className='hover:text-white hover:scale-110 transition duration-200 font-bold'
+									value='our-markets'
+									onClick={ handleInputHeader } >
+									Yates
+								</button>
+							</a>
+						</div>
+
+					</div>
 					
 					
 					<button 

@@ -7,6 +7,14 @@ html, body {
     @apply bg-body text-white font-poppins
 }
 
+.hover-trigger .hover-target {
+    display: none;
+}
+
+.hover-trigger:hover .hover-target {
+    display: block;
+}
+
 .left-50 {
     left: 50%;
 }
