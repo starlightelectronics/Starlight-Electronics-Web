@@ -7,8 +7,8 @@ export const Audio = () => {
 	return (
         <div className='animate__animated animate__fadeIn'>
             <section className="py-20">
-                <div className="container items-center max-w-screen-xl px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
-                    <div className="flex flex-wrap items-center -mx-3">
+                <div className="container items-center max-w-screen-xl px-10 mx-auto sm:px-20 md:px-32 lg:px-16 4xl:px-0">
+                    <div className="flex flex-wrap items-center -mx-3 4xl:-mx-40">
                     <div className="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img className="mx-auto sm:max-w-sm lg:max-w-full rounded-lg" src={ audio } alt="feature image" /></div>
                         <div className="order-1 w-full px-3 lg:w-1/2 lg:order-0">
                             <div className="w-full lg:max-w-md mx-auto">
