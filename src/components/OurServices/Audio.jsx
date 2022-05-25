@@ -1,6 +1,7 @@
 import React from 'react';
 
 import audio from '../../assets/img/gallery/img_41.webp';
+import das from '../../assets/img/content/das.png';
 
 export const Audio = () => {
 	return (
@@ -24,6 +25,7 @@ export const Audio = () => {
                                     industria del turismo tales como hoteles, hostales,
                                     restaurantes, iglesias, casinos, entre otros. 
                                 </p>
+                                <img src={ das } className="h-24" alt="logo DAS" />
                             </div>
                         </div>
                     </div>

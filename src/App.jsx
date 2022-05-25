@@ -12,7 +12,7 @@ import { AboutAs } from './components/AboutAs';
 import { OurServices } from './components/OurServices';
 import { OurMarkets } from './components/OurMarkets';
 
-import updateListNavarSide from './helpers/updateList.js';
+// import updateListNavarSide from './helpers/updateList.js';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
