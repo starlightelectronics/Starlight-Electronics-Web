@@ -12,8 +12,6 @@ import { AboutAs } from './components/AboutAs';
 import { OurServices } from './components/OurServices';
 import { OurMarkets } from './components/OurMarkets';
 
-import { ourServices } from './data/ourServices';
-
 // import updateListNavarSide from './helpers/updateList.js';
 
 import AOS from 'aos';

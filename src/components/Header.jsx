@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 
 import logo_sle_white from '../assets/img/content/logo-sle-white.png';
 import { HoverHeader } from './HoverHeader';
+import { ourMarkets } from '../data/ourMarkets';
 
 export const Header = ({ setPage = 'home' }) => {
 
@@ -73,9 +74,17 @@ export const Header = ({ setPage = 'home' }) => {
 							Servicios
 						</button>
 						<div className='absolute flex text-center rounded-lg backdrop-blur-sm bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
-							<HoverHeader title={'Audio'}  value={'audio'} handleInputHeader={ handleInputHeader } />
-							<HoverHeader title={'Video'}  value={'video'} handleInputHeader={ handleInputHeader } />
-							<HoverHeader title={'Iluminación'}  value={'ilumination'} handleInputHeader={ handleInputHeader } />
+							{
+								ourMarkets.map( (market, index) => {
+									return (
+										<HoverHeader
+											key={ index }
+											title={ market.title }
+											value={ market.title }
+											handleInputHeader={ handleInputHeader } />
+									);
+								})
+							}
 						</div>
 
 					</div>
