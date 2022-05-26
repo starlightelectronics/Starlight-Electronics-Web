@@ -116,7 +116,7 @@ export const AboutAs = () => {
                 <div className='max-w-screen-xl mx-auto sm:px-20 md:px-32 lg:px-16'>
                     <section className="py-12 sm:py-16 mt-16">
                         <div className="max-w-7xl px-10 mx-auto sm:text-center">
-                            <h2 className="font-bold text-3xl sm:text-4xl lg:text-6xl mt-3">Valores corpotarivos.</h2>
+                            <h2 className="font-bold text-3xl sm:text-4xl lg:text-6xl mt-3">Valores corpotarivos</h2>
                             {/* <p className="mt-4 text-gray-500 text-base sm:text-xl lg:text-2xl">We've built integrations with some of your favorite services. </p> */}
                             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-10 my-12 sm:my-16 md:text-lg">
                                 <div className="rounded-lg py-10 flex flex-col items-center justify-center">

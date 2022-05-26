@@ -14,9 +14,12 @@ import { OurMarkets } from './components/OurMarkets';
 
 // import updateListNavarSide from './helpers/updateList.js';
 
+import { ourMarkets } from './data/ourMarkets';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { TextInfo } from './components/TextInfo';
+import { ComponenteView } from './components/ComponenteView';
 
 const App = () => {
 
@@ -85,8 +88,18 @@ const App = () => {
 							<Footer />
 						</>
 
-				: null
-					
+				: 
+					ourMarkets.map(( market, index ) => {
+						if ( page == market.title ) { 
+							return (
+								<>
+									<ComponenteView key={ index } service={ market } index={ 1 } />
+									<SideSocialNetwork />
+									<Footer />
+								</>
+							)
+						}
+					})
 
 			}
 			

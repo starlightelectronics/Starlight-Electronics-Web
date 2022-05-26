@@ -22,11 +22,12 @@ export const Home = () => {
                     </a>
                     
                 </div>
-
+                
                 {/* <button type="button" className="text-gray-900 mt-5 bg-[#F7BE38] ml-2 md:ml-0 hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 mr-2 mb-2">
                         <img className='mr-2 align-middle' src={ logoPSE } alt="logo pse" width='20' />
                         Check out with PSE
                 </button> */}
+
                 			
             </div>
 

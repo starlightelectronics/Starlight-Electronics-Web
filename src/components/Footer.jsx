@@ -13,7 +13,7 @@ export const Footer = () => {
     return (
             <footer className="text-gray-700 bg-white body-font mt-16">
                 <div className="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
-                    <a href="#" className="text-xl font-black leading-none text-gray-900 select-none logo"> Starlight Electronics </a>
+                    <a href="#" className="text-xl font-black leading-none text-gray-900 select-none logo uppercase"> Starlight Electronics </a>
                     <p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2022 - Todos los derechos reservados</p>
                     <span className="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
                         

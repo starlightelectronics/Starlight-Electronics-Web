@@ -3,11 +3,9 @@ import React, { useRef } from 'react';
 import logo_sle_white from '../assets/img/content/logo-sle-white.png';
 import { HoverHeader } from './HoverHeader';
 import { ourMarkets } from '../data/ourMarkets';
+import { ourServices } from '../data/ourServices';
 
 export const Header = ({ setPage = 'home' }) => {
-
-	// const mobile_links = useRef( null );
-	// const mobile_menu = useRef( null );
 	
 	setTimeout(() => {
 		
@@ -74,17 +72,17 @@ export const Header = ({ setPage = 'home' }) => {
 							Servicios
 						</button>
 						<div className='absolute flex text-center rounded-lg backdrop-blur-sm bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
-							{
-								ourMarkets.map( (market, index) => {
+							{/* {
+								ourServices.map( (service, index) => {
 									return (
 										<HoverHeader
 											key={ index }
-											title={ market.title }
-											value={ market.title }
+											title={ service.title }
+											value={ service.title }
 											handleInputHeader={ handleInputHeader } />
 									);
 								})
-							}
+							} */}
 						</div>
 
 					</div>
@@ -97,7 +95,17 @@ export const Header = ({ setPage = 'home' }) => {
 							Mercados
 						</button>
 						<div className='absolute text-center rounded-lg backdrop-blur-sm bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
-							<HoverHeader title={'Cruceros'} value={'cruceros'} handleInputHeader={ handleInputHeader } />
+							{
+								ourMarkets.map( (market, index) => {
+									return (
+										<HoverHeader
+											key={ index + 1 }
+											title={ market.title }
+											value={ market.title }
+											handleInputHeader={ handleInputHeader } />
+									);
+								})
+							}
 						</div>
 
 					</div>
@@ -134,13 +142,68 @@ export const Header = ({ setPage = 'home' }) => {
 					<a id='mobile_menu' href="#" className='md:hidden text-white block p-5 font-bold hover:text-yellow-500'>
 						<svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="white"/></svg>
 					</a>
-					<ul id='mobile_links' className="mobile_links hidden w-full absolute z-50 left-0 text-center bg-gray-800">
-                        <li><a href="#" className="text-white block p-5 font-bold hover:text-yellow-500">Home</a></li>
-                        <li><a href="#" className="text-white block p-5 font-bold hover:text-yellow-500">Nosotros</a></li>
-                        <li><a href="#" className="text-white block p-5 font-bold hover:text-yellow-500">Servicios</a></li>
-						<li><a href="#" className="text-white block p-5 font-bold hover:text-yellow-500">Mercados</a></li>
-						<li><a href="#" className="text-white block p-5 font-bold hover:text-yellow-500">Galería</a></li>
-                        <li><a href="#" className="my-4 inline-block rounded-full bg-green-500 text-white font-bold px-4 py-3 hover:text-black hover:bg-white transition duration-500">Contáctanos</a></li>
+					<ul id='mobile_links' className="mt-5 mobile_links hidden w-full absolute z-50 left-0 text-center backdrop-blur-xl bg-white/2">
+
+                        <li>
+							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
+								<button 
+									className='hover:scale-110 transition duration-200 hover:text-sky-700 font-bold'
+									value='home'
+									onClick={ handleInputHeader } >
+									Inicio
+								</button>
+							</a>
+						</li>
+                        <li>
+							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
+								<button 
+									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
+									value='about'
+									onClick={ handleInputHeader } >
+									Nosotros
+								</button>
+							</a>
+						</li>
+                        <li>
+							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
+								<button 
+									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
+									value='our-services'
+									onClick={ handleInputHeader } >
+									Servicios
+								</button>
+							</a>
+						</li>
+                        <li>
+							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
+								<button 
+									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
+									value='our-markets'
+									onClick={ handleInputHeader } >
+									Mercados
+								</button>
+							</a>
+						</li>
+                        <li>
+							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
+								<button 
+									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
+									value='gallery'
+									onClick={ handleInputHeader } >
+									Galería
+								</button>
+							</a>
+						</li>
+                        <li>
+							<a href="#contact" className="my-4 inline-block rounded-full bg-sky-600 text-white font-bold px-4 py-3 hover:scale-110 hover:bg-sky-800 transition duration-500">
+								<button 
+									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
+									value='home'
+									onClick={ handleInputHeader } >
+									Contáctanos
+								</button>
+							</a>
+						</li>
                     </ul>        
                 </div>
 				
