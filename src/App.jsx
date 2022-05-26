@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { Header } from './components/Header';
+import { Header } from './components/Header/Header';
 import { SideNavbar } from './components/SideNavbar';
 import { Home } from './components/Home';
 import { Gallery } from './components/Gallery';
@@ -92,8 +92,10 @@ const App = () => {
 					ourMarkets.map(( market, index ) => {
 						if ( page == market.title ) { 
 							return (
-								<>
-									<ComponenteView key={ index } service={ market } index={ 1 } />
+								<>	
+									<div className='body-uniquite'>
+										<ComponenteView key={ index } service={ market } index={ 1 } />
+									</div>
 									<SideSocialNetwork />
 									<Footer />
 								</>

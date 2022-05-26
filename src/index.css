@@ -7,6 +7,10 @@ html, body {
     @apply bg-body text-white font-poppins
 }
 
+.body-uniquite {
+    min-height: calc( 100vh - 290px );
+}
+
 .hover-trigger .hover-target {
     display: none;
 }

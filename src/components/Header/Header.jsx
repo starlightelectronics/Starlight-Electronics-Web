@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
-import logo_sle_white from '../assets/img/content/logo-sle-white.png';
+import logo_sle_white from '../../assets/img/content/logo-sle-white.png';
 import { HoverHeader } from './HoverHeader';
-import { ourMarkets } from '../data/ourMarkets';
-import { ourServices } from '../data/ourServices';
+import { ourMarkets } from '../../data/ourMarkets';
+import { ourServices } from '../../data/ourServices';
+import { HeaderMobile } from './HeaderMobile';
 
 export const Header = ({ setPage = 'home' }) => {
 	
@@ -49,30 +50,15 @@ export const Header = ({ setPage = 'home' }) => {
 				</div>
 
 				<div className="hidden md:flex space-x-4 lg:space-x-10 items-center">
-					<button 
-						className='hover:scale-110 transition duration-200 hover:text-white font-bold'
-						value='home'
-						onClick={ handleInputHeader } >
-						Inicio
-					</button>
-					
-					<button 
-						className='hover:text-white hover:scale-110 transition duration-200 font-bold'
-						value='about'
-						onClick={ handleInputHeader } >
-						Nosotros
-					</button>
+
+					<HoverHeader title='Inicio' value='home' handleInputHeader={ handleInputHeader } />			
+					<HoverHeader title='Nosotros' value='about' handleInputHeader={ handleInputHeader } />
 
 					{/* Services and options dropdown */}
 					<div className='relative hover-trigger'>
-						<button 
-							className='hover:text-white hover:scale-110 transition duration-200 font-bold'
-							value='our-services'
-							onClick={ handleInputHeader } >
-							Servicios
-						</button>
+						<HoverHeader title='Servicios' value='our-services' handleInputHeader={ handleInputHeader } />
 						<div className='absolute flex text-center rounded-lg backdrop-blur-sm bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
-							{/* {
+							{
 								ourServices.map( (service, index) => {
 									return (
 										<HoverHeader
@@ -82,18 +68,14 @@ export const Header = ({ setPage = 'home' }) => {
 											handleInputHeader={ handleInputHeader } />
 									);
 								})
-							} */}
+							}
 						</div>
 
 					</div>
 
+					{/* Services and options dropdown */}
 					<div className='relative hover-trigger'>
-						<button 
-							className='hover:text-white hover:scale-110 transition duration-200 font-bold'
-							value='our-markets'
-							onClick={ handleInputHeader } >
-							Mercados
-						</button>
+						<HoverHeader title='Mercados' value='our-markets' handleInputHeader={ handleInputHeader } />
 						<div className='absolute text-center rounded-lg backdrop-blur-sm bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
 							{
 								ourMarkets.map( (market, index) => {
@@ -107,16 +89,9 @@ export const Header = ({ setPage = 'home' }) => {
 								})
 							}
 						</div>
-
 					</div>
-					
-					
-					<button 
-						className='hover:scale-110 transition duration-200 hover:text-white font-bold'
-						value='gallery'
-						onClick={ handleInputHeader } >
-						Galería
-					</button>
+								
+					<HoverHeader title='Galería' value='gallery' handleInputHeader={ handleInputHeader } />
 					
 					<a href="#contact">
 						<button 
@@ -142,58 +117,14 @@ export const Header = ({ setPage = 'home' }) => {
 					<a id='mobile_menu' href="#" className='md:hidden text-white block p-5 font-bold hover:text-yellow-500'>
 						<svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="white"/></svg>
 					</a>
-					<ul id='mobile_links' className="mt-5 mobile_links hidden w-full absolute z-50 left-0 text-center backdrop-blur-xl bg-white/2">
+					<ul id='mobile_links' className="mt-8 mobile_links hidden w-full absolute z-50 left-0 text-center backdrop-blur-xl bg-white/2">
 
-                        <li>
-							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
-								<button 
-									className='hover:scale-110 transition duration-200 hover:text-sky-700 font-bold'
-									value='home'
-									onClick={ handleInputHeader } >
-									Inicio
-								</button>
-							</a>
-						</li>
-                        <li>
-							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
-								<button 
-									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
-									value='about'
-									onClick={ handleInputHeader } >
-									Nosotros
-								</button>
-							</a>
-						</li>
-                        <li>
-							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
-								<button 
-									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
-									value='our-services'
-									onClick={ handleInputHeader } >
-									Servicios
-								</button>
-							</a>
-						</li>
-                        <li>
-							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
-								<button 
-									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
-									value='our-markets'
-									onClick={ handleInputHeader } >
-									Mercados
-								</button>
-							</a>
-						</li>
-                        <li>
-							<a href="#" className="text-white block p-5 font-bold hover:text-sky-700">
-								<button 
-									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
-									value='gallery'
-									onClick={ handleInputHeader } >
-									Galería
-								</button>
-							</a>
-						</li>
+						<HeaderMobile title={ 'Inicio' } value={ 'home' } handleInputHeader={ handleInputHeader } />
+						<HeaderMobile title={ 'Nosotros' } value={ 'about' } handleInputHeader={ handleInputHeader } />
+						<HeaderMobile title={ 'Servicios' } value={ 'our-services' } handleInputHeader={ handleInputHeader } />
+						<HeaderMobile title={ 'Mercados' } value={ 'our-markets' } handleInputHeader={ handleInputHeader } />
+						<HeaderMobile title={ 'Galería' } value={ 'gallery' } handleInputHeader={ handleInputHeader } />
+ 
                         <li>
 							<a href="#contact" className="my-4 inline-block rounded-full bg-sky-600 text-white font-bold px-4 py-3 hover:scale-110 hover:bg-sky-800 transition duration-500">
 								<button 
@@ -204,17 +135,12 @@ export const Header = ({ setPage = 'home' }) => {
 								</button>
 							</a>
 						</li>
+
                     </ul>        
                 </div>
 				
-				{/* <div className="md:hidden">
-					<svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="white"/></svg>
-				</div> */}
 			</div>
 		</header>
 		
 	);
-
-
-
 };

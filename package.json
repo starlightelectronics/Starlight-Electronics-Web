@@ -13,8 +13,8 @@
     "animate.css": "^4.1.1",
     "aos": "^3.0.0-beta.6",
     "react": "^18.0.0",
+    "react-alice-carousel": "^2.6.1",
     "react-dom": "^18.0.0",
-    "react-elastic-carousel": "^0.11.5",
     "react-icons": "^4.3.1",
     "react-viewerjs": "^0.1.9",
     "tw-elements": "^1.0.0-alpha12"
