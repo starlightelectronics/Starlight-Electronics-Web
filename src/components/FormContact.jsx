@@ -1,6 +1,6 @@
 import React from 'react'
 
-import globalpositionwhite from '../assets/img/content/global-position-white.png';
+import globalpositionwhite from '../assets/img/content/global-position-white.webp';
 
 export const FormContact = () => {
 
@@ -36,8 +36,8 @@ export const FormContact = () => {
                             <area shape="rect" coords="435,210,475,250" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
                         </map>
 
-                        <figure className='my-auto w-full border-dashed border-2 rounded-xl'>
-                            <img src={ globalpositionwhite } alt="mapa de posicion global" className="md:h-2/4 mx-auto md:mt-5 " useMap='#globalposition' />
+                        <figure className='my-auto w-full border-dashed border-2 rounded-xl 4xl:mb-32'>
+                            <img src={ globalpositionwhite } alt="mapa de posicion global" className="md:h-2/4 mx-auto md:mt-5 4xl:w-8/12" useMap='#globalposition' />
                         </figure>
                     
                 </div>
@@ -47,7 +47,7 @@ export const FormContact = () => {
                     <div className="pl-4 text-sm font-normal">Mensaje enviado.</div>
                 </div> */}
 
-                <div className="container bg-[#0f1d40] text-gray-800 px-4 md:px-12 pt-7 rounded-2xl mb-20 mt-20">
+                <div id='location' className="container bg-[#0f1d40] text-gray-800 px-4 md:px-12 pt-7 rounded-2xl mb-20 mt-20">
                     <div className="block py-10 md:py-12 px-4 md:px-6">
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 mb-12">
                             <div className="mb-12 lg:mb-0 text-center mx-auto">

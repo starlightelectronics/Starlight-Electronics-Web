@@ -57,8 +57,8 @@ export const Header = ({ setPage = 'home' }) => {
 					{/* Services and options dropdown */}
 					<div className='relative hover-trigger'>
 						<HoverHeader title='Servicios' value='our-services' handleInputHeader={ handleInputHeader } />
-						<div className='absolute flex text-center rounded-lg backdrop-blur-sm bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
-							{
+						<div className='absolute flex text-center rounded-lg px-4 py-4 z-10 backdrop-blur-2xl bg-white/2 hover-target animate__animated animate__fadeIn'>
+							{/* {
 								ourServices.map( (service, index) => {
 									return (
 										<HoverHeader
@@ -68,7 +68,7 @@ export const Header = ({ setPage = 'home' }) => {
 											handleInputHeader={ handleInputHeader } />
 									);
 								})
-							}
+							} */}
 						</div>
 
 					</div>
@@ -76,7 +76,7 @@ export const Header = ({ setPage = 'home' }) => {
 					{/* Services and options dropdown */}
 					<div className='relative hover-trigger'>
 						<HoverHeader title='Mercados' value='our-markets' handleInputHeader={ handleInputHeader } />
-						<div className='absolute text-center rounded-lg backdrop-blur-sm bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
+						<div className='absolute text-center rounded-lg backdrop-blur-2xl bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
 							{
 								ourMarkets.map( (market, index) => {
 									return (

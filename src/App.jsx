@@ -8,7 +8,7 @@ import { FormContact } from './components/FormContact';
 import { Footer } from './components/Footer';
 import { OurClients } from './components/OurClients';
 import { SideSocialNetwork } from './components/SideSocialNetwork';
-import { AboutAs } from './components/AboutAs';
+import { AboutAs } from './components/About/AboutAs';
 import { OurServices } from './components/OurServices';
 import { OurMarkets } from './components/OurMarkets';
 
@@ -18,7 +18,7 @@ import { ourMarkets } from './data/ourMarkets';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { TextInfo } from './components/TextInfo';
+import { TextInfo } from './components/About/TextInfo';
 import { ComponenteView } from './components/ComponenteView';
 
 const App = () => {
