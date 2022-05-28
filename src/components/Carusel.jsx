@@ -15,42 +15,42 @@ export const Carusel = () => {
                         <img
                             src={ imagen_5 }
                             className="block w-full"
-                            alt="Wild Landscape"
+                            alt="starlightelectronics"
                         />
                     </div>
                     <div className="carousel-item relative float-left w-full">
                         <img
                             src={ imagen_3 }
                             className="block w-full"
-                            alt="Exotic Fruits"
+                            alt="starlight electronics"
                         />
                     </div>
                     <div className="carousel-item relative float-left w-full">
                         <img
                             src={ imagen_2 }
                             className="block w-full"
-                            alt="Exotic Fruits"
+                            alt="starlightelectronics"
                         />
                     </div>
                     <div className="carousel-item relative float-left w-full">
                         <img
                             src={ imagen_1 }
                             className="block w-full"
-                            alt="Exotic Fruits"
+                            alt="starlight electronics"
                         />
                     </div>
                     <div className="carousel-item relative float-left w-full">
                         <img
                             src={ imagen_4 }
                             className="block w-full"
-                            alt="Exotic Fruits"
+                            alt="starlightelectronics"
                         />
                     </div>
                     <div className="carousel-item relative float-left w-full">
                         <img
                             src={ imagen_6 }
                             className="block w-full"
-                            alt="Exotic Fruits"
+                            alt="starlight electronics"
                         />
                     </div>
                 </div>

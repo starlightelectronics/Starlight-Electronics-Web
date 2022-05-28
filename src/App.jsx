@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { Header } from './components/Header/Header';
-import { SideNavbar } from './components/SideNavbar';
+// import { SideNavbar } from './components/SideNavbar';
 import { Home } from './components/Home';
 import { Gallery } from './components/Gallery';
 import { FormContact } from './components/FormContact';
@@ -38,11 +38,11 @@ const App = () => {
 				page === 'home' ?
 					<div>
 						<SideSocialNetwork />
+						{/* <SideNavbar /> */}
 					
 						<div className="container mt-10 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-6 w-full">
 							<div className="flex flex-wrap md:flex-nowrap" data-aos="fade-up">
 
-								<SideNavbar />
 								<Home />
 
 							</div>
@@ -89,6 +89,7 @@ const App = () => {
 						</>
 
 				: 
+
 					ourMarkets.map(( market, index ) => {
 						if ( page == market.title ) { 
 							return (
@@ -102,6 +103,7 @@ const App = () => {
 							)
 						}
 					})
+
 
 			}
 			

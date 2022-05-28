@@ -50,7 +50,7 @@ export const Footer = () => {
                          </a>
 
                         <figure className='w-36 border-l ml-6'>
-                            <img className='ml-3' src={ avixamember } alt="" />
+                            <img className='ml-3' src={ avixamember } alt="Imagen de avixamember con starlightelectronics" />
                         </figure>
 
                     </span>

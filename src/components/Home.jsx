@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import logoPSE from '../assets/img/icons/logo-pse.png';
+// import logoPSE from '../assets/img/icons/logo-pse.png';
 import { Carusel } from './Carusel';
 
 export const Home = () => {
 	return (
         <>
-            <div className="flex flex-wrap 4xl:mt-60 4xl:ml-60 lg:ml-20 justify-center sm:w-2/4 md:justify-start max-w-xl mt-0 md:my-36 animate__animated animate__fadeIn">
-                <h1 id='home' className="font-bold text-5xl md:text-6xl lg:text-6xl text-center md:text-left"> <span className='text-sky-600 border-b-2 bor'>STARLIGHT</span> <br /> <br /> construyendo soluciones <br /> a su alcance</h1>
+            <div className="flex flex-wrap 4xl:mt-60 4xl:ml-60 lg:ml-20 justify-center sm:w-2/4 md:justify-start max-w-xl mt-0 md:my-28 animate__animated animate__fadeIn">
+                <h1 id='home' className="font-bold text-5xl md:text-6xl lg:text-6xl text-center md:text-left"> <br /> Construyendo Soluciones <br /> A su alcance</h1>
                 <div className="w-full flex justify-center md:justify-start">
                     <a href="#contact">
                         <button className="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3 hover:scale-110 transition duration-300 hover:bg-sky-800">

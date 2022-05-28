@@ -22,7 +22,7 @@ export const Gallery = () => {
                             images.map(( image, index ) => {
                                 return (
                                     <RViewerTrigger index={ index } key={ index } >
-                                        <img src={ image } alt='imagen de galeria' className="cursor-pointer w-full bg-nav h-36 lg:h-72 object-cover hover:scale-110 transition duration-300" />
+                                        <img src={ image } alt='imagen galeria de starlight electronics controlav' className="cursor-pointer w-full bg-nav h-36 lg:h-72 object-cover hover:scale-110 transition duration-300" />
                                     </RViewerTrigger>
                                 )
                             })

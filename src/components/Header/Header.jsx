@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 import logo_sle_white from '../../assets/img/content/logo-sle-white.png';
 import { HoverHeader } from './HoverHeader';
@@ -7,39 +7,25 @@ import { ourServices } from '../../data/ourServices';
 import { HeaderMobile } from './HeaderMobile';
 
 export const Header = ({ setPage = 'home' }) => {
-	
-	setTimeout(() => {
-		
-		const mobile_links = document.getElementById('mobile_links');
-		const mobile_menu = document.getElementById('mobile_menu');
 
-		mobile_links.style.setProperty('--animate-duration', '.4s');
-		mobile_links.classList.add('animate__animated');
+	const [ showMenu, setShowMenu ] = useState( false );
+	const menuMobile = useRef( null );
+	const menuToogle = useRef( null );
 
-		mobile_menu.addEventListener('click', e => {
-			
-			console.log( 'Hola' );
-			
-			mobile_links.classList.toggle('hidden');
 
-			if(mobile_links.classList.contains('hidden')) {
+	const handleClickMenu = () => {
 
-				mobile_links.classList.toggle('animate__flipOutX');
-				mobile_links.classList.toggle('hidden');
+		setShowMenu( !showMenu );
 
-			}else{
-
-				mobile_links.classList.toggle('animate__flipInX');
-				
-			}
-		});
-	}, 500);
-
-	const handleInputHeader = (e) => {
-		setPage( e.target.value );
-		console.log(e.target.value);
 	}
 
+	const handleInputHeader = ( e ) => {
+
+		setPage( e.target.value );
+		setShowMenu( !showMenu );
+
+	}
+	
 	return (
 		<header className="py-6">
 			<div className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
@@ -57,7 +43,7 @@ export const Header = ({ setPage = 'home' }) => {
 					{/* Services and options dropdown */}
 					<div className='relative hover-trigger'>
 						<HoverHeader title='Servicios' value='our-services' handleInputHeader={ handleInputHeader } />
-						<div className='absolute flex text-center rounded-lg px-4 py-4 z-10 backdrop-blur-2xl bg-white/2 hover-target animate__animated animate__fadeIn'>
+						<div className='absolute -left-36 w-96 flex text-center rounded-lg px-4 py-4 z-10 backdrop-blur-2xl bg-white/10 hover-target animate__animated animate__fadeIn'>
 							{/* {
 								ourServices.map( (service, index) => {
 									return (
@@ -70,18 +56,17 @@ export const Header = ({ setPage = 'home' }) => {
 								})
 							} */}
 						</div>
-
 					</div>
 
 					{/* Services and options dropdown */}
 					<div className='relative hover-trigger'>
 						<HoverHeader title='Mercados' value='our-markets' handleInputHeader={ handleInputHeader } />
-						<div className='absolute text-center rounded-lg backdrop-blur-2xl bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
+						<div className='absolute -left-1/4 text-center rounded-lg backdrop-blur-2xl bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
 							{
 								ourMarkets.map( (market, index) => {
 									return (
 										<HoverHeader
-											key={ index + 1 }
+											key={ index }
 											title={ market.title }
 											value={ market.title }
 											handleInputHeader={ handleInputHeader } />
@@ -114,29 +99,36 @@ export const Header = ({ setPage = 'home' }) => {
 				</div>
 
 				<div className="block lg:hidden w-1/5 lg:w-4/6">
-					<a id='mobile_menu' href="#" className='md:hidden text-white block p-5 font-bold hover:text-yellow-500'>
-						<svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="white"/></svg>
+					<a ref={ menuToogle } href="#" className='md:hidden text-white block p-5 font-bold hover:text-yellow-500'>
+						<button onClick={ handleClickMenu }>
+							<svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="white"/></svg>
+						</button>
 					</a>
-					<ul id='mobile_links' className="mt-8 mobile_links hidden w-full absolute z-50 left-0 text-center backdrop-blur-xl bg-white/2">
 
-						<HeaderMobile title={ 'Inicio' } value={ 'home' } handleInputHeader={ handleInputHeader } />
-						<HeaderMobile title={ 'Nosotros' } value={ 'about' } handleInputHeader={ handleInputHeader } />
-						<HeaderMobile title={ 'Servicios' } value={ 'our-services' } handleInputHeader={ handleInputHeader } />
-						<HeaderMobile title={ 'Mercados' } value={ 'our-markets' } handleInputHeader={ handleInputHeader } />
-						<HeaderMobile title={ 'Galería' } value={ 'gallery' } handleInputHeader={ handleInputHeader } />
- 
-                        <li>
-							<a href="#contact" className="my-4 inline-block rounded-full bg-sky-600 text-white font-bold px-4 py-3 hover:scale-110 hover:bg-sky-800 transition duration-500">
-								<button 
-									className='hover:scale-110 transition duration-200 hover:text-white font-bold'
-									value='home'
-									onClick={ handleInputHeader } >
-									Contáctanos
-								</button>
-							</a>
-						</li>
+					{
+						showMenu ? 
+								<ul ref={ menuMobile } className={`mt-8 mobile_links w-full absolute z-50 left-0 text-center backdrop-blur-xl bg-white/2 animate__animated ${ showMenu ? 'animate__flipInX' : 'animate__flipOutX' } animate__faster`}>
 
-                    </ul>        
+									<HeaderMobile title={ 'Inicio' } value={ 'home' } handleInputHeader={ handleInputHeader } />
+									<HeaderMobile title={ 'Nosotros' } value={ 'about' } handleInputHeader={ handleInputHeader } />
+									<HeaderMobile title={ 'Servicios' } value={ 'our-services' } handleInputHeader={ handleInputHeader } />
+									<HeaderMobile title={ 'Mercados' } value={ 'our-markets' } handleInputHeader={ handleInputHeader } />
+									<HeaderMobile title={ 'Galería' } value={ 'gallery' } handleInputHeader={ handleInputHeader } />
+			
+									<li>
+										<a href="#contact" className="my-4 inline-block rounded-full bg-sky-600 text-white font-bold px-4 py-3 hover:scale-110 hover:bg-sky-800 transition duration-500">
+											<button 
+												className='hover:scale-110 transition duration-200 hover:text-white font-bold'
+												value='home'
+												onClick={ handleInputHeader } >
+												Contáctanos
+											</button>
+										</a>
+									</li>
+								</ul>        
+						: null
+					}
+
                 </div>
 				
 			</div>

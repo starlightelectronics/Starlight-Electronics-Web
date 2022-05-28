@@ -37,7 +37,7 @@ export const FormContact = () => {
                         </map>
 
                         <figure className='my-auto w-full border-dashed border-2 rounded-xl 4xl:mb-32'>
-                            <img src={ globalpositionwhite } alt="mapa de posicion global" className="md:h-2/4 mx-auto md:mt-5 4xl:w-8/12" useMap='#globalposition' />
+                            <img src={ globalpositionwhite } alt="mapa de posicion global de starlightelectronics y controlavllc" className="md:h-2/4 mx-auto md:mt-5 4xl:w-8/12" useMap='#globalposition' />
                         </figure>
                     
                 </div>
