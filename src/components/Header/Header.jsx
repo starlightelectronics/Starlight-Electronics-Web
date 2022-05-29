@@ -95,7 +95,7 @@ export const Header = ({ setPage = 'home' }) => {
 				</div>
 
 				<div className="block lg:hidden w-1/5 lg:w-4/6">
-					<a ref={ menuToogle } href="#" className='md:hidden text-white block p-5 font-bold hover:text-yellow-500'>
+					<a ref={ menuToogle } className='md:hidden text-white block p-5 font-bold'>
 						<button onClick={ handleClickMenu }>
 							<svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="white"/></svg>
 						</button>
@@ -107,12 +107,69 @@ export const Header = ({ setPage = 'home' }) => {
 
 									<HeaderMobile title={ 'Inicio' } value={ 'home' } handleInputHeader={ handleInputHeader } />
 									<HeaderMobile title={ 'Nosotros' } value={ 'about' } handleInputHeader={ handleInputHeader } />
-									<HeaderMobile title={ 'Servicios' } value={ 'our-services' } handleInputHeader={ handleInputHeader } />
-									<HeaderMobile title={ 'Mercados' } value={ 'our-markets' } handleInputHeader={ handleInputHeader } />
+									
+
+									<div className="accordion">
+										<div className="accordion-item">
+											<h2 className="accordion-header mb-0" id="headingOne">
+												<button 
+													className='accordion-button collapsed hover:scale-110 transition duration-200 hover:text-sky-500 font-bold w-full py-4 px-5 focus:outline-none'
+													type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne" aria-expanded="false"
+													value='our-markets' >
+													Servicios
+												</button>
+											</h2>
+											<div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne">
+												<div className="accordion-body py-4 px-5 border border-y">
+												<HeaderMobile title={ 'Todos' } value={ 'our-services' } handleInputHeader={ handleInputHeader } />
+													{
+														ourServices.map( (service, index) => {
+															return (
+																<HoverHeader
+																	key={ index }
+																	title={ service.title }
+																	value={ service.title }
+																	handleInputHeader={ handleInputHeader } />
+															);
+														})
+													}
+												</div>
+											</div>
+										</div>
+
+										<div className="accordion-item">
+											<h2 className="accordion-header mb-0" id="headingTwo">
+												<button 
+													className='accordion-button collapsed hover:scale-110 transition duration-200 hover:text-sky-500 font-bold w-full py-4 px-5 focus:outline-none'
+													type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo" aria-expanded="false"
+													value='our-markets' >
+													Mercados
+												</button>
+											</h2>
+											<div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo">
+												<div className="accordion-body py-4 px-5 border">
+												<HeaderMobile title={ 'Todos' } value={ 'our-markets' } handleInputHeader={ handleInputHeader } />
+													{
+														ourMarkets.map( (market, index) => {
+															return (
+																<HoverHeader
+																	key={ index }
+																	title={ market.title }
+																	value={ market.title }
+																	handleInputHeader={ handleInputHeader } />
+															);
+														})
+													}
+												</div>
+											</div>
+										</div>
+									</div>
+
+			
 									<HeaderMobile title={ 'Galería' } value={ 'gallery' } handleInputHeader={ handleInputHeader } />
 			
 									<li>
-										<a href="#contact" className="my-4 inline-block rounded-full bg-sky-600 text-white font-bold px-4 py-3 hover:scale-110 hover:bg-sky-800 transition duration-500">
+										<a href="#contact" className="my-4 inline-block rounded-full bg-sky-700 text-white font-bold px-4 py-3 hover:scale-110 hover:bg-sky-800 transition duration-500">
 											<button 
 												className='hover:scale-110 transition duration-200 hover:text-white font-bold'
 												value='home'
@@ -124,9 +181,8 @@ export const Header = ({ setPage = 'home' }) => {
 								</ul>        
 						: null
 					}
-
                 </div>
-				
+
 			</div>
 		</header>
 		
