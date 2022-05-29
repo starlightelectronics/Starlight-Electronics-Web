@@ -14,16 +14,12 @@ export const Header = ({ setPage = 'home' }) => {
 
 
 	const handleClickMenu = () => {
-
 		setShowMenu( !showMenu );
-
 	}
 
 	const handleInputHeader = ( e ) => {
-
 		setPage( e.target.value );
 		setShowMenu( !showMenu );
-
 	}
 	
 	return (
@@ -44,7 +40,7 @@ export const Header = ({ setPage = 'home' }) => {
 					<div className='relative hover-trigger'>
 						<HoverHeader title='Servicios' value='our-services' handleInputHeader={ handleInputHeader } />
 						<div className='absolute -left-36 w-96 flex text-center rounded-lg px-4 py-4 z-10 backdrop-blur-2xl bg-white/10 hover-target animate__animated animate__fadeIn'>
-							{/* {
+							{
 								ourServices.map( (service, index) => {
 									return (
 										<HoverHeader
@@ -54,7 +50,7 @@ export const Header = ({ setPage = 'home' }) => {
 											handleInputHeader={ handleInputHeader } />
 									);
 								})
-							} */}
+							}
 						</div>
 					</div>
 

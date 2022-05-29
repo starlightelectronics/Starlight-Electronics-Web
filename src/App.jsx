@@ -1,25 +1,26 @@
 import { useEffect, useState } from 'react';
 
 import { Header } from './components/Header/Header';
-// import { SideNavbar } from './components/SideNavbar';
 import { Home } from './components/Home';
-import { Gallery } from './components/Gallery';
-import { FormContact } from './components/FormContact';
-import { Footer } from './components/Footer';
-import { OurClients } from './components/OurClients';
-import { SideSocialNetwork } from './components/SideSocialNetwork';
 import { AboutAs } from './components/About/AboutAs';
 import { OurServices } from './components/OurServices';
 import { OurMarkets } from './components/OurMarkets';
+import { Gallery } from './components/Gallery';
+import { OurClients } from './components/OurClients';
+import { FormContact } from './components/FormContact';
+import { TextInfo } from './components/About/TextInfo';
+import { Footer } from './components/Footer';
+import { ComponenteView } from './components/ComponenteView';
+import { SideSocialNetwork } from './components/SideSocialNetwork';
+// import { SideNavbar } from './components/SideNavbar';
 
 // import updateListNavarSide from './helpers/updateList.js';
 
 import { ourMarkets } from './data/ourMarkets';
+import { ourServices } from './data/ourServices';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { TextInfo } from './components/About/TextInfo';
-import { ComponenteView } from './components/ComponenteView';
 
 const App = () => {
 
@@ -27,7 +28,9 @@ const App = () => {
 
 	useEffect(() => {
 		AOS.init({ duration: 1000 });
-	}, []);
+	}, []); 
+
+	const arraySearch = ourServices.concat(ourMarkets);
 
 	return (
 		<>	
@@ -88,22 +91,22 @@ const App = () => {
 							<Footer />
 						</>
 
-				: 
-
-					ourMarkets.map(( market, index ) => {
-						if ( page == market.title ) { 
-							return (
-								<>	
-									<div className='body-uniquite'>
-										<ComponenteView key={ index } service={ market } index={ 1 } />
-									</div>
-									<SideSocialNetwork />
-									<Footer />
-								</>
-							)
-						}
-					})
-
+				:
+					arraySearch.map(( market, index ) => {
+							if ( page == market.title ) { 
+								return (
+									<div key={ index }>	
+										<div className='body-uniquite'>
+											<ComponenteView service={ market } index={ 1 } />
+										</div>
+										<SideSocialNetwork />
+										<Footer />
+									</div >
+								)
+							}
+						})
+					
+				
 
 			}
 			

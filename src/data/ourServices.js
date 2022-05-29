@@ -24,7 +24,7 @@ export const ourServices = [
         image: video,
     },
     {
-        title: 'Iluminacion',
+        title: 'Iluminación',
         description1: 'Ofrecemos soluciones integrales en iluminación que permiten tener un proyecto totalmente integrado, teniendo en cuenta las necesidades del cliente, el ángulo de apertura requerido, el plano de trabajo y temperatura buscando el equilibrio perfecto entre la iluminación natural y la instalada, para esto contamos con luces que permiten protocolos como DMX para entretenimiento, o instalaciones simples en techo, pared, suelos y decorativas, cuidando la estética y performance.',
         description2: '',
         description3: '',
