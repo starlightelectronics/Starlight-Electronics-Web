@@ -15,24 +15,24 @@ export const FormContact = () => {
                     <form className="space-y-10 mt-16 mb-8 md:w-2/4" method="POST" name="contact" data-netlify="true">
                         <input type="hidden" name="form-name" value="contact" />
                         <div>
-                            <label className="text-white block mb-2 text-xl font-bold">Nombre</label>
-                            <input type="text" id="name" name="name" className="w-full border border-input-border bg-input px-4 py-4" placeholder='Tú nombre' required />
+                            <label htmlFor='name' className="text-white block mb-2 text-xl font-bold">Nombre</label>
+                            <input type="text" id="nombre" name="name" className="w-full border border-input-border bg-input px-4 py-4" placeholder='Tú nombre' required />
                         </div>
                         <div>
-                            <label className="text-white block mb-2 text-xl font-bold">Email</label>
-                            <input type="email" id="email" name="email" className="w-full border border-input-border bg-input px-4 py-4" placeholder='example@starlight.com' required />
+                            <label htmlFor='email' className="text-white block mb-2 text-xl font-bold">Email</label>
+                            <input type="email" id="correo" name="email" className="w-full border border-input-border bg-input px-4 py-4" placeholder='example@starlight.com' required />
                         </div>
                         <div>
-                            <label className="text-white block mb-2 text-xl font-bold"> ¿Cómo podemos ayudarte? </label>
-                            <textarea type="text" id="message" name="message" className="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none" required ></textarea>
+                            <label htmlFor='mensaje' className="text-white block mb-2 text-xl font-bold"> ¿Cómo podemos ayudarte? </label>
+                            <textarea type="text" id="mensaje" name="message" className="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none" required ></textarea>
                         </div>
                         <button type='submit' className="px-6 py-2 bg-theme text-white font-bold">Enviar</button>
                     </form>
                 
                         <map name="globalposition">
-                            <area shape="rect" coords="190,310,232,350" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
-                            <area shape="rect" coords="220,370,240,420" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
-                            <area shape="rect" coords="380,290,420,330" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
+                            <area shape="rect" coords="190,310,232,350" href="https://www.controlavllc.com/" alt="positionglobal" target='_blank' />
+                            <area shape="rect" coords="220,370,240,420" href="#home" alt="positionglobal" />
+                            <area shape="rect" coords="380,290,420,330" href="#home" alt="positionglobal" />
                             <area shape="rect" coords="435,210,475,250" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
                         </map>
 
