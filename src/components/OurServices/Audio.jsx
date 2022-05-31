@@ -10,7 +10,7 @@ export const Audio = () => {
                 <legend className='px-10 text-center mb-5 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading uppercase'>AMPLIFICACIÓN Y AUDIO</legend>
                 <div className="flex flex-wrap items-center -mx-3 4xl:mx-0">
                     <div className='w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0'>
-                        <img className="mx-auto sm:max-w-sm lg:max-w-full rounded-lg hover:shadow-2xl hover:scale-110 transition duration-300" src={ audio } alt="image starlight electronics" />
+                        <img className="mx-auto sm:max-w-sm lg:max-w-full rounded-lg hover:shadow-2xl hover:scale-110 transition duration-300" src={ audio } alt="Servicio de amplificación de audio" title='imagen de audio'/>
                     </div>
                     <div className="order-1 w-full px-3 lg:w-1/2 lg:order-0">
                         <div className="w-full lg:max-w-md mx-auto 4xl:text-xl">
@@ -26,7 +26,7 @@ export const Audio = () => {
                                 industria del turismo tales como hoteles, hostales,
                                 restaurantes, iglesias, casinos, entre otros.
                             </p>
-                            <img src={ das } className="h-24" alt="logo DAS" />
+                            <img src={ das } className="h-24" alt="logo DAS" title='das audio' />
                         </div>
                     </div>
                 </div>        

@@ -27,7 +27,7 @@ export const Header = ({ setPage = 'home' }) => {
 			<div className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
 				<div className='flex justify-items-center items-center'>
 					<a href="">
-						<img src={ logo_sle_white } className="h-20" alt="logo starlight electronics" />
+						<img src={ logo_sle_white } className="h-20" alt="logo starlight electronics" title='logo starlight electronics' />
 					</a>
 				</div>
 
