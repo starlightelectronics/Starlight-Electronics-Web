@@ -25,6 +25,7 @@ export default defineConfig({
       plugins: [
         // https://github.com/vitejs/vite/issues/5308
         // add the name of your package
+        // esbuildCommonjs(['react-viewerjs']),
         esbuildCommonjs(['react-viewerjs']),
       ],
     },

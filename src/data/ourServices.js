@@ -2,10 +2,19 @@ import control from '../assets/img/gallery/img_54.webp';
 import video from '../assets/img/gallery/img_24.webp';
 import ilumination from '../assets/img/gallery/img_15.webp';
 import design from '../assets/img/gallery/img_7.webp';
-import homeautomation from '../assets/img/gallery/img_44.webp';
-import installation from '../assets/img/gallery/img_27.webp';
+import homeautomation from '../assets/img/gallery/img_60.webp';
+import installation from '../assets/img/gallery/img_57.webp';
 import screens from '../assets/img/gallery/img_53.webp';
 import television from '../assets/img/gallery/img_35.webp';
+
+import datacenter from '../assets/img/gallery/img_58.webp';
+import videowalls from '../assets/img/gallery/img_2.webp';
+import constrolacces from '../assets/img/gallery/img_59.webp';
+
+// import structurecable from '../assets/img/gallery/img_2.webp';
+// import ipphone from '../assets/img/gallery/img_2.webp';
+// import microwaverlinks from '../assets/img/gallery/img_2.webp';
+// import metalmecanica from '../assets/img/gallery/img_2.webp';
 
 
 export const ourServices = [
@@ -65,60 +74,60 @@ export const ourServices = [
         description3: '',
         image: television,
     },
+    {
+        title: 'Video walls',
+        description1: 'Diseñamos e integramos muros de vídeo LED de gran formato para teatros, edificios publicitarios y comerciales, así como espacios interiores para aplicaciones terrestres o marinas. Ofrecemos productos LED personalizados adaptados a las necesidades del proyecto y los requisitos de las agencias de arquitectos, diseñadores, contratistas y gobernantes.',
+        description2: 'Este es un servicio esencial de Control AV. Nuestros técnicos e ingenieros capacitados pueden ser enviados con poca anticipación para resolver cualquier problema que requiera que estén en el sitio.',
+        description3: 'Sin embargo, en muchos casos, el diagnóstico remoto y la intervención junto con la asistencia telefónica pueden resolver problemas sin incurrir en el costo y el tiempo de inactividad asociados con una visita in situ. También podemos proporcionar a nuestros clientes contratos de mantenimiento personalizados.',
+        image: videowalls,
+    },
+    {
+        title: 'Seguridad y control de acceso',
+        description1: 'Starlight Electronics proporciona sistemas físicos de seguridad y control de acceso que se integran perfectamente en la infraestructura de TI de una organización.',
+        description2: 'Ofrecemos sistemas integrales de seguridad a pequeña y gran escala que consisten en paneles de control con interfaz de usuario a medida, sensores de movimiento, cámaras de seguridad con cable o inalámbricas. Gracias a los procesadores de control que manejamos, podemos integrar muchos sistemas entre ellos los controles de acceso del personal en edificios, clubes, oficinas y establecimientos que tienen derecho de admisión e ingresos controlados, manejamos marcas y sistemas muy competentes que permiten el control de accesos ágiles y eficientes. ',
+        description3: '',
+        image: constrolacces,
+    },
     // {
-    //     title: '',
-    //     description1: '',
+    //     title: 'Cableado estructurado',
+    //     description1: 'Nuestro conocimiento y experiencia nos permite apoyarte para desplegar arquitecturas de redes de datos que soporte el plan de transformación digital que requiere el modelo de negocio de tu compañía.',
+    //     description2: 'Tenemos la capacidad de realizar la instalación en cobre o fibra óptica FTTX, de acuerdo al presupuesto y las necesidades integrales que tienen nuestros clientes, por lo cual nuestro modelo de servicio incluye el diseño, implementación, soporte de las redes o ampliaciones, lo que nos permite ser el aliado de negocios perfecto y que su compañía necesita',
+    //     description3: '',
+    //     image: ,
+    // },
+    {
+        title: 'Datacenter',
+        description1: 'Contamos con los aliados y los especialistas para la estructuración de la arquitectura física de centros de datos de alto Impacto, en los cuales se puedan soportar los servicios informáticos en todos los niveles, aseguramos la continuidad operativa y de conectividad mediante la redundancia de los sistemas, la seguridad de los datos y las operaciones en la red consolidando el rendimiento de su estructura TI, manejamos fibras de las mejores marcas y con los aliados estratégicos para su conexión',
+        description2: 'Ofrecemos servicios de escalabilidad así como mantenimientos preventivos y correctivos de estos sistemas.',
+        description3: '',
+        image: datacenter,
+    },
+    // {
+    //     title: 'Telefonía IP',
+    //     description1: 'Nos aseguramos que tus comunicaciones sean efectivas, económicas y de la mejor calidad, para ello empleamos marcas reconocidas como Cisco o QSC, los cuales se integran muy bien con los sistemas para salas de conferencias, auditorios, empresas y oficinas que necesiten la integración de sus comunicaciones a bajo costo y poco mantenimiento.',
     //     description2: '',
     //     description3: '',
-    //     image: audio,
+    //     image: ,
     // },
     // {
-    //     title: '',
-    //     description1: '',
+    //     title: 'Enlaces microondas',
+    //     description1: 'Contamos con la capacidad y los especialistas capacitados para conectar tus sedes o las instalaciones a través de enlaces microondas con sistemas altamente escalable y modular en la cual convergen todo tipo de tráfico, capacidad y frecuencias. A la fecha hemos desplegado enlaces en innumerables redes alrededor del mundo con excelencia comprobada.',
     //     description2: '',
     //     description3: '',
-    //     image: audio,
+    //     image: ,
     // },
     // {
-    //     title: '',
-    //     description1: '',
+    //     title: 'Soldadura y metalmecánica',
+    //     description1: 'El corte láser, la ingeniería, el punzonado, el troquelado, la soldadura, el recubrimiento de metales, el fresado y taladrado, son algunas de nuestras especialidades, las cuales llevamos a cabo bajo los más altos estándares de calidad. ofrecer productos y servicios metalmecánicos a personas o empresas pertenecientes, al sector industrial, comercial y de servicios entre otros. Trabajamos con personal especializado, excelentes insumos, técnicas, equipos idóneos y a la vanguardia que nos permiten garantizar calidad y cumplimiento en nuestros productos y servicios.',
     //     description2: '',
     //     description3: '',
-    //     image: audio,
+    //     image: ,
     // },
     // {
-    //     title: '',
-    //     description1: '',
+    //     title: 'Sistemas inteligentes de estacionamiento',
+    //     description1: 'Trabajamos en optimizar los estacionamientos inteligentes, este tipo de proyectos se puede desarrollar de varias formas',
     //     description2: '',
     //     description3: '',
-    //     image: audio,
-    // },
-    // {
-    //     title: '',
-    //     description1: '',
-    //     description2: '',
-    //     description3: '',
-    //     image: audio,
-    // },
-    // {
-    //     title: '',
-    //     description1: '',
-    //     description2: '',
-    //     description3: '',
-    //     image: audio,
-    // },
-    // {
-    //     title: '',
-    //     description1: '',
-    //     description2: '',
-    //     description3: '',
-    //     image: audio,
-    // },
-    // {
-    //     title: '',
-    //     description1: '',
-    //     description2: '',
-    //     description3: '',
-    //     image: audio,
+    //     image: ,
     // },
 ];
