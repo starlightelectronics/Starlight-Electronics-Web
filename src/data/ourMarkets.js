@@ -1,6 +1,6 @@
 import cruceros from '../assets/img/gallery/img_40.webp';
 import comercial from '../assets/img/gallery/img_23.webp';
-import yates from '../assets/img/gallery/img_40.webp';
+import yates from '../assets/img/gallery/img_61.webp';
 
 
 export const ourMarkets = [
