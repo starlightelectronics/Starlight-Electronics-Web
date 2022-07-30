@@ -1,23 +1,34 @@
-import control from '../assets/img/gallery/img_54.webp';
+import audio from '../assets/img/gallery/img_41.webp';
+import control from '../assets/img/gallery/img_64.webp';
 import video from '../assets/img/gallery/img_24.webp';
-import ilumination from '../assets/img/gallery/img_15.webp';
+import ilumination from '../assets/img/gallery/img_31.webp';
 import design from '../assets/img/gallery/img_7.webp';
 import homeautomation from '../assets/img/gallery/img_60.webp';
 import installation from '../assets/img/gallery/img_57.webp';
 import screens from '../assets/img/gallery/img_53.webp';
 import television from '../assets/img/gallery/img_35.webp';
 
-import datacenter from '../assets/img/gallery/img_58.webp';
+import datacenter from '../assets/img/gallery/img_62.webp';
 import videowalls from '../assets/img/gallery/img_2.webp';
 import constrolacces from '../assets/img/gallery/img_59.webp';
 
-// import structurecable from '../assets/img/gallery/img_2.webp';
-// import ipphone from '../assets/img/gallery/img_2.webp';
-// import microwaverlinks from '../assets/img/gallery/img_2.webp';
-// import metalmecanica from '../assets/img/gallery/img_2.webp';
+import structurecable from '../assets/img/gallery/img_62.webp';
+import microwaverlinks from '../assets/img/gallery/img_63.webp';
+import metalmecanica from '../assets/img/gallery/img_66.webp';
+import parking from '../assets/img/gallery/img_65.webp';
 
+import das from '../assets/img/content/das.png';
+
+// import ipphone from '../assets/img/gallery/img_2.webp';
 
 export const ourServices = [
+    {
+        title: 'Amplificación de audio',
+        description1: 'Ofrecemos soluciones completas de sonido ambiental, sistemas de audio profesional envolvente y de alta calidad adaptables a pequeños y grandes espacios que requieran fidelidad y eficiencia, con el fin de entregar música o mensajes a través de sistemas de alertas de emergencia para la evacuación en: edificios, clínicas, hospitales, centros de entrenamiento y deportes, night clubs, centros culturales, spas, instituciones educativas, industria del turismo tales como hoteles, hostales, restaurantes, iglesias, casinos, entre otros.',
+        description2: das,
+        description3: '',
+        image: audio,
+    },
     {
         title: 'Control y automatización',
         description1: 'Proveemos a nuestros clientes, sistemas de automatización y control para espacios como auditorios, teatros, centros de convenciones, salas de juntas y conferencias, aulas de clases, entretenimiento u hogares.',
@@ -88,13 +99,13 @@ export const ourServices = [
         description3: '',
         image: constrolacces,
     },
-    // {
-    //     title: 'Cableado estructurado',
-    //     description1: 'Nuestro conocimiento y experiencia nos permite apoyarte para desplegar arquitecturas de redes de datos que soporte el plan de transformación digital que requiere el modelo de negocio de tu compañía.',
-    //     description2: 'Tenemos la capacidad de realizar la instalación en cobre o fibra óptica FTTX, de acuerdo al presupuesto y las necesidades integrales que tienen nuestros clientes, por lo cual nuestro modelo de servicio incluye el diseño, implementación, soporte de las redes o ampliaciones, lo que nos permite ser el aliado de negocios perfecto y que su compañía necesita',
-    //     description3: '',
-    //     image: ,
-    // },
+    {
+        title: 'Cableado estructurado',
+        description1: 'Nuestro conocimiento y experiencia nos permite apoyarte para desplegar arquitecturas de redes de datos que soporte el plan de transformación digital que requiere el modelo de negocio de tu compañía.',
+        description2: 'Tenemos la capacidad de realizar la instalación en cobre o fibra óptica FTTX, de acuerdo al presupuesto y las necesidades integrales que tienen nuestros clientes, por lo cual nuestro modelo de servicio incluye el diseño, implementación, soporte de las redes o ampliaciones, lo que nos permite ser el aliado de negocios perfecto y que su compañía necesita',
+        description3: '',
+        image: structurecable,
+    },
     {
         title: 'Datacenter',
         description1: 'Contamos con los aliados y los especialistas para la estructuración de la arquitectura física de centros de datos de alto Impacto, en los cuales se puedan soportar los servicios informáticos en todos los niveles, aseguramos la continuidad operativa y de conectividad mediante la redundancia de los sistemas, la seguridad de los datos y las operaciones en la red consolidando el rendimiento de su estructura TI, manejamos fibras de las mejores marcas y con los aliados estratégicos para su conexión',
@@ -109,25 +120,25 @@ export const ourServices = [
     //     description3: '',
     //     image: ,
     // },
-    // {
-    //     title: 'Enlaces microondas',
-    //     description1: 'Contamos con la capacidad y los especialistas capacitados para conectar tus sedes o las instalaciones a través de enlaces microondas con sistemas altamente escalable y modular en la cual convergen todo tipo de tráfico, capacidad y frecuencias. A la fecha hemos desplegado enlaces en innumerables redes alrededor del mundo con excelencia comprobada.',
-    //     description2: '',
-    //     description3: '',
-    //     image: ,
-    // },
-    // {
-    //     title: 'Soldadura y metalmecánica',
-    //     description1: 'El corte láser, la ingeniería, el punzonado, el troquelado, la soldadura, el recubrimiento de metales, el fresado y taladrado, son algunas de nuestras especialidades, las cuales llevamos a cabo bajo los más altos estándares de calidad. ofrecer productos y servicios metalmecánicos a personas o empresas pertenecientes, al sector industrial, comercial y de servicios entre otros. Trabajamos con personal especializado, excelentes insumos, técnicas, equipos idóneos y a la vanguardia que nos permiten garantizar calidad y cumplimiento en nuestros productos y servicios.',
-    //     description2: '',
-    //     description3: '',
-    //     image: ,
-    // },
-    // {
-    //     title: 'Sistemas inteligentes de estacionamiento',
-    //     description1: 'Trabajamos en optimizar los estacionamientos inteligentes, este tipo de proyectos se puede desarrollar de varias formas',
-    //     description2: '',
-    //     description3: '',
-    //     image: ,
-    // },
+    {
+        title: 'Enlaces microondas',
+        description1: 'Contamos con la capacidad y los especialistas capacitados para conectar tus sedes o las instalaciones a través de enlaces microondas con sistemas altamente escalable y modular en la cual convergen todo tipo de tráfico, capacidad y frecuencias. A la fecha hemos desplegado enlaces en innumerables redes alrededor del mundo con excelencia comprobada.',
+        description2: '',
+        description3: '',
+        image: microwaverlinks,
+    },
+    {
+        title: 'Soldadura y metalmecánica',
+        description1: 'El corte láser, la ingeniería, el punzonado, el troquelado, la soldadura, el recubrimiento de metales, el fresado y taladrado, son algunas de nuestras especialidades, las cuales llevamos a cabo bajo los más altos estándares de calidad. ofrecer productos y servicios metalmecánicos a personas o empresas pertenecientes, al sector industrial, comercial y de servicios entre otros. Trabajamos con personal especializado, excelentes insumos, técnicas, equipos idóneos y a la vanguardia que nos permiten garantizar calidad y cumplimiento en nuestros productos y servicios.',
+        description2: '',
+        description3: '',
+        image: metalmecanica,
+    },
+    {
+        title: 'Sistemas inteligentes de estacionamiento',
+        description1: 'Trabajamos en optimizar los estacionamientos inteligentes, este tipo de proyectos se puede desarrollar de varias formas',
+        description2: '',
+        description3: '',
+        image: parking,
+    },
 ];

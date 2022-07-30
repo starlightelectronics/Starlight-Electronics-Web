@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponenteView } from './ComponenteView';
-import { Audio } from './OurServices/Audio';
 import { ourServices } from '../data/ourServices';
 
 export const OurServices = () => {
@@ -12,11 +11,10 @@ export const OurServices = () => {
                     <button type='submit' className="px-6 py-2 bg-theme text-white font-bold rounded-sm">Descargar Folleto</button>
                 </a>
             </div>
-            <Audio />
             {
                 ourServices.map(( service, index ) => {
                     return (
-                        <ComponenteView key={ index } service={ service } index={ index } />
+                        <ComponenteView key={ index } service={ service } index={ index + 1 } />
                     )
                 })
             }

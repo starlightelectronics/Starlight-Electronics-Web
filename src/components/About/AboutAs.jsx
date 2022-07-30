@@ -1,6 +1,8 @@
 import React from 'react'
 
-import logo_sle_blue from '../../assets/img/content/logo-sle-blue.png'
+import logo_sle_blue from '../../assets/img/content/logo-sle-white.png'
+import mision from '../../assets/img/gallery/img_49.webp'
+import vision from '../../assets/img/gallery/img_27.webp'
 
 export const AboutAs = () => {
     return (
@@ -59,8 +61,8 @@ export const AboutAs = () => {
             <section className="w-full pt-7 pb-7 md:pt-20 md:pb-24">
                 <div className="box-border flex flex-col items-center content-center px-8 mx-auto leading-6 text-black border-0 border-gray-300 border-solid md:flex-row max-w-7xl lg:px-16">
 
-                    <div data-aos="fade-up" className="box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10">
-                        <img src="https://cdn.devdojo.com/images/december2020/productivity.png" className="p-2 pl-6 pr-5 xl:pl-16 xl:pr-20 " />
+                    <div data-aos="fade-up" className="box-border relative w-full max-w-md px-4 mt-5 mb-4 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-32">
+                        <img src={ mision } className="rounded-md border lg:max-h-80" />
                     </div>
 
                     <div className="box-border order-first w-full text-white border-solid md:w-1/2 md:pl-10 md:order-none">
@@ -107,14 +109,14 @@ export const AboutAs = () => {
                     </div>
 
                     <div className="box-border relative w-full max-w-md px-4 mt-10 mb-4 text-center bg-no-repeat bg-contain border-solid md:mt-0 md:max-w-none lg:mb-0 md:w-1/2">
-                        <img data-aos="fade-up" src="https://cdn.devdojo.com/images/december2020/settings.png" className="pl-4 sm:pr-10 xl:pl-10 lg:pr-32" />
+                        <img data-aos="fade-up" src={ vision } className="rounded-md border lg:max-h-80" />
                     </div>
                 </div>
 
                 <div className='max-w-screen-xl mx-auto sm:px-20 md:px-32 lg:px-16'>
                     <section className="py-12 sm:py-16 mt-16">
                         <div className="max-w-7xl px-10 mx-auto sm:text-center">
-                            <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl mt-3 text-center uppercase">Valores corpotarivos</h2>
+                            <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl mt-3 text-center uppercase">Valores corporativos</h2>
                             {/* <p className="mt-4 text-gray-500 text-base sm:text-xl lg:text-2xl">We've built integrations with some of your favorite services. </p> */}
                             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-10 my-12 sm:my-16 md:text-lg">
                                 <div className="rounded-lg py-10 flex flex-col items-center justify-center hover:shadow-2xl hover:bg-slate-800 hover:scale-110 transition duration-300">

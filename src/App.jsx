@@ -34,7 +34,6 @@ const App = () => {
 
 	return (
 		<>	
-
 			<Header setPage={ setPage } />
 			
 			{
@@ -92,12 +91,12 @@ const App = () => {
 						</>
 
 				:
-					arraySearch.map(( market, index ) => {
-							if ( page == market.title ) { 
+					arraySearch.map(( item, index ) => {
+							if ( page == item.title ) { 
 								return (
 									<div key={ index }>	
 										<div className='body-uniquite'>
-											<ComponenteView service={ market } index={ 1 } />
+											<ComponenteView service={ item } index={ 1 } />
 										</div>
 										<SideSocialNetwork />
 										<Footer />
@@ -105,7 +104,6 @@ const App = () => {
 								)
 							}
 						})
-					
 				
 
 			}

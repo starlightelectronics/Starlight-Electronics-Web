@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import { Carousel } from './Carousel';
-
-// import logoPSE from '../assets/img/icons/logo-pse.png';
 import { Carusel } from './Carusel';
 
 export const Home = () => {
@@ -33,7 +30,6 @@ export const Home = () => {
 
             <div className='my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20'>
                 <Carusel />
-                {/* <Carousel /> */}
             </div>
 
             
