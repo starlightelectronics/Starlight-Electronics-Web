@@ -12,14 +12,12 @@ import datacenter from '../assets/img/gallery/img_62.webp';
 import videowalls from '../assets/img/gallery/img_2.webp';
 import constrolacces from '../assets/img/gallery/img_59.webp';
 
-import structurecable from '../assets/img/gallery/img_62.webp';
+// import structurecable from '../assets/img/gallery/img_62.webp';
 import microwaverlinks from '../assets/img/gallery/img_63.webp';
 import metalmecanica from '../assets/img/gallery/img_66.webp';
 import parking from '../assets/img/gallery/img_65.webp';
 
 import das from '../assets/img/content/das.png';
-
-// import ipphone from '../assets/img/gallery/img_2.webp';
 
 export const ourServices = [
     {
@@ -99,13 +97,13 @@ export const ourServices = [
         description3: '',
         image: constrolacces,
     },
-    {
-        title: 'Cableado estructurado',
-        description1: 'Nuestro conocimiento y experiencia nos permite apoyarte para desplegar arquitecturas de redes de datos que soporte el plan de transformación digital que requiere el modelo de negocio de tu compañía.',
-        description2: 'Tenemos la capacidad de realizar la instalación en cobre o fibra óptica FTTX, de acuerdo al presupuesto y las necesidades integrales que tienen nuestros clientes, por lo cual nuestro modelo de servicio incluye el diseño, implementación, soporte de las redes o ampliaciones, lo que nos permite ser el aliado de negocios perfecto y que su compañía necesita',
-        description3: '',
-        image: structurecable,
-    },
+    // {
+    //     title: 'Cableado estructurado',
+    //     description1: 'Nuestro conocimiento y experiencia nos permite apoyarte para desplegar arquitecturas de redes de datos que soporte el plan de transformación digital que requiere el modelo de negocio de tu compañía.',
+    //     description2: 'Tenemos la capacidad de realizar la instalación en cobre o fibra óptica FTTX, de acuerdo al presupuesto y las necesidades integrales que tienen nuestros clientes, por lo cual nuestro modelo de servicio incluye el diseño, implementación, soporte de las redes o ampliaciones, lo que nos permite ser el aliado de negocios perfecto y que su compañía necesita',
+    //     description3: '',
+    //     image: structurecable,
+    // },
     {
         title: 'Datacenter',
         description1: 'Contamos con los aliados y los especialistas para la estructuración de la arquitectura física de centros de datos de alto Impacto, en los cuales se puedan soportar los servicios informáticos en todos los niveles, aseguramos la continuidad operativa y de conectividad mediante la redundancia de los sistemas, la seguridad de los datos y las operaciones en la red consolidando el rendimiento de su estructura TI, manejamos fibras de las mejores marcas y con los aliados estratégicos para su conexión',
