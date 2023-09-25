@@ -95,16 +95,13 @@ export const AboutAs = () => {
                             Nuestra <span className='text-sky-600'> visión </span>
                         </h3>
                         <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-10 lg:text-lg text-justify">
-                            En el 2023, Starlight Electronics SAS
-                            será una empresa reconocida en la
-                            industria del entretenimiento y
-                            automatización a nivel internacional y
-                            en el 2025 a nivel regional, gracias a
-                            su experiencia, efectividad,
-                            cumplimento y mejoramiento de sus
-                            procesos permitiendo afianzar las
-                            relaciones con los clientes y demás
-                            partes interesadas.
+                            Starlight Electronics SAS para el año 2025 será un referente
+Internacional en la Industria del entretenimiento y automatización en
+el sector naval, reconocidos por la calidad de los servicios y soluciones 
+técnicas aportadas, apoyados de un equipo humano capacitado,
+soportados con certificaciones que aseguren la calidad y seguridad
+de los proyectos. A nivel Nacional aportar la experiencia en pro de 
+afianzar y ampliar las relaciones comerciales.
                         </p>
                     </div>
 
