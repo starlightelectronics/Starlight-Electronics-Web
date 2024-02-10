@@ -62,7 +62,7 @@ export const FormContact = () => {
                                     <svg className="w-8 h-8 text-blue-600 mb-6 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
                                 </a>
                                 <h6 className="font-medium text-white">Bototá - Colombia</h6>
-                                <h6 className="font-medium text-white">Calle 95 N° 13-09 Of. 201-202</h6>
+                                <h6 className="font-medium text-white">Carrera 10 N° 96-79 Of. 507</h6>
                             </div>
                             <div className="mb-6 md:mb-0 text-center mx-auto">
                                 <a target='_blank' href="https://wa.me/message/S5CMKVFJ7PDSM1">
