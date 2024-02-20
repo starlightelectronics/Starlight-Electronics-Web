@@ -17,7 +17,7 @@ export const SideSocialNetwork = () => {
             <a
               className='flex justify-between items-center w-full mr-3 ml-3 text-gray-300'
               target="_blank"
-              href='https://wa.me/message/S5CMKVFJ7PDSM1'
+              href='https://wa.me/573173759475'
             >
              <FaWhatsapp size={30} /> Whatsapp 
             </a>
