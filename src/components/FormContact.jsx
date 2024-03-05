@@ -15,7 +15,7 @@ export const FormContact = () => {
                     <form className="space-y-10 mt-16 mb-8 md:w-2/4" method="POST" name="contact" data-netlify="true">
                         <input type="hidden" name="form-name" value="contact" />
                         <div>
-                            <label htmlFor='name' className="text-white block mb-2 text-xl font-bold">Nombre</label>
+                            <label htmlFor='names' className="text-white block mb-2 text-xl font-bold">Nombre</label>
                             <input type="text" id="nombre" name="name" className="w-full border border-input-border bg-input px-4 py-4" placeholder='Tú nombre' required />
                         </div>
                         <div>
