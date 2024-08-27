@@ -55,7 +55,7 @@ export const Footer = () => {
               <img className='ml-3' src={avixamember} alt="Avixamember con starlightelectronics" title='Avixamember con Starlight Electronics' style={{ maxWidth: '100%' }} />
             </figure>
             <figure className='w-36'>
-              <img className='ml-3' src={ISO-9001-2015} alt="Incontec con starlightelectronics" title='Incontec con Starlight Electronics' style={{ maxWidth: '100%' }} />
+              <img className='ml-3' src={incontec} alt="Incontec con starlightelectronics" title='Incontec con Starlight Electronics' style={{ maxWidth: '100%' }} />
             </figure>
           </div>
         </div>
