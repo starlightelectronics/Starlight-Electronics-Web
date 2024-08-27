@@ -1,6 +1,6 @@
 import React from 'react'
 
-import logo_sle_blue from '../../assets/img/content/1logo-sle-white.png'
+import SLE-ISO from '../../assets/img/content/SLE-ISO90012015.png'
 import mision from '../../assets/img/gallery/img_49.webp'
 import vision from '../../assets/img/gallery/img_27.webp'
 
@@ -20,7 +20,7 @@ export const AboutAs = () => {
                         </div>
 
                         <div className="relative top-0 right-0 h-24 mt-12 md:mt-0 md:h-10 mx-auto">
-                            <img src={ logo_sle_blue } className="object-cover mt-3 mr-5 h-30 lg:h-32 md:my-auto md:mr-0" alt='logo starlight electronics' />
+                            <img src={ SLE-ISO } className="object-cover mt-3 mr-5 h-30 lg:h-32 md:my-auto md:mr-0" alt='logo starlight electronics' />
                         </div>
                     </div>
 
