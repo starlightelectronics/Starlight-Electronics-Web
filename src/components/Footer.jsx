@@ -1,5 +1,4 @@
-You said;
-centrar la imagen iso9001
+
 
 import React from 'react';
 import {
