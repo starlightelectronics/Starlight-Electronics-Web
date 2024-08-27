@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa';
 
 import avixamember from '../assets/img/content/3avixamember.png';
-import incontec from '../assets/img/content/ISO90012015.png';
+import ISO9001 from '../assets/img/content/ISO90012015.png';
 
 export const Footer = () => {
   return (
@@ -55,7 +55,7 @@ export const Footer = () => {
               <img className='ml-3' src={avixamember} alt="Avixamember con starlightelectronics" title='Avixamember con Starlight Electronics' style={{ maxWidth: '100%' }} />
             </figure>
             <figure className='w-36'>
-              <img className='ml-3' src={ISO90012015} alt="Incontec con starlightelectronics" title='Incontec con Starlight Electronics' style={{ maxWidth: '100%' }} />
+              <img className='ml-3' src={ISO9001} alt="Incontec con starlightelectronics" title='Incontec con Starlight Electronics' style={{ maxWidth: '100%' }} />
             </figure>
           </div>
         </div>
