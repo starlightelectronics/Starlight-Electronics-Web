@@ -18,7 +18,7 @@ export const Footer = () => {
           <p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2022 - Todos los derechos reservados</p>
           <div className="flex items-center mt-4 space-x-5 sm:ml-auto sm:mt-0">
             <a
-              href="https://api.whatsapp.com/message/S5CMKVFJ7PDSM1?autoload=1&app_absent=0"
+              href="https://wa.me/573173759475"
               className="text-gray-400 hover:text-gray-500"
               target="_blank"
             >
@@ -26,7 +26,7 @@ export const Footer = () => {
               <FaWhatsapp size={30} />
             </a>
             <a
-              href="https://www.facebook.com/StarlightElectronics"
+              href="https://www.facebook.com/people/Starlight-Electronics-SAS/61564271327740/?mibextid=LQQJ4d&rdid=SxbKmK42KqpeAEWG&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252FRhdx78MpajhnHD6B%252F%253Fmibextid%253DLQQJ4d&checkpoint_src=any "
               className="text-gray-400 hover:text-gray-500"
               target="_blank"
             >
@@ -42,7 +42,7 @@ export const Footer = () => {
               <FaInstagram size={30} />
             </a>
             <a
-              href="https://www.linkedin.com/in/starlight-electronics-s-a-s-421a2a190/"
+              href="https://www.linkedin.com/company/104921825/admin/dashboard/"
               className="text-gray-400 hover:text-gray-500"
               target="_blank"
             >
