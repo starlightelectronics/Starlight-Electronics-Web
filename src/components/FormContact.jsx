@@ -54,8 +54,8 @@ export const FormContact = () => {
                                 <a target='_blank' href="https://www.google.es/maps/place/Starlight+Electronics/@4.2718596,-73.4873487,17z/data=!3m1!4b1!4m5!3m4!1s0x8e3fd594303ed19f:0x4d0f853180d82792!8m2!3d4.2718543!4d-73.48516?hl=es">
                                     <svg className="w-8 h-8 text-blue-600 mb-6 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
                                 </a>
-                                <h6 className="font-medium text-white">Cumaral - Meta - Colombia</h6>
-                                <h6 className="font-medium text-white">Carrera 17 #10-11.</h6>
+                                <h6 className="font-medium text-white">Barrio Buque, Villavicencio-Meta</h6>
+                                <h6 className="font-medium text-white">Carrera 43c 16 -27</h6>
                             </div>
                             <div className="mb-12 lg:mb-0 text-center mx-auto">
                                 <a target='_blank' href="https://www.google.es/maps/place/STARLIGHT+ELECTRONICS/@4.6799303,-74.0502013,17z/data=!3m1!4b1!4m5!3m4!1s0x8e3f9b25f09168f7:0xeca1a3376e61515b!8m2!3d4.679925!4d-74.0480126?hl=es">
