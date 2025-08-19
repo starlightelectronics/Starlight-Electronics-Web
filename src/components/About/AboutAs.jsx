@@ -118,6 +118,125 @@ export const AboutAs = () => {
                     </div>
                 </div>
 
+                
+{/* =================================================================
+    SECCIÓN POLÍTICA DE CALIDAD
+================================================================= */}
+<section className="py-12 sm:py-16 bg-slate-900/50 rounded-lg">
+    <div className="max-w-7xl px-10 mx-auto text-center">
+        
+        {/* Título de la sección */}
+        <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl mt-3 uppercase">
+            Política de Calidad <span className="text-sky-600">2025</span>
+        </h2>
+
+        {/* Párrafo introductorio */}
+        <p className="mt-8 text-lg text-gray-400 max-w-3xl mx-auto">
+            En Starlight Electronics S.A.S., respondemos a las necesidades específicas de nuestros clientes, a través de los siguientes compromisos:
+        </p>
+
+        {/* Lista de compromisos */}
+        <div className="mt-12 grid gap-x-8 gap-y-10 md:grid-cols-2 text-left">
+            
+            {/* Compromiso 1 */}
+            <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                    <svg className="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <p className="text-gray-300">
+                    Aumentar el nivel de satisfacción de las partes interesadas mediante el cumplimiento de las condiciones pactadas y los requisitos aplicables.
+                </p>
+            </div>
+
+            {/* Compromiso 2 */}
+            <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                    <svg className="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <p className="text-gray-300">
+                    Brindar soluciones a través de un equipo humano competente y comprometido.
+                </p>
+            </div>
+
+            {/* Compromiso 3 */}
+            <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                    <svg className="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <p className="text-gray-300">
+                    Garantizar la confiabilidad en los servicios prestados mediante una logística oportuna y eficaz.
+                </p>
+            </div>
+
+            {/* Compromiso 4 */}
+            <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                    <svg className="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <p className="text-gray-300">
+                    Mantener la oferta de herramientas tecnológicas con el apoyo comercial de aliados estratégicos.
+                </p>
+            </div>
+
+            {/* Compromiso 5 */}
+            <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                    <svg className="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <p className="text-gray-300">
+                    Asegurar la disponibilidad de información clara, veraz y oportuna para la toma de decisiones.
+                </p>
+            </div>
+
+            {/* Compromiso 6 */}
+            <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                    <svg className="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <p className="text-gray-300">
+                    Gestionar con eficiencia las finanzas para asegurar la rentabilidad, sostenibilidad y crecimiento.
+                </p>
+            </div>
+            
+            {/* Compromiso 7 */}
+            <div className="flex items-start space-x-4 md:col-span-2 md:w-1/2 md:mx-auto">
+                 <div className="flex-shrink-0">
+                    <svg className="h-7 w-7 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <p className="text-gray-300">
+                    Incrementar la mejora, aprendizaje e innovación en los procesos del sistema de gestión de la calidad.
+                </p>
+            </div>
+
+        </div>
+
+        {/* Párrafo de cierre */}
+        <p className="mt-16 text-md text-gray-500 italic max-w-4xl mx-auto border-t border-gray-700 pt-8">
+            "La Alta Dirección lidera el sistema de gestión de la calidad, promueve el enfoque al cliente, asegura la comunicación de esta política a todos los niveles de la organización y que se encuentre disponible para nuestras partes interesadas con el fin de asegurar su entendimiento y aplicación."
+        </p>
+    </div>
+</section>
+
+
+
+
+
+
+                
                 <div className='max-w-screen-xl mx-auto sm:px-20 md:px-32 lg:px-16'>
                     <section className="py-12 sm:py-16 mt-16">
                         <div className="max-w-7xl px-10 mx-auto sm:text-center">
