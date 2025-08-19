@@ -71,7 +71,7 @@ export const AboutAs = () => {
                             Nuestra <span className='text-sky-600'> misión </span>
                         </h3>
                         <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
-                            Starlight Electronics SAS es una empresa
+                            En Starlight Electronics SAS es una empresa
                             dedicada al <span className='text-white'>sector tecnológico, con
                             énfasis en el mercado del entretenimiento
                             y automatización,</span>  para el sector turístico,
