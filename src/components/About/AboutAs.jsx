@@ -122,7 +122,7 @@ export const AboutAs = () => {
 {/* =================================================================
     SECCIÓN POLÍTICA DE CALIDAD
 ================================================================= */}
-<section className="py-12 sm:py-16 bg-slate-900/50 rounded-lg">
+    <section className="py-12 sm:py-16">
     <div className="max-w-7xl px-10 mx-auto text-center">
         
         {/* Título de la sección */}
