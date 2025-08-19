@@ -69,23 +69,29 @@ export const AboutAs = () => {
                     <div className="box-border order-first w-full text-white border-solid md:w-1/2 md:pl-10 md:order-none">
                         <h3 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-4xl md:text-2xl">
                             Nuestra <span className='text-sky-600'> misión </span>
-                        </h3>
-                        <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
-                            En Starlight Electronics SAS es una empresa
-                            dedicada al <span className='text-white'>sector tecnológico, con
-                            énfasis en el mercado del entretenimiento
-                            y automatización,</span>  para el sector turístico,
-                            comercial y residencial, orientada al
-                            mejoramiento continuo.
-                        </p>
-                        <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
-                            Starlight Electronics SAS cuenta con la
-                            capacidad de <span className='text-white'> planificar, diseñar, ejecutar
-                            y dar soporte </span> a proyectos en cualquier
-                            parte del mundo implementando una
-                            gran variedad de tecnologías de acuerdo
-                            con las necesidades del cliente.
-                        </p>
+                       </h3>
+
+<p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
+  En Starlight Electronics S.A.S. brindamos 
+  <span className="text-white"> soluciones para los sectores naval, comercial y residencial </span> 
+  tales como 
+  <span className="text-white"> integración e instalación de equipos y sistemas de audio, video, redes estructuradas, iluminación artística y automatización, </span> 
+  así como 
+  <span className="text-white"> demolición, preparación e instalación de pisos y superficies.</span>
+</p>
+
+<p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
+  Estamos en capacidad de 
+  <span className="text-white"> planificar, diseñar, ejecutar y dar soporte </span> 
+  a proyectos 
+  <span className="text-white"> en cualquier parte del mundo, </span> 
+  implementando 
+  <span className="text-white"> diversas tecnologías </span> 
+  acorde a las 
+  <span className="text-white"> necesidades del cliente </span> 
+  y orientados siempre al 
+  <span className="text-white"> mejoramiento continuo.</span>
+</p>
                     </div>
 
                 </div>
