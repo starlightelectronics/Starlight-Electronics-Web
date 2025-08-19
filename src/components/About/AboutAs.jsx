@@ -70,47 +70,50 @@ export const AboutAs = () => {
                         <h3 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-4xl md:text-2xl">
                             Nuestra <span className='text-sky-600'> misión </span>
                        </h3>
+                        <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
+                         En Starlight Electronics S.A.S. brindamos 
+                         <span className="text-white"> soluciones para los sectores naval, comercial y residencial </span> 
+                         tales como 
+                        <span className="text-white"> integración e instalación de equipos y sistemas de audio, video, redes estructuradas, iluminación artística y automatización, </span> 
+                          así como 
+                       <span className="text-white"> demolición, preparación e instalación de pisos y superficies.</span>
+                        </p>
 
-<p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
-  En Starlight Electronics S.A.S. brindamos 
-  <span className="text-white"> soluciones para los sectores naval, comercial y residencial </span> 
-  tales como 
-  <span className="text-white"> integración e instalación de equipos y sistemas de audio, video, redes estructuradas, iluminación artística y automatización, </span> 
-  así como 
-  <span className="text-white"> demolición, preparación e instalación de pisos y superficies.</span>
-</p>
-
-<p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
-  Estamos en capacidad de 
-  <span className="text-white"> planificar, diseñar, ejecutar y dar soporte </span> 
-  a proyectos 
-  <span className="text-white"> en cualquier parte del mundo, </span> 
-  implementando 
-  <span className="text-white"> diversas tecnologías </span> 
-  acorde a las 
-  <span className="text-white"> necesidades del cliente </span> 
-  y orientados siempre al 
-  <span className="text-white"> mejoramiento continuo.</span>
-</p>
+                      <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg text-justify">
+                      Estamos en capacidad de 
+                       <span className="text-white"> planificar, diseñar, ejecutar y dar soporte </span> 
+                       a proyectos 
+                       <span className="text-white"> en cualquier parte del mundo, </span> 
+                       implementando 
+                       <span className="text-white"> diversas tecnologías </span> 
+                       acorde a las 
+                       <span className="text-white"> necesidades del cliente </span> 
+                       y orientados siempre al 
+                     <span className="text-white"> mejoramiento continuo.</span>
+                     </p>
                     </div>
 
                 </div>
-                <div className="box-border flex flex-col items-center content-center px-8 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
+               <div className="box-border flex flex-col items-center content-center px-8 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
 
-                    <div className="box-border w-full text-white border-solid md:w-1/2 md:pl-6 xl:pl-32">
-                        <h3 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-4xl md:text-2xl">
-                            Nuestra <span className='text-sky-600'> visión </span>
-                        </h3>
-                        <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-10 lg:text-lg text-justify">
-                         Starlight Electronics SAS para el año 2025 será un referente
-Internacional en la Industria del entretenimiento y automatización en
-el sector naval, reconocidos por la calidad de los servicios y soluciones 
-técnicas aportadas, apoyados de un equipo humano capacitado,
-soportados con certificaciones que aseguren la calidad y seguridad
-de los proyectos. A nivel Nacional aportar la experiencia en pro de 
-afianzar y ampliar las relaciones comerciales.
-                        </p>
-                    </div>
+  <div className="box-border w-full text-white border-solid md:w-1/2 md:pl-6 xl:pl-32">
+    <h3 className="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-4xl md:text-2xl">
+      Nuestra <span className="text-sky-600">visión</span>
+    </h3>
+    <p className="pt-4 pb-8 m-0 leading-7 text-gray-400 border-0 border-gray-300 sm:pr-10 lg:text-lg text-justify">
+      <span className="text-white">Para el año 2029</span> seremos un 
+      <span className="text-white"> referente internacional </span> en el 
+      <span className="text-white"> sector naval, comercial y residencial, </span> 
+      reconocidos por la 
+      <span className="text-white"> calidad de nuestros servicios </span> y 
+      <span className="text-white"> soluciones tecnológicas en entretenimiento y automatización, </span> 
+      apoyados en un 
+      <span className="text-white"> equipo humano competente </span> y 
+      <span className="text-white"> certificaciones que soportan la gestión de los proyectos.</span>
+    </p>
+  </div>
+</div>
+
 
                     <div className="box-border relative w-full max-w-md px-4 mt-10 mb-4 text-center bg-no-repeat bg-contain border-solid md:mt-0 md:max-w-none lg:mb-0 md:w-1/2">
                         <img data-aos="fade-up" src={ vision } className="rounded-md border lg:max-h-80" />
