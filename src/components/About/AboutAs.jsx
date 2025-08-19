@@ -112,10 +112,8 @@ export const AboutAs = () => {
       <span className="text-white"> certificaciones que soportan la gestión de los proyectos.</span>
     </p>
   </div>
-</div>
 
-
-                    <div className="box-border relative w-full max-w-md px-4 mt-10 mb-4 text-center bg-no-repeat bg-contain border-solid md:mt-0 md:max-w-none lg:mb-0 md:w-1/2">
+                   <div className="box-border relative w-full max-w-md px-4 mt-10 mb-4 text-center bg-no-repeat bg-contain border-solid md:mt-0 md:max-w-none lg:mb-0 md:w-1/2">
                         <img data-aos="fade-up" src={ vision } className="rounded-md border lg:max-h-80" />
                     </div>
                 </div>
