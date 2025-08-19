@@ -30,7 +30,7 @@ export const AboutAs = () => {
                         
                         <h3 className="text-gray-400 xl:text-xl ">
                             Somos una compañía <span className='text-white font-bold'>colombiana</span> dedicada a la integración de sistemas de Audio, Video e Iluminación
-                            fundada en el 2016, con un respaldo de 07 años de trayectoria en el extranjero, ya que somos una de las
+                            fundada en el 2016, con el respaldo de más de 7 años de trayectoria en el extranjero, ya que somos una de las
                             cuatro empresas que conforman el Grupo <span className='text-white font-bold'>Control AV</span>, con su casa matriz en <span className='text-white font-bold'>Miami - USA</span>.
                         </h3>
                     
