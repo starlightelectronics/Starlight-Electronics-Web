@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa';
 
 import avixamember from '../assets/img/content/3avixamember.png';
-import ISO9001 from '../assets/img/content/ISO90012015.png';
+import ISO9001 from '../assets/img/content/Bureau veritas.png';
 
 export const Footer = () => {
   return (
