@@ -1,5 +1,5 @@
 import img_1 from '../assets/img/gallery/img_1.webp'
-import img_2 from '../assets/img/gallery/img_2.webp'
+import img_2 from '../assets/img/gallery/img_2p.webp'
 import img_3 from '../assets/img/gallery/img_3.webp'
 import img_4 from '../assets/img/gallery/img_4.webp'
 import img_5 from '../assets/img/gallery/img_5.webp'
