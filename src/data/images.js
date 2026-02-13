@@ -63,4 +63,5 @@ export const images = [
     img_31, img_32, img_33, img_34, img_35, img_36, img_37, img_38, img_39, img_40,
     img_41, img_42, img_43, img_44, img_45, img_46, img_47, img_48, img_49, img_50,
     img_51, img_52, img_53, img_54, img_55, img_56
+    
 ]
