@@ -36,25 +36,28 @@ export const Header = ({ setPage = 'home' }) => {
 	}
 
 	const handleServicesClick = (e) => {
-		e.preventDefault();
-		setShowMarketsDropdown(false);
-		setShowContactDropdown(false);
-		setShowServicesDropdown( !showServicesDropdown );
-	}
+    e.preventDefault();
+    setShowMarketsDropdown(false);
+    setShowContactDropdown(false);
+    setActivePage('');
+    setShowServicesDropdown( !showServicesDropdown );
+}
 
 	const handleMarketsClick = (e) => {
-		e.preventDefault();
-		setShowServicesDropdown(false);
-		setShowContactDropdown(false);
-		setShowMarketsDropdown( !showMarketsDropdown );
-	}
+    e.preventDefault();
+    setShowServicesDropdown(false);
+    setShowContactDropdown(false);
+    setActivePage('');
+    setShowMarketsDropdown( !showMarketsDropdown );
+}
 
-	const handleContactClick = (e) => {
-		e.preventDefault();
-		setShowServicesDropdown(false);
-		setShowMarketsDropdown(false);
-		setShowContactDropdown( !showContactDropdown );
-	}
+const handleContactClick = (e) => {
+    e.preventDefault();
+    setShowServicesDropdown(false);
+    setShowMarketsDropdown(false);
+    setActivePage('');
+    setShowContactDropdown( !showContactDropdown );
+}
 
 	const handleContactOptionClick = (option) => {
 		closeAllDropdowns();
