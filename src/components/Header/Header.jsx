@@ -252,24 +252,22 @@ const handleContactClick = (e) => {
 								<HeaderMobile title={ 'Galería' } value={ 'gallery' } handleInputHeader={ handleInputHeader } />
 			
 								<li>
-									<a href="#contact" className="my-2 inline-block rounded-full bg-sky-700 text-white font-bold px-4 py-3 hover:scale-110 hover:bg-sky-800 transition duration-500">
-										<button 
-											className='hover:scale-110 transition duration-200 hover:text-white font-bold'
-											value='home'
-											onClick={ handleInputHeader } >
-											Contáctanos
-										</button>
-									</a>
-								</li>
+    <button 
+        className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
+        value='home'
+        onClick={ handleInputHeader } >
+        Contáctanos
+    </button>
+</li>
 
-								<li className="pb-4">
-									<button
-										className="my-2 inline-block rounded-full border-2 border-sky-600 text-sky-300 font-bold px-4 py-3 hover:scale-110 hover:bg-sky-800 hover:text-white transition duration-500"
-										onClick={() => { setShowMenu(false); setShowPQRS(true); }}
-									>
-										PQRS
-									</button>
-								</li>
+<li className="pb-4">
+    <button
+        className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
+        onClick={() => { setShowMenu(false); setShowPQRS(true); }}
+    >
+        PQRS
+    </button>
+</li>
 
 							</ul>        
 						: null
