@@ -36,21 +36,21 @@ export const FormContact = () => {
                         <area shape="rect" coords="435,210,475,250" href="https://www.controlavllc.com/" alt="positionglobal" target="_blank" />
                     </map>
 
-                    <figure className='my-auto w-full border-dashed border-2 rounded-xl 4xl:mb-32 relative'>
-                        <img src={ globalpositionwhite } alt="mapa de posicion global de starlightelectronics y controlavllc" className="md:h-2/4 mx-auto md:mt-5 4xl:w-8/12" useMap='#globalposition' />
-                        <div className="absolute bottom-4 left-4 text-white text-xs md:text-sm">
-                            <ul className="space-y-1">
-                                <li className="font-bold">• EUROPA</li>
-                                <li className="ml-4">○ Totana, España</li>
-                                <li className="ml-4">○ Turku, Finlandia</li>
-                                <li className="font-bold mt-1">• AMERICA DEL NORTE</li>
-                                <li className="ml-4">○ Miami, Florida</li>
-                                <li className="font-bold mt-1">• AMERICA DEL SUR</li>
-                                <li className="ml-4">○ Bogotá D.C, Colombia</li>
-                                <li className="ml-4">○ Villavicencio, Meta - Colombia</li>
-                            </ul>
-                        </div>
-                    </figure>
+                   <figure className='my-auto w-full border-dashed border-2 rounded-xl 4xl:mb-32'>
+    <img src={ globalpositionwhite } alt="mapa de posicion global de starlightelectronics y controlavllc" className="md:h-2/4 mx-auto md:mt-5 4xl:w-8/12" useMap='#globalposition' />
+    <div className="text-white text-xs md:text-sm px-4 pb-4">
+        <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-1">
+            <li className="font-bold col-span-2 md:col-span-3 mt-2">• EUROPA</li>
+            <li className="ml-4">○ Totana, España</li>
+            <li className="ml-4">○ Turku, Finlandia</li>
+            <li className="font-bold col-span-2 md:col-span-3 mt-1">• AMERICA DEL NORTE</li>
+            <li className="ml-4">○ Miami, Florida</li>
+            <li className="font-bold col-span-2 md:col-span-3 mt-1">• AMERICA DEL SUR</li>
+            <li className="ml-4">○ Bogotá D.C, Colombia</li>
+            <li className="ml-4">○ Villavicencio, Meta - Colombia</li>
+        </ul>
+    </div>
+</figure>
                     
                 </div>
 
