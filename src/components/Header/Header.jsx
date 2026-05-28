@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 import logo_sle_white from '../../assets/img/content/logo-sle-white.png';
 import { HoverHeader } from './HoverHeader';
@@ -17,8 +17,17 @@ export const Header = ({ setPage = 'home' }) => {
 	const [ showMobileMarkets, setShowMobileMarkets ] = useState( false );
 	const [ showPQRS, setShowPQRS ] = useState( false );
 	const [ activePage, setActivePage ] = useState( 'home' );
+	const [ scrolled, setScrolled ] = useState( false );
 	const menuMobile = useRef( null );
 	const menuToogle = useRef( null );
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setScrolled( window.scrollY > 50 );
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 
 	const closeAllDropdowns = () => {
 		setShowContactDropdown(false);
@@ -76,11 +85,11 @@ export const Header = ({ setPage = 'home' }) => {
 
 	return (
 		<>
-		<header className="py-6">
+		<header className={`py-4 fixed top-0 left-0 w-full z-40 transition-all duration-300 ${scrolled ? 'bg-[#060d1f]/95 backdrop-blur-md shadow-lg shadow-black/30 py-2' : 'bg-transparent'}`}>
 			<div className="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
 				<div className='flex justify-items-center items-center'>
 					<a href="/">
-						<img src={ logo_sle_white } className="h-28" alt="logo starlight electronics" title='logo starlight electronics' />
+						<img src={ logo_sle_white } className={`transition-all duration-300 ${scrolled ? 'h-16' : 'h-28'}`} alt="logo starlight electronics" title='logo starlight electronics' />
 					</a>
 				</div>
 
@@ -201,7 +210,7 @@ export const Header = ({ setPage = 'home' }) => {
 							<HeaderMobile title='Inicio' value='home' handleInputHeader={ handleInputHeader } />
 							<HeaderMobile title='Nosotros' value='about' handleInputHeader={ handleInputHeader } />
 
-							{/* Servicios mobile accordion */}
+							{/* Servicios mobile */}
 							<li>
 								<button
 									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4 flex items-center justify-center gap-2'
@@ -222,7 +231,7 @@ export const Header = ({ setPage = 'home' }) => {
 								)}
 							</li>
 
-							{/* Mercados mobile accordion */}
+							{/* Mercados mobile */}
 							<li>
 								<button
 									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4 flex items-center justify-center gap-2'
@@ -245,7 +254,6 @@ export const Header = ({ setPage = 'home' }) => {
 
 							<HeaderMobile title='Galería' value='gallery' handleInputHeader={ handleInputHeader } />
 
-							{/* Contáctanos mobile */}
 							<li>
 								<button
 									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
@@ -255,7 +263,6 @@ export const Header = ({ setPage = 'home' }) => {
 								</button>
 							</li>
 
-							{/* PQRS mobile */}
 							<li className="pb-4">
 								<button
 									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
@@ -271,6 +278,9 @@ export const Header = ({ setPage = 'home' }) => {
 
 			</div>
 		</header>
+
+		{/* Spacer para compensar el header fixed */}
+		<div className="h-28" />
 
 		{ showPQRS && <PQRSModal onClose={ () => setShowPQRS(false) } /> }
 		</>
