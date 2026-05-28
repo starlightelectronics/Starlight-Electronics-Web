@@ -7,7 +7,7 @@ import logo_sle_white from '../assets/img/content/logo-sle-white.png';
 export const Footer = () => {
   return (
     <footer className="bg-[#060d1f] border-t border-sky-900/30 mt-16 text-white">
-      <div className="container mx-auto px-8 md:px-14 lg:px-48 py-14">
+      <div className="container mx-auto px-8 md:px-14 lg:px-48 py-10">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14 max-w-5xl mx-auto">
 
