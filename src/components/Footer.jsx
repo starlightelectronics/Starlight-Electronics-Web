@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaWhatsapp, FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import avixamember from '../assets/img/content/avixamember.png';
 import ISO9001 from '../assets/img/content/SLE_ISO90012015.png';
 import logo_sle_white from '../assets/img/content/logo-sle-white.png';
@@ -9,110 +9,80 @@ export const Footer = () => {
     <footer className="bg-[#060d1f] border-t border-sky-900/30 mt-16 text-white">
       <div className="container mx-auto px-8 md:px-14 lg:px-24 py-14">
 
-        {/* Bloque ubicaciones y contacto */}
+        {/* Fila superior — contacto */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-14 pb-14 border-b border-sky-900/30">
-          <div className="text-center group">
+          <div className="text-center">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.google.es/maps/place/STARLIGHT+ELECTRONICS/@4.6799303,-74.0502013,17z">
+              <div className="w-11 h-11 rounded-full bg-sky-900/30 border border-sky-800/40 flex items-center justify-center mx-auto mb-3 hover:bg-sky-800/50 transition duration-200">
+                <svg className="w-5 h-5 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
+              </div>
+            </a>
+            <p className="text-white font-semibold text-sm">Bogotá, Colombia</p>
+            <p className="text-gray-500 text-xs mt-1">Calle 93B N° 11A-44 Of. 403</p>
+          </div>
+
+          <div className="text-center">
             <a target="_blank" rel="noopener noreferrer" href="https://www.google.es/maps/place/Starlight+Electronics/@4.2718596,-73.4873487,17z">
-              <div className="w-12 h-12 rounded-full bg-sky-900/40 border border-sky-700/40 flex items-center justify-center mx-auto mb-4 group-hover:bg-sky-800/60 transition duration-300">
+              <div className="w-11 h-11 rounded-full bg-sky-900/30 border border-sky-800/40 flex items-center justify-center mx-auto mb-3 hover:bg-sky-800/50 transition duration-200">
                 <svg className="w-5 h-5 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
               </div>
             </a>
             <p className="text-white font-semibold text-sm">Villavicencio, Meta</p>
-            <p className="text-gray-400 text-xs mt-1">Carrera 43C N° 16-27</p>
+            <p className="text-gray-500 text-xs mt-1">Carrera 43C N° 16-27</p>
           </div>
 
-          <div className="text-center group">
-            <a target="_blank" rel="noopener noreferrer" href="https://www.google.es/maps/place/STARLIGHT+ELECTRONICS/@4.6799303,-74.0502013,17z">
-              <div className="w-12 h-12 rounded-full bg-sky-900/40 border border-sky-700/40 flex items-center justify-center mx-auto mb-4 group-hover:bg-sky-800/60 transition duration-300">
-                <svg className="w-5 h-5 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817 80 80 35.817 80 80 80z"/></svg>
-              </div>
-            </a>
-            <p className="text-white font-semibold text-sm">Bogotá, Colombia</p>
-            <p className="text-gray-400 text-xs mt-1">Calle 93B N° 11A-44 Of. 403</p>
-          </div>
-
-          <div className="text-center group">
+          <div className="text-center">
             <a target="_blank" rel="noopener noreferrer" href="https://wa.me/573173759475">
-              <div className="w-12 h-12 rounded-full bg-sky-900/40 border border-sky-700/40 flex items-center justify-center mx-auto mb-4 group-hover:bg-sky-800/60 transition duration-300">
+              <div className="w-11 h-11 rounded-full bg-sky-900/30 border border-sky-800/40 flex items-center justify-center mx-auto mb-3 hover:bg-sky-800/50 transition duration-200">
                 <svg className="w-5 h-5 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
               </div>
             </a>
-            <p className="text-white font-semibold text-sm">+ 57 317 375 9475</p>
-            <p className="text-gray-400 text-xs mt-1">+ 57 316 690 5860</p>
+            <p className="text-white font-semibold text-sm">+57 317 375 9475</p>
+            <p className="text-gray-500 text-xs mt-1">+57 316 690 5860</p>
           </div>
 
-          <div className="text-center group">
+          <div className="text-center">
             <a href="mailto:ventas@starlightelectronics.com">
-              <div className="w-12 h-12 rounded-full bg-sky-900/40 border border-sky-700/40 flex items-center justify-center mx-auto mb-4 group-hover:bg-sky-800/60 transition duration-300">
+              <div className="w-11 h-11 rounded-full bg-sky-900/30 border border-sky-800/40 flex items-center justify-center mx-auto mb-3 hover:bg-sky-800/50 transition duration-200">
                 <svg className="w-5 h-5 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
               </div>
             </a>
             <p className="text-white font-semibold text-sm">ventas@</p>
-            <p className="text-gray-400 text-xs mt-1">starlightelectronics.com</p>
+            <p className="text-gray-500 text-xs mt-1">starlightelectronics.com</p>
           </div>
         </div>
 
         {/* Fila principal */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-14 items-start">
 
-          {/* Logo + redes */}
+          {/* Logo + descripción + redes */}
           <div>
             <img src={logo_sle_white} alt="Starlight Electronics" className="h-20 mb-5" />
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Automatización y soluciones de control en audio, video e iluminación para mejorar la calidad de vida.
+            <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
+              Automatización y soluciones de control en audio, video e iluminación para mejorar la calidad de vida a través de los avances tecnológicos.
             </p>
-            <div className="flex items-center gap-4">
-              <a href="https://wa.me/573173759475" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/40 transition duration-200"><FaWhatsapp size={16} /></a>
-              <a href="https://www.facebook.com/people/Starlight-Electronics-SAS/61564271327740/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-sky-400 hover:border-sky-400/40 transition duration-200"><FaFacebook size={16} /></a>
-              <a href="https://www.instagram.com/starlightelectronics/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-pink-400 hover:border-pink-400/40 transition duration-200"><FaInstagram size={16} /></a>
-              <a href="https://www.linkedin.com/company/104921825/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-sky-500 hover:border-sky-500/40 transition duration-200"><FaLinkedin size={16} /></a>
+            <div className="flex items-center gap-3">
+              <a href="https://www.facebook.com/people/Starlight-Electronics-SAS/61564271327740/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-sky-400 hover:border-sky-400/40 transition duration-200">
+                <FaFacebook size={15} />
+              </a>
+              <a href="https://www.instagram.com/starlightelectronics/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-pink-400 hover:border-pink-400/40 transition duration-200">
+                <FaInstagram size={15} />
+              </a>
+              <a href="https://www.linkedin.com/company/104921825/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-sky-500 hover:border-sky-500/40 transition duration-200">
+                <FaLinkedin size={15} />
+              </a>
             </div>
-          </div>
-
-          {/* Presencia global */}
-          <div>
-            <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6">Presencia Global</h4>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-gray-300 text-sm">
-                <span className="text-lg">🇨🇴</span>
-                <div>
-                  <p className="font-medium text-white">Colombia</p>
-                  <p className="text-gray-500 text-xs">Bogotá · Villavicencio</p>
-                </div>
-              </li>
-              <li className="flex items-center gap-3 text-gray-300 text-sm">
-                <span className="text-lg">🇺🇸</span>
-                <div>
-                  <p className="font-medium text-white">Estados Unidos</p>
-                  <p className="text-gray-500 text-xs">Miami, Florida</p>
-                </div>
-              </li>
-              <li className="flex items-center gap-3 text-gray-300 text-sm">
-                <span className="text-lg">🇪🇸</span>
-                <div>
-                  <p className="font-medium text-white">España</p>
-                  <p className="text-gray-500 text-xs">Totana, Murcia</p>
-                </div>
-              </li>
-              <li className="flex items-center gap-3 text-gray-300 text-sm">
-                <span className="text-lg">🇫🇮</span>
-                <div>
-                  <p className="font-medium text-white">Finlandia</p>
-                  <p className="text-gray-500 text-xs">Turku</p>
-                </div>
-              </li>
-            </ul>
           </div>
 
           {/* Certificaciones */}
           <div>
             <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6">Certificaciones</h4>
-            <div className="flex flex-col gap-6">
-              <div className="bg-white rounded-xl p-4 flex items-center justify-center" style={{maxWidth: '180px'}}>
-                <img src={ISO9001} alt="ISO 9001:2015" className="h-12 object-contain" />
+            <div className="flex flex-wrap gap-4">
+              <div className="bg-white rounded-xl p-4 flex items-center justify-center" style={{width: '160px', height: '80px'}}>
+                <img src={ISO9001} alt="ISO 9001:2015" className="max-h-14 max-w-full object-contain" />
               </div>
-              <div className="bg-white rounded-xl p-4 flex items-center justify-center" style={{maxWidth: '180px'}}>
-                <img src={avixamember} alt="Avixa Member" className="h-12 object-contain" />
+              <div className="bg-white rounded-xl p-4 flex items-center justify-center" style={{width: '160px', height: '80px'}}>
+                <img src={avixamember} alt="Avixa Member" className="max-h-14 max-w-full object-contain" />
               </div>
             </div>
           </div>
@@ -122,7 +92,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-sky-900/30 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-gray-500 text-sm">© 2026 Starlight Electronics SAS — Todos los derechos reservados</p>
-          <p className="text-gray-600 text-xs">Bogotá · Miami · Europa</p>
+          <p className="text-gray-600 text-xs">Bogotá · Villavicencio · Miami · Europa</p>
         </div>
 
       </div>
