@@ -13,6 +13,8 @@ export const Header = ({ setPage = 'home' }) => {
 	const [ showContactDropdown, setShowContactDropdown ] = useState( false );
 	const [ showServicesDropdown, setShowServicesDropdown ] = useState( false );
 	const [ showMarketsDropdown, setShowMarketsDropdown ] = useState( false );
+	const [ showMobileServices, setShowMobileServices ] = useState( false );
+	const [ showMobileMarkets, setShowMobileMarkets ] = useState( false );
 	const [ showPQRS, setShowPQRS ] = useState( false );
 	const [ activePage, setActivePage ] = useState( 'home' );
 	const menuMobile = useRef( null );
@@ -36,28 +38,28 @@ export const Header = ({ setPage = 'home' }) => {
 	}
 
 	const handleServicesClick = (e) => {
-    e.preventDefault();
-    setShowMarketsDropdown(false);
-    setShowContactDropdown(false);
-    setActivePage('');
-    setShowServicesDropdown( !showServicesDropdown );
-}
+		e.preventDefault();
+		setShowMarketsDropdown(false);
+		setShowContactDropdown(false);
+		setActivePage('');
+		setShowServicesDropdown( !showServicesDropdown );
+	}
 
 	const handleMarketsClick = (e) => {
-    e.preventDefault();
-    setShowServicesDropdown(false);
-    setShowContactDropdown(false);
-    setActivePage('');
-    setShowMarketsDropdown( !showMarketsDropdown );
-}
+		e.preventDefault();
+		setShowServicesDropdown(false);
+		setShowContactDropdown(false);
+		setActivePage('');
+		setShowMarketsDropdown( !showMarketsDropdown );
+	}
 
-const handleContactClick = (e) => {
-    e.preventDefault();
-    setShowServicesDropdown(false);
-    setShowMarketsDropdown(false);
-    setActivePage('');
-    setShowContactDropdown( !showContactDropdown );
-}
+	const handleContactClick = (e) => {
+		e.preventDefault();
+		setShowServicesDropdown(false);
+		setShowMarketsDropdown(false);
+		setActivePage('');
+		setShowContactDropdown( !showContactDropdown );
+	}
 
 	const handleContactOptionClick = (option) => {
 		closeAllDropdowns();
@@ -94,14 +96,10 @@ const handleContactClick = (e) => {
 							onClick={ handleServicesClick }
 						>
 							Servicios
-							<svg
-								className={`w-4 h-4 transition-transform duration-200 ${showServicesDropdown ? 'rotate-180' : ''}`}
-								fill="none" stroke="currentColor" viewBox="0 0 24 24"
-							>
+							<svg className={`w-4 h-4 transition-transform duration-200 ${showServicesDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
 							</svg>
 						</button>
-
 						{ showServicesDropdown && (
 							<div className="absolute left-0 mt-2 w-72 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 py-1">
 								{ ourServices.map( (service, index) => (
@@ -127,14 +125,10 @@ const handleContactClick = (e) => {
 							onClick={ handleMarketsClick }
 						>
 							Mercados
-							<svg
-								className={`w-4 h-4 transition-transform duration-200 ${showMarketsDropdown ? 'rotate-180' : ''}`}
-								fill="none" stroke="currentColor" viewBox="0 0 24 24"
-							>
+							<svg className={`w-4 h-4 transition-transform duration-200 ${showMarketsDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
 							</svg>
 						</button>
-
 						{ showMarketsDropdown && (
 							<div className="absolute left-0 mt-2 w-48 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 py-1">
 								{ ourMarkets.map( (market, index) => (
@@ -162,14 +156,10 @@ const handleContactClick = (e) => {
 							onClick={ handleContactClick }
 						>
 							Contáctanos
-							<svg
-								className={`w-4 h-4 transition-transform duration-200 ${showContactDropdown ? 'rotate-180' : ''}`}
-								fill="none" stroke="currentColor" viewBox="0 0 24 24"
-							>
+							<svg className={`w-4 h-4 transition-transform duration-200 ${showContactDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
 							</svg>
 						</button>
-
 						{ showContactDropdown && (
 							<div className="absolute right-0 mt-2 w-52 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50">
 								<button
@@ -197,6 +187,7 @@ const handleContactClick = (e) => {
 
 				</div>
 
+				{/* MENÚ MOBILE */}
 				<div className="block lg:hidden w-1/5 lg:w-4/6">
 					<div ref={ menuToogle } className='md:hidden text-white block p-5 font-bold'>
 						<button onClick={ handleClickMenu }>
@@ -204,75 +195,79 @@ const handleContactClick = (e) => {
 						</button>
 					</div>
 
-					{
-						showMenu ? 
-							<ul ref={ menuMobile } className={`mt-8 mobile_links w-full absolute z-50 left-0 text-center backdrop-blur-xl bg-white/2 animate__animated ${ showMenu ? 'animate__flipInX' : 'animate__flipOutX' } animate__faster`}>
+					{ showMenu && (
+						<ul ref={ menuMobile } className="mt-8 mobile_links w-full absolute z-50 left-0 text-center backdrop-blur-xl bg-white/2 animate__animated animate__flipInX animate__faster">
 
-								<HeaderMobile title={ 'Inicio' } value={ 'home' } handleInputHeader={ handleInputHeader } />
-								<HeaderMobile title={ 'Nosotros' } value={ 'about' } handleInputHeader={ handleInputHeader } />
+							<HeaderMobile title='Inicio' value='home' handleInputHeader={ handleInputHeader } />
+							<HeaderMobile title='Nosotros' value='about' handleInputHeader={ handleInputHeader } />
 
-								<div className="accordion">
-									<div className="accordion-item">
-										<h2 className="accordion-header mb-0" id="headingOne">
-											<button 
-												className='accordion-button collapsed hover:scale-110 transition duration-200 hover:text-sky-500 font-bold w-full py-4 px-5 focus:outline-none'
-												type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne" aria-expanded="false">
-												Servicios
-											</button>
-										</h2>
-										<div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne">
-											<div className="accordion-body py-4 px-5 border border-y">
-												<HeaderMobile title={ 'Todos' } value={ 'our-services' } handleInputHeader={ handleInputHeader } />
-												{ ourServices.map( (service, index) => (
-													<HeaderMobile key={ index } title={ service.title } value={ service.title } handleInputHeader={ handleInputHeader } />
-												))}
-											</div>
-										</div>
+							{/* Servicios mobile accordion */}
+							<li>
+								<button
+									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4 flex items-center justify-center gap-2'
+									onClick={() => { setShowMobileServices(!showMobileServices); setShowMobileMarkets(false); }}
+								>
+									Servicios
+									<svg className={`w-4 h-4 transition-transform duration-200 ${showMobileServices ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+									</svg>
+								</button>
+								{ showMobileServices && (
+									<div className="bg-white/5 py-2 border-t border-b border-sky-800/30">
+										<HeaderMobile title='Todos' value='our-services' handleInputHeader={ handleInputHeader } />
+										{ ourServices.map( (service, index) => (
+											<HeaderMobile key={ index } title={ service.title } value={ service.title } handleInputHeader={ handleInputHeader } />
+										))}
 									</div>
+								)}
+							</li>
 
-									<div className="accordion-item">
-										<h2 className="accordion-header mb-0" id="headingTwo">
-											<button 
-												className='accordion-button collapsed hover:scale-110 transition duration-200 hover:text-sky-500 font-bold w-full py-4 px-5 focus:outline-none'
-												type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo" aria-expanded="false">
-												Mercados
-											</button>
-										</h2>
-										<div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo">
-											<div className="accordion-body py-4 px-5 border">
-												<HeaderMobile title={ 'Todos' } value={ 'our-markets' } handleInputHeader={ handleInputHeader } />
-												{ ourMarkets.map( (market, index) => (
-													<HeaderMobile key={ index } title={ market.title } value={ market.title } handleInputHeader={ handleInputHeader } />
-												))}
-											</div>
-										</div>
+							{/* Mercados mobile accordion */}
+							<li>
+								<button
+									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4 flex items-center justify-center gap-2'
+									onClick={() => { setShowMobileMarkets(!showMobileMarkets); setShowMobileServices(false); }}
+								>
+									Mercados
+									<svg className={`w-4 h-4 transition-transform duration-200 ${showMobileMarkets ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+									</svg>
+								</button>
+								{ showMobileMarkets && (
+									<div className="bg-white/5 py-2 border-t border-b border-sky-800/30">
+										<HeaderMobile title='Todos' value='our-markets' handleInputHeader={ handleInputHeader } />
+										{ ourMarkets.map( (market, index) => (
+											<HeaderMobile key={ index } title={ market.title } value={ market.title } handleInputHeader={ handleInputHeader } />
+										))}
 									</div>
-								</div>
+								)}
+							</li>
 
-								<HeaderMobile title={ 'Galería' } value={ 'gallery' } handleInputHeader={ handleInputHeader } />
-			
-								<li>
-    <button 
-        className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
-        value='home'
-        onClick={ handleInputHeader } >
-        Contáctanos
-    </button>
-</li>
+							<HeaderMobile title='Galería' value='gallery' handleInputHeader={ handleInputHeader } />
 
-<li className="pb-4">
-    <button
-        className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
-        onClick={() => { setShowMenu(false); setShowPQRS(true); }}
-    >
-        PQRS
-    </button>
-</li>
+							{/* Contáctanos mobile */}
+							<li>
+								<button
+									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
+									onClick={() => { handleInputHeader({ target: { value: 'home' } }); setTimeout(() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }}
+								>
+									Contáctanos
+								</button>
+							</li>
 
-							</ul>        
-						: null
-					}
-                </div>
+							{/* PQRS mobile */}
+							<li className="pb-4">
+								<button
+									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
+									onClick={() => { setShowMenu(false); setShowPQRS(true); }}
+								>
+									PQRS
+								</button>
+							</li>
+
+						</ul>
+					)}
+				</div>
 
 			</div>
 		</header>
