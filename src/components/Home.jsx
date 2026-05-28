@@ -8,7 +8,7 @@ const phrases = [
     'Integración de Sistemas',
 ];
 
-export const Home = () => {
+export const Home = ({ setPage }) => {
 
     const [ currentPhrase, setCurrentPhrase ] = useState(0);
     const [ displayed, setDisplayed ] = useState('');
@@ -74,7 +74,7 @@ export const Home = () => {
 
                     <button
                         className="w-full sm:w-auto px-8 py-4 border border-sky-600/60 hover:border-sky-400 text-sky-300 hover:text-white font-bold flex items-center justify-center gap-3 hover:scale-105 transition duration-300 rounded-sm hover:bg-sky-900/30"
-                        onClick={() => document.getElementById('info')?.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={() => setPage('our-services')}
                     >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
