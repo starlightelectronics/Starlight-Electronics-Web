@@ -11,9 +11,17 @@ export const Header = ({ setPage = 'home' }) => {
 
 	const [ showMenu, setShowMenu ] = useState( false );
 	const [ showContactDropdown, setShowContactDropdown ] = useState( false );
+	const [ showServicesDropdown, setShowServicesDropdown ] = useState( false );
+	const [ showMarketsDropdown, setShowMarketsDropdown ] = useState( false );
 	const [ showPQRS, setShowPQRS ] = useState( false );
 	const menuMobile = useRef( null );
 	const menuToogle = useRef( null );
+
+	const closeAllDropdowns = () => {
+		setShowContactDropdown(false);
+		setShowServicesDropdown(false);
+		setShowMarketsDropdown(false);
+	}
 
 	const handleClickMenu = () => {
 		setShowMenu( !showMenu );
@@ -22,15 +30,32 @@ export const Header = ({ setPage = 'home' }) => {
 	const handleInputHeader = ( e ) => {
 		setPage( e.target.value );
 		setShowMenu( false );
+		closeAllDropdowns();
+	}
+
+	const handleServicesClick = (e) => {
+		e.preventDefault();
+		setShowMarketsDropdown(false);
+		setShowContactDropdown(false);
+		setShowServicesDropdown( !showServicesDropdown );
+	}
+
+	const handleMarketsClick = (e) => {
+		e.preventDefault();
+		setShowServicesDropdown(false);
+		setShowContactDropdown(false);
+		setShowMarketsDropdown( !showMarketsDropdown );
 	}
 
 	const handleContactClick = (e) => {
 		e.preventDefault();
+		setShowServicesDropdown(false);
+		setShowMarketsDropdown(false);
 		setShowContactDropdown( !showContactDropdown );
 	}
 
 	const handleContactOptionClick = (option) => {
-		setShowContactDropdown(false);
+		closeAllDropdowns();
 		if (option === 'contacto') {
 			setPage('home');
 			setTimeout(() => {
@@ -41,10 +66,6 @@ export const Header = ({ setPage = 'home' }) => {
 		}
 	}
 
-	const handleBlur = () => {
-		setTimeout(() => setShowContactDropdown(false), 150);
-	}
-	
 	return (
 		<>
 		<header className="py-6">
@@ -60,46 +81,72 @@ export const Header = ({ setPage = 'home' }) => {
 					<HoverHeader title='Inicio' value='home' handleInputHeader={ handleInputHeader } />			
 					<HoverHeader title='Nosotros' value='about' handleInputHeader={ handleInputHeader } />
 
-					<div className='relative hover-trigger'>
-						<HoverHeader title='Servicios' value='our-services' handleInputHeader={ handleInputHeader } />
-						<div className='absolute -left-36 w-96 flex text-center rounded-lg px-4 py-4 z-10 backdrop-blur-2xl bg-white/10 hover-target animate__animated animate__fadeIn'>
-							{
-								ourServices.map( (service, index) => {
-									return (
-										<HoverHeader
-											key={ index }
-											title={ service.title }
-											value={ service.title }
-											handleInputHeader={ handleInputHeader } />
-									);
-								})
-							}
-						</div>
+					{/* Servicios dropdown clic */}
+					<div className="relative">
+						<button
+							className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 flex items-center gap-2 ${showServicesDropdown ? 'bg-theme' : ''}`}
+							onClick={ handleServicesClick }
+						>
+							Servicios
+							<svg
+								className={`w-4 h-4 transition-transform duration-200 ${showServicesDropdown ? 'rotate-180' : ''}`}
+								fill="none" stroke="currentColor" viewBox="0 0 24 24"
+							>
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+							</svg>
+						</button>
+
+						{ showServicesDropdown && (
+							<div className="absolute left-0 mt-2 w-72 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 animate__animated animate__fadeIn animate__faster py-2">
+								{ ourServices.map( (service, index) => (
+									<button
+										key={ index }
+										className="w-full text-left px-5 py-2 text-white font-semibold hover:bg-sky-800/50 hover:text-sky-300 transition duration-200"
+										onMouseDown={() => { handleInputHeader({ target: { value: service.title } }); }}
+									>
+										{ service.title }
+									</button>
+								))}
+							</div>
+						)}
 					</div>
 
-					<div className='relative hover-trigger'>
-						<HoverHeader title='Mercados' value='our-markets' handleInputHeader={ handleInputHeader } />
-						<div className='absolute -left-1/4 text-center rounded-lg backdrop-blur-2xl bg-white/10 px-4 py-4 z-10 hover-target animate__animated animate__fadeIn'>
-							{
-								ourMarkets.map( (market, index) => {
-									return (
-										<HoverHeader
-											key={ index }
-											title={ market.title }
-											value={ market.title }
-											handleInputHeader={ handleInputHeader } />
-									);
-								})
-							}
-						</div>
+					{/* Mercados dropdown clic */}
+					<div className="relative">
+						<button
+							className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 flex items-center gap-2 ${showMarketsDropdown ? 'bg-theme' : ''}`}
+							onClick={ handleMarketsClick }
+						>
+							Mercados
+							<svg
+								className={`w-4 h-4 transition-transform duration-200 ${showMarketsDropdown ? 'rotate-180' : ''}`}
+								fill="none" stroke="currentColor" viewBox="0 0 24 24"
+							>
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+							</svg>
+						</button>
+
+						{ showMarketsDropdown && (
+							<div className="absolute left-0 mt-2 w-48 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 animate__animated animate__fadeIn animate__faster py-2">
+								{ ourMarkets.map( (market, index) => (
+									<button
+										key={ index }
+										className="w-full text-left px-5 py-2 text-white font-semibold hover:bg-sky-800/50 hover:text-sky-300 transition duration-200"
+										onMouseDown={() => { handleInputHeader({ target: { value: market.title } }); }}
+									>
+										{ market.title }
+									</button>
+								))}
+							</div>
+						)}
 					</div>
 							
 					<HoverHeader title='Galería' value='gallery' handleInputHeader={ handleInputHeader } />
 					
-					{/* Botón Contáctanos con dropdown */}
-					<div className="relative" onBlur={ handleBlur }>
+					{/* Contáctanos dropdown clic */}
+					<div className="relative">
 						<button
-							className="font-bold hover:scale-110 transition duration-300 flex items-center gap-2"
+							className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 flex items-center gap-2 ${showContactDropdown ? 'bg-theme' : ''}`}
 							onClick={ handleContactClick }
 						>
 							Contáctanos
@@ -157,25 +204,16 @@ export const Header = ({ setPage = 'home' }) => {
 										<h2 className="accordion-header mb-0" id="headingOne">
 											<button 
 												className='accordion-button collapsed hover:scale-110 transition duration-200 hover:text-sky-500 font-bold w-full py-4 px-5 focus:outline-none'
-												type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne" aria-expanded="false"
-												value='our-services' >
+												type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne" aria-expanded="false">
 												Servicios
 											</button>
 										</h2>
 										<div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne">
 											<div className="accordion-body py-4 px-5 border border-y">
-											<HeaderMobile title={ 'Todos' } value={ 'our-services' } handleInputHeader={ handleInputHeader } />
-												{
-													ourServices.map( (service, index) => {
-														return (
-															<HoverHeader
-																key={ index }
-																title={ service.title }
-																value={ service.title }
-																handleInputHeader={ handleInputHeader } />
-														);
-													})
-												}
+												<HeaderMobile title={ 'Todos' } value={ 'our-services' } handleInputHeader={ handleInputHeader } />
+												{ ourServices.map( (service, index) => (
+													<HeaderMobile key={ index } title={ service.title } value={ service.title } handleInputHeader={ handleInputHeader } />
+												))}
 											</div>
 										</div>
 									</div>
@@ -184,25 +222,16 @@ export const Header = ({ setPage = 'home' }) => {
 										<h2 className="accordion-header mb-0" id="headingTwo">
 											<button 
 												className='accordion-button collapsed hover:scale-110 transition duration-200 hover:text-sky-500 font-bold w-full py-4 px-5 focus:outline-none'
-												type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo" aria-expanded="false"
-												value='our-markets' >
+												type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo" aria-expanded="false">
 												Mercados
 											</button>
 										</h2>
 										<div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo">
 											<div className="accordion-body py-4 px-5 border">
-											<HeaderMobile title={ 'Todos' } value={ 'our-markets' } handleInputHeader={ handleInputHeader } />
-												{
-													ourMarkets.map( (market, index) => {
-														return (
-															<HoverHeader
-																key={ index }
-																title={ market.title }
-																value={ market.title }
-																handleInputHeader={ handleInputHeader } />
-														);
-													})
-												}
+												<HeaderMobile title={ 'Todos' } value={ 'our-markets' } handleInputHeader={ handleInputHeader } />
+												{ ourMarkets.map( (market, index) => (
+													<HeaderMobile key={ index } title={ market.title } value={ market.title } handleInputHeader={ handleInputHeader } />
+												))}
 											</div>
 										</div>
 									</div>
