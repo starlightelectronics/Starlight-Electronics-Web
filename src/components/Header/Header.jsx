@@ -99,7 +99,7 @@ export const Header = ({ setPage = 'home' }) => {
 					{/* Botón Contáctanos con dropdown */}
 					<div className="relative" onBlur={ handleBlur }>
 						<button
-							className="px-6 py-2 bg-theme font-bold hover:scale-110 transition duration-300 hover:bg-sky-800 flex items-center gap-2"
+							className="font-bold hover:scale-110 transition duration-300 flex items-center gap-2"
 							onClick={ handleContactClick }
 						>
 							Contáctanos
