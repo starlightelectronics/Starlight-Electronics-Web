@@ -87,10 +87,10 @@ export const Footer = () => {
           <div>
             <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6">Certificaciones</h4>
             <div className="flex flex-col gap-4">
-              <div className="bg-white rounded-xl p-4 flex items-center justify-center" style={{height: '80px'}}>
+              <div className="bg-white rounded-xl p-3 flex items-center justify-center" style={{height: '65px'}}>
                 <img src={ISO9001} alt="ISO 9001:2015" className="max-h-14 max-w-full object-contain" />
               </div>
-              <div className="bg-white rounded-xl p-4 flex items-center justify-center" style={{height: '80px'}}>
+              <div className="bg-white rounded-xl p-3 flex items-center justify-center" style={{height: '65px'}}>
                 <img src={avixamember} alt="Avixa Member" className="max-h-14 max-w-full object-contain" />
               </div>
             </div>
