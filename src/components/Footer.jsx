@@ -83,7 +83,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center">
             <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6 text-center">Certificaciones</h4>
             <div className="flex flex-col gap-4 w-full items-center">
-              <div className="bg-white rounded-xl p-3 flex items-center justify-center w-full" style={{height: '80px'}}>
+              <div className="bg-white rounded-xl p-3 flex items-center justify-center mx-auto" style={{height: '70px', width: '180px'}}>
                 <img src={ISO9001} alt="ISO 9001:2015" className="max-h-14 max-w-full object-contain" />
               </div>
               <div className="bg-white rounded-xl p-3 flex items-center justify-center w-full" style={{height: '80px'}}>
