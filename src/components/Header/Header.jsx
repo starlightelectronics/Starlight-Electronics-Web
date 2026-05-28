@@ -14,6 +14,7 @@ export const Header = ({ setPage = 'home' }) => {
 	const [ showServicesDropdown, setShowServicesDropdown ] = useState( false );
 	const [ showMarketsDropdown, setShowMarketsDropdown ] = useState( false );
 	const [ showPQRS, setShowPQRS ] = useState( false );
+	const [ activePage, setActivePage ] = useState( 'home' );
 	const menuMobile = useRef( null );
 	const menuToogle = useRef( null );
 
@@ -29,6 +30,7 @@ export const Header = ({ setPage = 'home' }) => {
 
 	const handleInputHeader = ( e ) => {
 		setPage( e.target.value );
+		setActivePage( e.target.value );
 		setShowMenu( false );
 		closeAllDropdowns();
 	}
@@ -58,6 +60,7 @@ export const Header = ({ setPage = 'home' }) => {
 		closeAllDropdowns();
 		if (option === 'contacto') {
 			setPage('home');
+			setActivePage('home');
 			setTimeout(() => {
 				document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
 			}, 100);
@@ -78,8 +81,8 @@ export const Header = ({ setPage = 'home' }) => {
 
 				<div className="hidden md:flex space-x-4 lg:space-x-10 items-center">
 
-					<HoverHeader title='Inicio' value='home' handleInputHeader={ handleInputHeader } />			
-					<HoverHeader title='Nosotros' value='about' handleInputHeader={ handleInputHeader } />
+					<HoverHeader title='Inicio' value='home' handleInputHeader={ handleInputHeader } activePage={ activePage } />			
+					<HoverHeader title='Nosotros' value='about' handleInputHeader={ handleInputHeader } activePage={ activePage } />
 
 					{/* Servicios dropdown clic */}
 					<div className="relative">
@@ -97,15 +100,18 @@ export const Header = ({ setPage = 'home' }) => {
 						</button>
 
 						{ showServicesDropdown && (
-							<div className="absolute left-0 mt-2 w-72 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 animate__animated animate__fadeIn animate__faster py-2">
+							<div className="absolute left-0 mt-2 w-72 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 py-1">
 								{ ourServices.map( (service, index) => (
-									<button
-										key={ index }
-										className="w-full text-left px-5 py-2 text-white font-semibold hover:bg-sky-800/50 hover:text-sky-300 transition duration-200"
-										onMouseDown={() => { handleInputHeader({ target: { value: service.title } }); }}
-									>
-										{ service.title }
-									</button>
+									<>
+										<button
+											key={ index }
+											className="w-full text-left px-5 py-2 text-white font-semibold hover:bg-sky-800/50 hover:text-sky-300 transition duration-200"
+											onMouseDown={() => { handleInputHeader({ target: { value: service.title } }); }}
+										>
+											{ service.title }
+										</button>
+										{ index < ourServices.length - 1 && <div className="border-t border-sky-800/40 mx-3" /> }
+									</>
 								))}
 							</div>
 						)}
@@ -127,21 +133,24 @@ export const Header = ({ setPage = 'home' }) => {
 						</button>
 
 						{ showMarketsDropdown && (
-							<div className="absolute left-0 mt-2 w-48 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 animate__animated animate__fadeIn animate__faster py-2">
+							<div className="absolute left-0 mt-2 w-48 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 py-1">
 								{ ourMarkets.map( (market, index) => (
-									<button
-										key={ index }
-										className="w-full text-left px-5 py-2 text-white font-semibold hover:bg-sky-800/50 hover:text-sky-300 transition duration-200"
-										onMouseDown={() => { handleInputHeader({ target: { value: market.title } }); }}
-									>
-										{ market.title }
-									</button>
+									<>
+										<button
+											key={ index }
+											className="w-full text-left px-5 py-2 text-white font-semibold hover:bg-sky-800/50 hover:text-sky-300 transition duration-200"
+											onMouseDown={() => { handleInputHeader({ target: { value: market.title } }); }}
+										>
+											{ market.title }
+										</button>
+										{ index < ourMarkets.length - 1 && <div className="border-t border-sky-800/40 mx-3" /> }
+									</>
 								))}
 							</div>
 						)}
 					</div>
 							
-					<HoverHeader title='Galería' value='gallery' handleInputHeader={ handleInputHeader } />
+					<HoverHeader title='Galería' value='gallery' handleInputHeader={ handleInputHeader } activePage={ activePage } />
 					
 					{/* Contáctanos dropdown clic */}
 					<div className="relative">
@@ -159,7 +168,7 @@ export const Header = ({ setPage = 'home' }) => {
 						</button>
 
 						{ showContactDropdown && (
-							<div className="absolute right-0 mt-2 w-52 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 animate__animated animate__fadeIn animate__faster">
+							<div className="absolute right-0 mt-2 w-52 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50">
 								<button
 									className="w-full text-left px-5 py-3 text-white font-semibold hover:bg-sky-800/50 hover:text-sky-300 transition duration-200 flex items-center gap-3 rounded-t-lg"
 									onMouseDown={() => handleContactOptionClick('contacto')}
