@@ -44,7 +44,7 @@ export const Home = ({ setPage }) => {
                 <div className="w-full flex justify-center md:justify-start mb-4">
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-900/50 border border-sky-700/50 text-sky-300 text-sm font-medium">
                         <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-                        ✦ ISO 9001:2015 Certificados
+                        ISO 9001:2015 Certificados
                     </span>
                 </div>
 
