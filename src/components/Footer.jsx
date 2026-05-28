@@ -7,7 +7,7 @@ import logo_sle_white from '../assets/img/content/logo-sle-white.png';
 export const Footer = () => {
   return (
     <footer className="bg-[#060d1f] border-t border-sky-900/30 mt-16 text-white">
-      <div className="container mx-auto px-8 md:px-14 lg:px-32 py-14">
+      <div className="container mx-auto px-8 md:px-14 lg:px-48 py-14">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14 max-w-5xl mx-auto">
 
@@ -87,7 +87,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6">Certificaciones</h4>
             <div className="flex flex-col gap-4">
-              <div className="bg-white rounded-xl p-3 flex items-center justify-center" style={{height: '65px'}}>
+             <div className="flex items-center justify-start" style={{height: '65px'}}>
                 <img src={ISO9001} alt="ISO 9001:2015" className="max-h-14 max-w-full object-contain" />
               </div>
               <div className="bg-white rounded-xl p-3 flex items-center justify-center" style={{height: '65px'}}>
