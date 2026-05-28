@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import { Header } from './components/Header/Header';
 import { Home } from './components/Home';
 import { AboutAs } from './components/About/AboutAs';
@@ -12,18 +11,13 @@ import { TextInfo } from './components/About/TextInfo';
 import { Footer } from './components/Footer';
 import { ComponenteView } from './components/ComponenteView';
 import { SideSocialNetwork } from './components/SideSocialNetwork';
-// import { SideNavbar } from './components/SideNavbar';
-
-// import updateListNavarSide from './helpers/updateList.js';
-
+import { WhatsAppButton } from './components/WhatsAppButton';
 import { ourMarkets } from './data/ourMarkets';
 import { ourServices } from './data/ourServices';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const App = () => {
-
 	const [page, setPage] = useState('home');
 
 	useEffect(() => {
@@ -40,48 +34,38 @@ const App = () => {
 				page === 'home' ?
 					<div>
 						<SideSocialNetwork />
-						{/* <SideNavbar /> */}
-					
 						<div className="container mt-10 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-6 w-full">
 							<div className="flex flex-wrap md:flex-nowrap" data-aos="fade-up">
-
 								<Home />
-
 							</div>
 						</div>
-							<TextInfo />
-							<FormContact />
-							<OurClients />
-							<Footer />
+						<TextInfo />
+						<FormContact />
+						<OurClients />
+						<Footer />
 					</div>
 				
 				:
-
 					page === 'about' ?
 						<>
 							<AboutAs />
 							<SideSocialNetwork />
 							<Footer />
 						</>
-
 				:
-
 					page === 'gallery' ?
 						<>
 							<Gallery />
 							<SideSocialNetwork />
 							<Footer />
 						</>
-
 				:
-
 					page === 'our-services' ?
 						<>
 							<OurServices />
 							<SideSocialNetwork />
 							<Footer />
 						</>
-
 				: 
 					page === 'our-markets' ?
 						<>
@@ -89,25 +73,23 @@ const App = () => {
 							<SideSocialNetwork />
 							<Footer />
 						</>
-
 				:
 					arraySearch.map(( item, index ) => {
-							if ( page == item.title ) { 
-								return (
-									<div key={ index }>	
-										<div className='body-uniquite'>
-											<ComponenteView service={ item } index={ 1 } />
-										</div>
-										<SideSocialNetwork />
-										<Footer />
-									</div >
-								)
-							}
-						})
-				
-
+						if ( page == item.title ) { 
+							return (
+								<div key={ index }>	
+									<div className='body-uniquite'>
+										<ComponenteView service={ item } index={ 1 } />
+									</div>
+									<SideSocialNetwork />
+									<Footer />
+								</div>
+							)
+						}
+					})
 			}
-			
+
+			<WhatsAppButton />
 		</>
 	)
 }
