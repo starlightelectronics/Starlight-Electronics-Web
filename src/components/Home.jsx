@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 import img1 from '../assets/img/gallery/img_1.webp';
 import img2 from '../assets/img/gallery/img_8.webp';
-import img3 from '../assets/img/gallery/img_25.webp';
-import img4 from '../assets/img/gallery/img_39.webp';
-import img5 from '../assets/img/gallery/img_54.webp';
+import img3 from '../assets/img/gallery/img_14.webp';
+import img4 from '../assets/img/gallery/img_25.webp';
+import img5 from '../assets/img/gallery/img_39.webp';
+import img6 from '../assets/img/gallery/img_54.webp';
+import img7 from '../assets/img/gallery/img_32.webp';
+import img8 from '../assets/img/gallery/img_45.webp';
 
-const bgImages = [ img1, img2, img3, img4, img5 ];
+const bgImages = [ img1, img2, img3, img4, img5, img6, img7, img8 ];
 
 const phrases = [
     'Construyendo Soluciones',
@@ -30,8 +33,8 @@ export const Home = ({ setPage }) => {
             setTimeout(() => {
                 setCurrentImg(prev => (prev + 1) % bgImages.length);
                 setFade(true);
-            }, 600);
-        }, 4000);
+            }, 800);
+        }, 6000);
         return () => clearInterval(interval);
     }, []);
 
@@ -56,6 +59,10 @@ export const Home = ({ setPage }) => {
 
     return (
         <>
+            <style>{`
+                @keyframes kenburns { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
+            `}</style>
+
             <div className="flex flex-wrap 4xl:mt-60 4xl:ml-60 lg:ml-20 justify-center sm:w-2/4 md:justify-start max-w-xl mt-0 md:my-28 animate__animated animate__fadeIn">
 
                 {/* Badge */}
@@ -133,7 +140,8 @@ export const Home = ({ setPage }) => {
                             objectFit: 'cover',
                             borderRadius: '12px',
                             opacity: currentImg === i ? (fade ? 1 : 0) : 0,
-                            transition: 'opacity 0.6s ease-in-out',
+                            transition: 'opacity 1.2s ease-in-out',
+                            animation: currentImg === i ? 'kenburns 6s ease-in-out forwards' : 'none',
                         }}
                     />
                 ))}
@@ -141,20 +149,20 @@ export const Home = ({ setPage }) => {
                 {/* Indicadores */}
                 <div style={{
                     position: 'absolute',
-                    bottom: '16px',
+                    bottom: '14px',
                     left: '50%',
                     transform: 'translateX(-50%)',
                     display: 'flex',
-                    gap: '8px',
-                    zIndex: 10,
+                    gap: '6px',
+                    zIndex: 2,
                 }}>
                     { bgImages.map((_, i) => (
                         <button
                             key={i}
                             onClick={() => { setFade(false); setTimeout(() => { setCurrentImg(i); setFade(true); }, 300); }}
                             style={{
-                                width: currentImg === i ? '24px' : '8px',
-                                height: '8px',
+                                width: currentImg === i ? '20px' : '6px',
+                                height: '6px',
                                 borderRadius: '9999px',
                                 background: currentImg === i ? '#38bdf8' : 'rgba(255,255,255,0.5)',
                                 border: 'none',
