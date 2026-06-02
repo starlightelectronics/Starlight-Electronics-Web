@@ -63,7 +63,7 @@ export const Home = ({ setPage }) => {
                 @keyframes kenburns { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
             `}</style>
 
-            <div className="flex flex-wrap 4xl:mt-60 4xl:ml-60 lg:ml-20 justify-center sm:w-2/4 md:justify-start max-w-xl mt-0 md:my-28 animate__animated animate__fadeIn">
+          <div className="flex flex-wrap justify-center md:justify-start mt-0 md:my-auto animate__animated animate__fadeIn" style={{flex: '0 0 45%', maxWidth: '45%'}}>
 
                 {/* Badge */}
                 <div className="w-full flex justify-center md:justify-start mb-4">
@@ -126,7 +126,7 @@ export const Home = ({ setPage }) => {
             </div>
 
             {/* Carrusel automático de fotos */}
-            <div className="my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20 relative" style={{height: '480px', width: '560px', maxWidth: '50vw', flexShrink: 0}}>
+            <div className="relative" style={{flex: '0 0 52%', maxWidth: '52%', height: '85vh', maxHeight: '700px', minHeight: '400px'}}>
                 { bgImages.map((img, i) => (
                     <img
                         key={i}
