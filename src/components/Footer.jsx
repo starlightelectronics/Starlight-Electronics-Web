@@ -4,6 +4,9 @@ import avixamember from '../assets/img/content/avixamember.png';
 import ISO9001 from '../assets/img/content/Bureau veritas.png';
 import logo_sle_white from '../assets/img/content/logo-sle-white.png';
 
+const mapBogota = "https://www.google.com/maps/place/STARLIGHT+ELECTRONICS/@4.6770998,-74.0527814,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9b25f09168f7:0xeca1a3376e61515b!8m2!3d4.6770945!4d-74.0479105!16s%2Fg%2F11hz2qbxsm?entry=ttu";
+const mapVillavicencio = "https://www.google.com/maps?q=4.2718543,-73.48516";
+
 export const Footer = () => {
   return (
     <footer className="bg-[#060d1f] border-t border-sky-900/30 mt-16 text-white">
@@ -30,11 +33,11 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Columna 2 - Oficinas centrado, direcciones a la izquierda */}
+          {/* Columna 2 - Oficinas */}
           <div className="flex flex-col items-center">
             <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6 text-center">Oficinas</h4>
             <div className="flex flex-col gap-6 w-full">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/STARLIGHT+ELECTRONICS/@4.6770998,-74.0527814,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9b25f09168f7:0xeca1a3376e61515b!8m2!3d4.6770945!4d-74.0479105!16s%2Fg%2F11hz2qbxsm?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
+              <a target="_blank" rel="noopener noreferrer" href={mapBogota} className="flex items-start gap-3 group">
                 <div className="w-8 h-8 rounded-full bg-sky-900/30 border border-sky-800/40 flex items-center justify-center shrink-0 group-hover:bg-sky-800/50 transition duration-200 mt-0.5">
                   <svg className="w-4 h-4 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
                 </div>
@@ -43,7 +46,7 @@ export const Footer = () => {
                   <p className="text-gray-500 text-xs mt-0.5">Calle 93B N° 11A-44 Of. 403</p>
                 </div>
               </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Carrera+43C+N+16-27+Villavicencio+Meta+Colombia"
+              <a target="_blank" rel="noopener noreferrer" href={mapVillavicencio} className="flex items-start gap-3 group">
                 <div className="w-8 h-8 rounded-full bg-sky-900/30 border border-sky-800/40 flex items-center justify-center shrink-0 group-hover:bg-sky-800/50 transition duration-200 mt-0.5">
                   <svg className="w-4 h-4 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
                 </div>
@@ -55,7 +58,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Columna 3 - Contacto centrado, datos a la izquierda */}
+          {/* Columna 3 - Contacto */}
           <div className="flex flex-col items-center">
             <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6 text-center">Contacto</h4>
             <div className="flex flex-col gap-5 w-full">
@@ -79,11 +82,11 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Columna 4 - Certificaciones centradas */}
+          {/* Columna 4 - Certificaciones */}
           <div className="flex flex-col items-center">
             <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6 text-center">Certificaciones</h4>
             <div className="flex flex-col gap-4 w-full items-center">
-              <div className="bg-white rounded-xl p-3 flex items-center justify-center mx-auto" style={{height: '70px', width: '180px'}}>
+              <div className="flex items-center justify-center mx-auto" style={{height: '70px', width: '180px'}}>
                 <img src={ISO9001} alt="ISO 9001:2015" className="max-h-14 max-w-full object-contain" />
               </div>
               <div className="bg-white rounded-xl p-3 flex items-center justify-center w-full" style={{height: '80px'}}>
