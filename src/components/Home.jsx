@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Carusel } from './Carusel';
+
+import img1 from '../assets/img/gallery/img_1.webp';
+import img2 from '../assets/img/gallery/img_8.webp';
+import img3 from '../assets/img/gallery/img_14.webp';
+import img4 from '../assets/img/gallery/img_25.webp';
+import img5 from '../assets/img/gallery/img_39.webp';
+import img6 from '../assets/img/gallery/img_54.webp';
+
+const bgImages = [ img1, img2, img3, img4, img5, img6 ];
 
 const phrases = [
     'Construyendo Soluciones',
@@ -14,11 +22,23 @@ export const Home = ({ setPage }) => {
     const [ displayed, setDisplayed ] = useState('');
     const [ isDeleting, setIsDeleting ] = useState(false);
     const [ charIndex, setCharIndex ] = useState(0);
+    const [ currentBg, setCurrentBg ] = useState(0);
+    const [ fade, setFade ] = useState(true);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade(false);
+            setTimeout(() => {
+                setCurrentBg(prev => (prev + 1) % bgImages.length);
+                setFade(true);
+            }, 800);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     useEffect(() => {
         const phrase = phrases[currentPhrase];
         let timeout;
-
         if (!isDeleting && charIndex <= phrase.length) {
             setDisplayed(phrase.slice(0, charIndex));
             timeout = setTimeout(() => setCharIndex(charIndex + 1), 80);
@@ -32,19 +52,34 @@ export const Home = ({ setPage }) => {
             setCurrentPhrase((prev) => (prev + 1) % phrases.length);
             setCharIndex(0);
         }
-
         return () => clearTimeout(timeout);
     }, [charIndex, isDeleting, currentPhrase]);
 
     return (
         <>
+            {/* Hero con fondo dinámico */}
+            <div className="fixed top-0 left-0 w-full h-full -z-10">
+                <div
+                    style={{
+                        backgroundImage: `url(${bgImages[currentBg]})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        opacity: fade ? 0.25 : 0,
+                        transition: 'opacity 0.8s ease-in-out',
+                        position: 'absolute',
+                        inset: 0,
+                    }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#060d1f] via-[#060d1f]/80 to-[#060d1f]/40" />
+            </div>
+
             <div className="flex flex-wrap 4xl:mt-60 4xl:ml-60 lg:ml-20 justify-center sm:w-2/4 md:justify-start max-w-xl mt-0 md:my-28 animate__animated animate__fadeIn">
-                
+
                 {/* Badge */}
                 <div className="w-full flex justify-center md:justify-start mb-4">
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-900/50 border border-sky-700/50 text-sky-300 text-sm font-medium">
                         <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-                        ISO 9001:2015 Certificados
+                        ✦ ISO 9001:2015 Certificados
                     </span>
                 </div>
 
@@ -71,7 +106,6 @@ export const Home = ({ setPage }) => {
                             Comunícate
                         </button>
                     </a>
-
                     <button
                         className="w-full sm:w-auto px-8 py-4 border border-sky-600/60 hover:border-sky-400 text-sky-300 hover:text-white font-bold flex items-center justify-center gap-3 hover:scale-105 transition duration-300 rounded-sm hover:bg-sky-900/30"
                         onClick={() => setPage('our-services')}
@@ -101,8 +135,15 @@ export const Home = ({ setPage }) => {
 
             </div>
 
-            <div className='my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20'>
-                <Carusel />
+            {/* Indicadores del slideshow */}
+            <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                { bgImages.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => { setFade(false); setTimeout(() => { setCurrentBg(i); setFade(true); }, 300); }}
+                        className={`transition-all duration-300 rounded-full ${currentBg === i ? 'w-6 h-2 bg-sky-400' : 'w-2 h-2 bg-white/30 hover:bg-white/60'}`}
+                    />
+                ))}
             </div>
         </>
     );
