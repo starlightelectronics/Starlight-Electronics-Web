@@ -2,14 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 import img1 from '../assets/img/gallery/img_1.webp';
 import img2 from '../assets/img/gallery/img_8.webp';
-import img3 from '../assets/img/gallery/img_14.webp';
-import img4 from '../assets/img/gallery/img_25.webp';
-import img5 from '../assets/img/gallery/img_39.webp';
-import img6 from '../assets/img/gallery/img_54.webp';
-import img7 from '../assets/img/gallery/img_32.webp';
-import img8 from '../assets/img/gallery/img_45.webp';
+import img3 from '../assets/img/gallery/img_25.webp';
+import img4 from '../assets/img/gallery/img_39.webp';
+import img5 from '../assets/img/gallery/img_54.webp';
 
-const bgImages = [ img1, img2, img3, img4, img5, img6, img7, img8 ];
+const bgImages = [ img1, img2, img3, img4, img5 ];
 
 const phrases = [
     'Construyendo Soluciones',
@@ -33,8 +30,8 @@ export const Home = ({ setPage }) => {
             setTimeout(() => {
                 setCurrentImg(prev => (prev + 1) % bgImages.length);
                 setFade(true);
-            }, 800);
-        }, 6000);
+            }, 600);
+        }, 4000);
         return () => clearInterval(interval);
     }, []);
 
@@ -59,11 +56,7 @@ export const Home = ({ setPage }) => {
 
     return (
         <>
-            <style>{`
-                @keyframes kenburns { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
-            `}</style>
-
-          <div className="flex flex-wrap justify-center md:justify-start mt-0 md:my-auto animate__animated animate__fadeIn" style={{flex: '0 0 45%', maxWidth: '45%'}}>
+            <div className="flex flex-wrap 4xl:mt-60 4xl:ml-60 lg:ml-20 justify-center sm:w-2/4 md:justify-start max-w-xl mt-0 md:my-28 animate__animated animate__fadeIn">
 
                 {/* Badge */}
                 <div className="w-full flex justify-center md:justify-start mb-4">
@@ -126,7 +119,7 @@ export const Home = ({ setPage }) => {
             </div>
 
             {/* Carrusel automático de fotos */}
-            <div className="relative" style={{flex: '0 0 52%', maxWidth: '52%', height: '85vh', maxHeight: '700px', minHeight: '400px'}}>
+            <div className="my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20 relative" style={{minHeight: '400px', minWidth: '300px'}}>
                 { bgImages.map((img, i) => (
                     <img
                         key={i}
@@ -140,8 +133,7 @@ export const Home = ({ setPage }) => {
                             objectFit: 'cover',
                             borderRadius: '12px',
                             opacity: currentImg === i ? (fade ? 1 : 0) : 0,
-                            transition: 'opacity 1.2s ease-in-out',
-                            animation: currentImg === i ? 'kenburns 6s ease-in-out forwards' : 'none',
+                            transition: 'opacity 0.6s ease-in-out',
                         }}
                     />
                 ))}
@@ -149,20 +141,20 @@ export const Home = ({ setPage }) => {
                 {/* Indicadores */}
                 <div style={{
                     position: 'absolute',
-                    bottom: '14px',
+                    bottom: '16px',
                     left: '50%',
                     transform: 'translateX(-50%)',
                     display: 'flex',
-                    gap: '6px',
-                    zIndex: 2,
+                    gap: '8px',
+                    zIndex: 10,
                 }}>
                     { bgImages.map((_, i) => (
                         <button
                             key={i}
                             onClick={() => { setFade(false); setTimeout(() => { setCurrentImg(i); setFade(true); }, 300); }}
                             style={{
-                                width: currentImg === i ? '20px' : '6px',
-                                height: '6px',
+                                width: currentImg === i ? '24px' : '8px',
+                                height: '8px',
                                 borderRadius: '9999px',
                                 background: currentImg === i ? '#38bdf8' : 'rgba(255,255,255,0.5)',
                                 border: 'none',
