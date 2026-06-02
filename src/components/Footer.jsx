@@ -34,7 +34,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center">
             <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6 text-center">Oficinas</h4>
             <div className="flex flex-col gap-6 w-full">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.google.es/maps/place/STARLIGHT+ELECTRONICS/@4.6799303,-74.0502013,17z" className="flex items-start gap-3 group">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Calle+93B+N+11A-44+Of+403+Bogota+Colombia"
                 <div className="w-8 h-8 rounded-full bg-sky-900/30 border border-sky-800/40 flex items-center justify-center shrink-0 group-hover:bg-sky-800/50 transition duration-200 mt-0.5">
                   <svg className="w-4 h-4 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
                 </div>
@@ -43,7 +43,7 @@ export const Footer = () => {
                   <p className="text-gray-500 text-xs mt-0.5">Calle 93B N° 11A-44 Of. 403</p>
                 </div>
               </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.google.es/maps/place/Starlight+Electronics/@4.2718596,-73.4873487,17z" className="flex items-start gap-3 group">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Carrera+43C+N+16-27+Villavicencio+Meta+Colombia"
                 <div className="w-8 h-8 rounded-full bg-sky-900/30 border border-sky-800/40 flex items-center justify-center shrink-0 group-hover:bg-sky-800/50 transition duration-200 mt-0.5">
                   <svg className="w-4 h-4 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
                 </div>
