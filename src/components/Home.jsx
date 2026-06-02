@@ -2,14 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 import img1 from '../assets/img/gallery/img_1.webp';
 import img2 from '../assets/img/gallery/img_8.webp';
-import img3 from '../assets/img/gallery/img_14.webp';
-import img4 from '../assets/img/gallery/img_25.webp';
-import img5 from '../assets/img/gallery/img_39.webp';
-import img6 from '../assets/img/gallery/img_54.webp';
-import img7 from '../assets/img/gallery/img_32.webp';
-import img8 from '../assets/img/gallery/img_45.webp';
+import img3 from '../assets/img/gallery/img_25.webp';
+import img4 from '../assets/img/gallery/img_39.webp';
+import img5 from '../assets/img/gallery/img_54.webp';
 
-const bgImages = [ img1, img2, img3, img4, img5, img6, img7, img8 ];
+const bgImages = [ img1, img2, img3, img4, img5 ];
 
 const phrases = [
     'Construyendo Soluciones',
@@ -25,11 +22,16 @@ export const Home = ({ setPage }) => {
     const [ isDeleting, setIsDeleting ] = useState(false);
     const [ charIndex, setCharIndex ] = useState(0);
     const [ currentImg, setCurrentImg ] = useState(0);
+    const [ fade, setFade ] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentImg(prev => (prev + 1) % bgImages.length);
-        }, 6000);
+            setFade(false);
+            setTimeout(() => {
+                setCurrentImg(prev => (prev + 1) % bgImages.length);
+                setFade(true);
+            }, 600);
+        }, 4000);
         return () => clearInterval(interval);
     }, []);
 
@@ -54,17 +56,6 @@ export const Home = ({ setPage }) => {
 
     return (
         <>
-            <style>{`
-                @keyframes kenburns-0 { 0% { transform: scale(1) translate(0,0); } 100% { transform: scale(1.12) translate(-2%,-1%); } }
-                @keyframes kenburns-1 { 0% { transform: scale(1.08) translate(1%,0); } 100% { transform: scale(1) translate(0,1%); } }
-                @keyframes kenburns-2 { 0% { transform: scale(1) translate(-1%,1%); } 100% { transform: scale(1.1) translate(1%,-1%); } }
-                @keyframes kenburns-3 { 0% { transform: scale(1.1) translate(0,1%); } 100% { transform: scale(1) translate(-1%,0); } }
-                @keyframes kenburns-4 { 0% { transform: scale(1) translate(1%,-1%); } 100% { transform: scale(1.12) translate(0,1%); } }
-                @keyframes kenburns-5 { 0% { transform: scale(1.08) translate(-1%,0); } 100% { transform: scale(1) translate(1%,-1%); } }
-                @keyframes kenburns-6 { 0% { transform: scale(1) translate(0,1%); } 100% { transform: scale(1.1) translate(-1%,0); } }
-                @keyframes kenburns-7 { 0% { transform: scale(1.1) translate(1%,1%); } 100% { transform: scale(1) translate(0,-1%); } }
-            `}</style>
-
             <div className="flex flex-wrap 4xl:mt-60 4xl:ml-60 lg:ml-20 justify-center sm:w-2/4 md:justify-start max-w-xl mt-0 md:my-28 animate__animated animate__fadeIn">
 
                 {/* Badge */}
@@ -127,62 +118,43 @@ export const Home = ({ setPage }) => {
 
             </div>
 
-            {/* Carrusel Ken Burns */}
-         <div className="my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20" style={{
-    position: 'relative',
-    width: '100%',
-    maxWidth: '800px',
-    height: '600px',
-    borderRadius: '16px',
-    overflow: 'hidden',
-    boxShadow: '0 25px 60px rgba(0,0,0,0.5)',
-    flexShrink: 0,
-}}>
+            {/* Carrusel automático de fotos */}
+            <div className="my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20 relative" style={{minHeight: '400px', minWidth: '300px'}}>
                 { bgImages.map((img, i) => (
-                    <div key={i} style={{
-                        position: 'absolute',
-                        inset: 0,
-                        opacity: currentImg === i ? 1 : 0,
-                        transition: 'opacity 1.5s ease-in-out',
-                        overflow: 'hidden',
-                    }}>
-                        <img
-                            src={img}
-                            alt={`Proyecto ${i+1}`}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                animation: currentImg === i ? `kenburns-${i} 6s ease-in-out forwards` : 'none',
-                            }}
-                        />
-                    </div>
+                    <img
+                        key={i}
+                        src={img}
+                        alt={`Proyecto Starlight ${i+1}`}
+                        style={{
+                            position: i === 0 ? 'relative' : 'absolute',
+                            top: 0, left: 0,
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            borderRadius: '12px',
+                            opacity: currentImg === i ? (fade ? 1 : 0) : 0,
+                            transition: 'opacity 0.6s ease-in-out',
+                        }}
+                    />
                 ))}
-
-                {/* Overlay sutil */}
-                <div style={{
-                    position: 'absolute', inset: 0,
-                    background: 'linear-gradient(to bottom, transparent 60%, rgba(6,13,31,0.4) 100%)',
-                    zIndex: 1,
-                }} />
 
                 {/* Indicadores */}
                 <div style={{
                     position: 'absolute',
-                    bottom: '14px',
+                    bottom: '16px',
                     left: '50%',
                     transform: 'translateX(-50%)',
                     display: 'flex',
-                    gap: '6px',
-                    zIndex: 2,
+                    gap: '8px',
+                    zIndex: 10,
                 }}>
                     { bgImages.map((_, i) => (
                         <button
                             key={i}
-                            onClick={() => setCurrentImg(i)}
+                            onClick={() => { setFade(false); setTimeout(() => { setCurrentImg(i); setFade(true); }, 300); }}
                             style={{
-                                width: currentImg === i ? '20px' : '6px',
-                                height: '6px',
+                                width: currentImg === i ? '24px' : '8px',
+                                height: '8px',
                                 borderRadius: '9999px',
                                 background: currentImg === i ? '#38bdf8' : 'rgba(255,255,255,0.5)',
                                 border: 'none',
