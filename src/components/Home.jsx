@@ -126,7 +126,7 @@ export const Home = ({ setPage }) => {
             </div>
 
             {/* Carrusel automático de fotos */}
-            <div className="my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20 relative" style={{minHeight: '400px', minWidth: '300px'}}>
+            <div className="my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20 relative" style={{height: '480px', width: '560px', maxWidth: '50vw', flexShrink: 0}}>
                 { bgImages.map((img, i) => (
                     <img
                         key={i}
