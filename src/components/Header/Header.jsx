@@ -98,28 +98,13 @@ export const Header = ({ setPage = 'home' }) => {
 					<HoverHeader title='Inicio' value='home' handleInputHeader={ handleInputHeader } activePage={ activePage } />			
 					<HoverHeader title='Nosotros' value='about' handleInputHeader={ handleInputHeader } activePage={ activePage } />
 
-					{/* Servicios dropdown clic */}
-					<div className="relative">
-						<button
-							className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 flex items-center gap-2 ${showServicesDropdown ? 'bg-theme' : ''}`}
-							onClick={ handleServicesClick }
-						>
-							Servicios
-							<svg className={`w-4 h-4 transition-transform duration-200 ${showServicesDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-							</svg>
-						</button>
-						{ showServicesDropdown && (
-							<div className="absolute left-0 mt-2 w-72 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 py-1">
-								{ ourServices.map( (service, index) => (
-									<>
-										<button
-											key={ index }
-											className="w-full text-left px-5 py-2 text-white font-semibold hover:bg-sky-800/50 hover:text-sky-300 transition duration-200"
-											onMouseDown={() => { handleInputHeader({ target: { value: service.title } }); }}
-										>
-											{ service.title }
-										</button>
+					{/* Servicios directo */}
+<button
+    className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 ${activePage === 'our-services' ? 'bg-theme' : ''}`}
+    onClick={() => handleInputHeader({ target: { value: 'our-services' } })}
+>
+    Servicios
+</button>
 										{ index < ourServices.length - 1 && <div className="border-t border-sky-800/40 mx-3" /> }
 									</>
 								))}
