@@ -128,15 +128,15 @@ export const Home = ({ setPage }) => {
             </div>
 
             {/* Carrusel Ken Burns */}
-            <div className="my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20" style={{
-                position: 'relative',
-                width: '520px',
-                height: '420px',
-                borderRadius: '16px',
-                overflow: 'hidden',
-                boxShadow: '0 25px 60px rgba(0,0,0,0.5)',
-                flexShrink: 0,
-            }}>
+           <div className="my-auto mx-auto mt-12 mr-0 sm:mr-6 sm:mt-auto 4xl:mt-20" style={{
+    position: 'relative',
+    width: '680px',
+    height: '580px',
+    borderRadius: '16px',
+    overflow: 'hidden',
+    boxShadow: '0 25px 60px rgba(0,0,0,0.5)',
+    flexShrink: 0,
+}}>
                 { bgImages.map((img, i) => (
                     <div key={i} style={{
                         position: 'absolute',
