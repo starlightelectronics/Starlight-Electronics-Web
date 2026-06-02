@@ -11,7 +11,6 @@ export const Header = ({ setPage = 'home' }) => {
 
 	const [ showMenu, setShowMenu ] = useState( false );
 	const [ showContactDropdown, setShowContactDropdown ] = useState( false );
-	const [ showServicesDropdown, setShowServicesDropdown ] = useState( false );
 	const [ showMarketsDropdown, setShowMarketsDropdown ] = useState( false );
 	const [ showMobileServices, setShowMobileServices ] = useState( false );
 	const [ showMobileMarkets, setShowMobileMarkets ] = useState( false );
@@ -29,9 +28,12 @@ export const Header = ({ setPage = 'home' }) => {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
 	const closeAllDropdowns = () => {
 		setShowContactDropdown(false);
-		setShowServicesDropdown(false);
 		setShowMarketsDropdown(false);
 	}
 
@@ -44,19 +46,11 @@ export const Header = ({ setPage = 'home' }) => {
 		setActivePage( e.target.value );
 		setShowMenu( false );
 		closeAllDropdowns();
-	}
-
-	const handleServicesClick = (e) => {
-		e.preventDefault();
-		setShowMarketsDropdown(false);
-		setShowContactDropdown(false);
-		setActivePage('');
-		setShowServicesDropdown( !showServicesDropdown );
+		scrollToTop();
 	}
 
 	const handleMarketsClick = (e) => {
 		e.preventDefault();
-		setShowServicesDropdown(false);
 		setShowContactDropdown(false);
 		setActivePage('');
 		setShowMarketsDropdown( !showMarketsDropdown );
@@ -64,7 +58,6 @@ export const Header = ({ setPage = 'home' }) => {
 
 	const handleContactClick = (e) => {
 		e.preventDefault();
-		setShowServicesDropdown(false);
 		setShowMarketsDropdown(false);
 		setActivePage('');
 		setShowContactDropdown( !showContactDropdown );
@@ -75,9 +68,10 @@ export const Header = ({ setPage = 'home' }) => {
 		if (option === 'contacto') {
 			setPage('home');
 			setActivePage('home');
+			scrollToTop();
 			setTimeout(() => {
 				document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-			}, 100);
+			}, 300);
 		} else if (option === 'pqrs') {
 			setShowPQRS(true);
 		}
@@ -95,24 +89,18 @@ export const Header = ({ setPage = 'home' }) => {
 
 				<div className="hidden md:flex space-x-4 lg:space-x-10 items-center">
 
-					<HoverHeader title='Inicio' value='home' handleInputHeader={ handleInputHeader } activePage={ activePage } />			
+					<HoverHeader title='Inicio' value='home' handleInputHeader={ handleInputHeader } activePage={ activePage } />
 					<HoverHeader title='Nosotros' value='about' handleInputHeader={ handleInputHeader } activePage={ activePage } />
 
-					{/* Servicios directo */}
-<button
-    className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 ${activePage === 'our-services' ? 'bg-theme' : ''}`}
-    onClick={() => handleInputHeader({ target: { value: 'our-services' } })}
->
-    Servicios
-</button>
-										{ index < ourServices.length - 1 && <div className="border-t border-sky-800/40 mx-3" /> }
-									</>
-								))}
-							</div>
-						)}
-					</div>
+					{/* Servicios - directo a la página */}
+					<button
+						className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 ${activePage === 'our-services' ? 'bg-theme' : ''}`}
+						onClick={() => handleInputHeader({ target: { value: 'our-services' } })}
+					>
+						Servicios
+					</button>
 
-					{/* Mercados dropdown clic */}
+					{/* Mercados dropdown */}
 					<div className="relative">
 						<button
 							className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 flex items-center gap-2 ${showMarketsDropdown ? 'bg-theme' : ''}`}
@@ -140,10 +128,10 @@ export const Header = ({ setPage = 'home' }) => {
 							</div>
 						)}
 					</div>
-							
+
 					<HoverHeader title='Galería' value='gallery' handleInputHeader={ handleInputHeader } activePage={ activePage } />
-					
-					{/* Contáctanos dropdown clic */}
+
+					{/* Contáctanos dropdown */}
 					<div className="relative">
 						<button
 							className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 flex items-center gap-2 ${showContactDropdown ? 'bg-theme' : ''}`}
@@ -195,25 +183,14 @@ export const Header = ({ setPage = 'home' }) => {
 							<HeaderMobile title='Inicio' value='home' handleInputHeader={ handleInputHeader } />
 							<HeaderMobile title='Nosotros' value='about' handleInputHeader={ handleInputHeader } />
 
-							{/* Servicios mobile */}
+							{/* Servicios mobile - directo */}
 							<li>
 								<button
-									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4 flex items-center justify-center gap-2'
-									onClick={() => { setShowMobileServices(!showMobileServices); setShowMobileMarkets(false); }}
+									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
+									onClick={() => handleInputHeader({ target: { value: 'our-services' } })}
 								>
 									Servicios
-									<svg className={`w-4 h-4 transition-transform duration-200 ${showMobileServices ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-									</svg>
 								</button>
-								{ showMobileServices && (
-									<div className="bg-white/5 py-2 border-t border-b border-sky-800/30">
-										<HeaderMobile title='Todos' value='our-services' handleInputHeader={ handleInputHeader } />
-										{ ourServices.map( (service, index) => (
-											<HeaderMobile key={ index } title={ service.title } value={ service.title } handleInputHeader={ handleInputHeader } />
-										))}
-									</div>
-								)}
 							</li>
 
 							{/* Mercados mobile */}
@@ -242,7 +219,7 @@ export const Header = ({ setPage = 'home' }) => {
 							<li>
 								<button
 									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
-									onClick={() => { handleInputHeader({ target: { value: 'home' } }); setTimeout(() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }}
+									onClick={() => { handleInputHeader({ target: { value: 'home' } }); setTimeout(() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }, 300); }}
 								>
 									Contáctanos
 								</button>
