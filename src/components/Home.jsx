@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 import img1 from '../assets/img/gallery/img_1.webp';
 import img2 from '../assets/img/gallery/img_8.webp';
-import img3 from '../assets/img/gallery/img_14.webp';
-import img4 from '../assets/img/gallery/img_25.webp';
-import img5 from '../assets/img/gallery/img_39.webp';
-import img6 from '../assets/img/gallery/img_54.webp';
+import img3 from '../assets/img/gallery/img_25.webp';
+import img4 from '../assets/img/gallery/img_39.webp';
+import img5 from '../assets/img/gallery/img_54.webp';
 
-const bgImages = [ img1, img2, img3, img4, img5, img6 ];
+const bgImages = [ img1, img2, img3, img4, img5 ];
 
 const phrases = [
     'Construyendo Soluciones',
@@ -22,17 +21,17 @@ export const Home = ({ setPage }) => {
     const [ displayed, setDisplayed ] = useState('');
     const [ isDeleting, setIsDeleting ] = useState(false);
     const [ charIndex, setCharIndex ] = useState(0);
-    const [ currentBg, setCurrentBg ] = useState(0);
+    const [ currentImg, setCurrentImg ] = useState(0);
     const [ fade, setFade ] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setFade(false);
             setTimeout(() => {
-                setCurrentBg(prev => (prev + 1) % bgImages.length);
+                setCurrentImg(prev => (prev + 1) % bgImages.length);
                 setFade(true);
-            }, 800);
-        }, 5000);
+            }, 600);
+        }, 4000);
         return () => clearInterval(interval);
     }, []);
 
@@ -57,31 +56,6 @@ export const Home = ({ setPage }) => {
 
     return (
         <>
-            {/* Hero con fondo dinámico */}
-            <div style={{
-                position: 'fixed',
-                top: 0, left: 0,
-                width: '100%', height: '100%',
-                zIndex: -1,
-                overflow: 'hidden',
-            }}>
-                { bgImages.map((img, i) => (
-                    <div key={i} style={{
-                        position: 'absolute',
-                        inset: 0,
-                        backgroundImage: `url(${img})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        opacity: currentBg === i ? (fade ? 0.3 : 0) : 0,
-                        transition: 'opacity 1s ease-in-out',
-                    }} />
-                ))}
-                <div style={{
-                    position: 'absolute', inset: 0,
-                    background: 'linear-gradient(to right, #060d1f 40%, rgba(6,13,31,0.85) 70%, rgba(6,13,31,0.5) 100%)',
-                }} />
-            </div>
-
             <div className="flex flex-wrap 4xl:mt-60 4xl:ml-60 lg:ml-20 justify-center sm:w-2/4 md:justify-start max-w-xl mt-0 md:my-28 animate__animated animate__fadeIn">
 
                 {/* Badge */}
@@ -144,32 +118,53 @@ export const Home = ({ setPage }) => {
 
             </div>
 
-            {/* Indicadores del slideshow */}
-            <div style={{
-                position: 'fixed',
-                bottom: '32px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                display: 'flex',
-                gap: '8px',
-                zIndex: 10,
-            }}>
-                { bgImages.map((_, i) => (
-                    <button
+            {/* Carrusel automático de fotos */}
+            <div className="my-auto mx-auto mt-12 mr-0 sm:mr-10 sm:mt-auto 4xl:mt-20 relative" style={{minHeight: '400px', minWidth: '300px'}}>
+                { bgImages.map((img, i) => (
+                    <img
                         key={i}
-                        onClick={() => { setFade(false); setTimeout(() => { setCurrentBg(i); setFade(true); }, 300); }}
+                        src={img}
+                        alt={`Proyecto Starlight ${i+1}`}
                         style={{
-                            width: currentBg === i ? '24px' : '8px',
-                            height: '8px',
-                            borderRadius: '9999px',
-                            background: currentBg === i ? '#38bdf8' : 'rgba(255,255,255,0.3)',
-                            border: 'none',
-                            cursor: 'pointer',
-                            transition: 'all 0.3s',
-                            padding: 0,
+                            position: i === 0 ? 'relative' : 'absolute',
+                            top: 0, left: 0,
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            borderRadius: '12px',
+                            opacity: currentImg === i ? (fade ? 1 : 0) : 0,
+                            transition: 'opacity 0.6s ease-in-out',
                         }}
                     />
                 ))}
+
+                {/* Indicadores */}
+                <div style={{
+                    position: 'absolute',
+                    bottom: '16px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    display: 'flex',
+                    gap: '8px',
+                    zIndex: 10,
+                }}>
+                    { bgImages.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => { setFade(false); setTimeout(() => { setCurrentImg(i); setFade(true); }, 300); }}
+                            style={{
+                                width: currentImg === i ? '24px' : '8px',
+                                height: '8px',
+                                borderRadius: '9999px',
+                                background: currentImg === i ? '#38bdf8' : 'rgba(255,255,255,0.5)',
+                                border: 'none',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s',
+                                padding: 0,
+                            }}
+                        />
+                    ))}
+                </div>
             </div>
         </>
     );
