@@ -58,19 +58,28 @@ export const Home = ({ setPage }) => {
     return (
         <>
             {/* Hero con fondo dinámico */}
-            <div className="fixed top-0 left-0 w-full h-full -z-10">
-                <div
-                    style={{
-                        backgroundImage: `url(${bgImages[currentBg]})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        opacity: fade ? 0.25 : 0,
-                        transition: 'opacity 0.8s ease-in-out',
+            <div style={{
+                position: 'fixed',
+                top: 0, left: 0,
+                width: '100%', height: '100%',
+                zIndex: -1,
+                overflow: 'hidden',
+            }}>
+                { bgImages.map((img, i) => (
+                    <div key={i} style={{
                         position: 'absolute',
                         inset: 0,
-                    }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#060d1f] via-[#060d1f]/80 to-[#060d1f]/40" />
+                        backgroundImage: `url(${img})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        opacity: currentBg === i ? (fade ? 0.3 : 0) : 0,
+                        transition: 'opacity 1s ease-in-out',
+                    }} />
+                ))}
+                <div style={{
+                    position: 'absolute', inset: 0,
+                    background: 'linear-gradient(to right, #060d1f 40%, rgba(6,13,31,0.85) 70%, rgba(6,13,31,0.5) 100%)',
+                }} />
             </div>
 
             <div className="flex flex-wrap 4xl:mt-60 4xl:ml-60 lg:ml-20 justify-center sm:w-2/4 md:justify-start max-w-xl mt-0 md:my-28 animate__animated animate__fadeIn">
@@ -136,12 +145,29 @@ export const Home = ({ setPage }) => {
             </div>
 
             {/* Indicadores del slideshow */}
-            <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+            <div style={{
+                position: 'fixed',
+                bottom: '32px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                display: 'flex',
+                gap: '8px',
+                zIndex: 10,
+            }}>
                 { bgImages.map((_, i) => (
                     <button
                         key={i}
                         onClick={() => { setFade(false); setTimeout(() => { setCurrentBg(i); setFade(true); }, 300); }}
-                        className={`transition-all duration-300 rounded-full ${currentBg === i ? 'w-6 h-2 bg-sky-400' : 'w-2 h-2 bg-white/30 hover:bg-white/60'}`}
+                        style={{
+                            width: currentBg === i ? '24px' : '8px',
+                            height: '8px',
+                            borderRadius: '9999px',
+                            background: currentBg === i ? '#38bdf8' : 'rgba(255,255,255,0.3)',
+                            border: 'none',
+                            cursor: 'pointer',
+                            transition: 'all 0.3s',
+                            padding: 0,
+                        }}
                     />
                 ))}
             </div>
