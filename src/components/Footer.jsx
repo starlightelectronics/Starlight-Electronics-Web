@@ -5,8 +5,7 @@ import ISO9001 from '../assets/img/content/Bureau veritas.png';
 import logo_sle_white from '../assets/img/content/logo-sle-white.png';
 
 const mapBogota = "https://www.google.com/maps/place/STARLIGHT+ELECTRONICS/@4.6770998,-74.0527814,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9b25f09168f7:0xeca1a3376e61515b!8m2!3d4.6770945!4d-74.0479105!16s%2Fg%2F11hz2qbxsm?entry=ttu";
-const mapVillavicencio = "https://www.google.com/maps/@4.1367383,-73.6430033,3a,77.6y,319.51h,89.38t/data=!3m7!1e1!3m5!1sp8M16lrwzYzzYtgfrhZVOg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.6177136138803974%26panoid%3Dp8M16lrwzYzzYtgfrhZVOg%26yaw%3D319.5124151649561!7i16384!8i8192?entry=ttu";
-
+const mapVillavicencio = "https://www.google.com/maps/place/Cra.+43c+%23+16-27,+Villavicencio,+Meta/@4.1367559,-73.6479483,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3e2e060c759421:0x489f928d49c1c13d!8m2!3d4.1367506!4d-73.6430774!16s%2Fg%2F11l_60zkbj?entry=ttu";
 export const Footer = () => {
   return (
     <footer className="bg-[#060d1f] border-t border-sky-900/30 mt-16 text-white">
