@@ -34,7 +34,7 @@ const App = () => {
 				page === 'home' ?
 					<div>
 						<SideSocialNetwork />
-						<div className="container mt-10 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-6 w-full">
+						<div className="container mt-10 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-16 w-full min-h-screen">
 							<div className="flex flex-wrap md:flex-nowrap" data-aos="fade-up">
 								<Home setPage={ setPage } />
 							</div>
