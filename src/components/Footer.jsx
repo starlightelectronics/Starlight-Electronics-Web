@@ -5,7 +5,7 @@ import ISO9001 from '../assets/img/content/Bureau veritas.png';
 import logo_sle_white from '../assets/img/content/logo-sle-white.png';
 
 const mapBogota = "https://www.google.com/maps/place/STARLIGHT+ELECTRONICS/@4.6770998,-74.0527814,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9b25f09168f7:0xeca1a3376e61515b!8m2!3d4.6770945!4d-74.0479105!16s%2Fg%2F11hz2qbxsm?entry=ttu";
-const mapVillavicencio = "https://www.google.com/maps/place/Cra.+43c+%23+16-27,+Villavicencio,+Meta/@4.1367559,-73.6479483,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3e2e060c759421:0x489f928d49c1c13d!8m2!3d4.1367506!4d-73.6430774!16s%2Fg%2F11l_60zkbj?entry=ttu";
+const mapVillavicencio = "https://www.google.com/maps/place/STARLIGHT+ELECTRONICS/@4.1367998,-73.6430509,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3e2f02192e245b:0x7f17c9e48e5d3ed5!8m2!3d4.1367998!4d-73.6430509!16s%2Fg%2F11zcghn9jq?hl=en-GB&entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D";
 export const Footer = () => {
   return (
     <footer className="bg-[#060d1f] border-t border-sky-900/30 mt-16 text-white">
