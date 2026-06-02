@@ -100,34 +100,13 @@ export const Header = ({ setPage = 'home' }) => {
 						Servicios
 					</button>
 
-					{/* Mercados dropdown */}
-					<div className="relative">
-						<button
-							className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 flex items-center gap-2 ${showMarketsDropdown ? 'bg-theme' : ''}`}
-							onClick={ handleMarketsClick }
-						>
-							Mercados
-							<svg className={`w-4 h-4 transition-transform duration-200 ${showMarketsDropdown ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-							</svg>
-						</button>
-						{ showMarketsDropdown && (
-							<div className="absolute left-0 mt-2 w-48 rounded-lg backdrop-blur-2xl bg-[#0a1628]/95 border border-sky-800 shadow-xl z-50 py-1">
-								{ ourMarkets.map( (market, index) => (
-									<>
-										<button
-											key={ index }
-											className="w-full text-left px-5 py-2 text-white font-semibold hover:bg-sky-800/50 hover:text-sky-300 transition duration-200"
-											onMouseDown={() => { handleInputHeader({ target: { value: market.title } }); }}
-										>
-											{ market.title }
-										</button>
-										{ index < ourMarkets.length - 1 && <div className="border-t border-sky-800/40 mx-3" /> }
-									</>
-								))}
-							</div>
-						)}
-					</div>
+					{/* Mercados - directo a la página */}
+					<button
+						className={`px-4 py-2 font-bold hover:scale-110 transition duration-300 ${activePage === 'our-markets' ? 'bg-theme' : ''}`}
+						onClick={() => handleInputHeader({ target: { value: 'our-markets' } })}
+					>
+						Mercados
+					</button>
 
 					<HoverHeader title='Galería' value='gallery' handleInputHeader={ handleInputHeader } activePage={ activePage } />
 
@@ -192,26 +171,14 @@ export const Header = ({ setPage = 'home' }) => {
 									Servicios
 								</button>
 							</li>
-
-							{/* Mercados mobile */}
+{/* Mercados mobile - directo */}
 							<li>
 								<button
-									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4 flex items-center justify-center gap-2'
-									onClick={() => { setShowMobileMarkets(!showMobileMarkets); setShowMobileServices(false); }}
+									className='text-white hover:scale-110 transition duration-200 hover:text-sky-400 font-bold w-full py-4'
+									onClick={() => handleInputHeader({ target: { value: 'our-markets' } })}
 								>
 									Mercados
-									<svg className={`w-4 h-4 transition-transform duration-200 ${showMobileMarkets ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-									</svg>
 								</button>
-								{ showMobileMarkets && (
-									<div className="bg-white/5 py-2 border-t border-b border-sky-800/30">
-										<HeaderMobile title='Todos' value='our-markets' handleInputHeader={ handleInputHeader } />
-										{ ourMarkets.map( (market, index) => (
-											<HeaderMobile key={ index } title={ market.title } value={ market.title } handleInputHeader={ handleInputHeader } />
-										))}
-									</div>
-								)}
 							</li>
 
 							<HeaderMobile title='Galería' value='gallery' handleInputHeader={ handleInputHeader } />
