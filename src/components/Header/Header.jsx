@@ -64,18 +64,15 @@ export const Header = ({ setPage = 'home' }) => {
 	}
 
 	const handleContactOptionClick = (option) => {
-		closeAllDropdowns();
-		if (option === 'contacto') {
-			setPage('home');
-			setActivePage('home');
-			scrollToTop();
-			setTimeout(() => {
-				document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-			}, 300);
-		} else if (option === 'pqrs') {
-			setShowPQRS(true);
-		}
-	}
+    closeAllDropdowns();
+    if (option === 'contacto') {
+        setPage('contact');
+        setActivePage('contact');
+        scrollToTop();
+    } else if (option === 'pqrs') {
+        setShowPQRS(true);
+    }
+}
 
 	return (
 		<>
