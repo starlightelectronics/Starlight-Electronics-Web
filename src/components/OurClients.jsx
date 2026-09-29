@@ -23,7 +23,7 @@ export const OurClients = () => {
     ));
 
     return (
-        <div className='mx-4 sm:mx-40 2xl:mx-72 mt-16'>
+        <div className='container mx-auto px-8 md:px-14 lg:px-24 mt-16'>
             <div className='font-bold sm:ml-5 md:ml-4 mb-4'>
                 <h2 id="galeria" className="text-center md:text-left md:text-3xl text-xl text-white">Nuestros <span className='text-sky-600'>clientes</span></h2>
             </div>
