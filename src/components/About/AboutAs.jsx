@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SLE_ISO from '../../assets/img/content/Logo SLE.png'
+import SLE_ISO from '../../assets/img/content/logo-sle-white.png'
 import mision from '../../assets/img/gallery/img_49.webp'
 import vision from '../../assets/img/gallery/img_27.webp'
 
