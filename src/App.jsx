@@ -72,6 +72,12 @@ const App = () => {
 							<SideSocialNetwork />
 							<Footer />
 						</>
+				: page === 'contact' ?
+    <>
+        <FormContact />
+        <SideSocialNetwork />
+        <Footer />
+    </>
 				:
 					arraySearch.map(( item, index ) => {
 						if ( page == item.title ) { 
