@@ -1,19 +1,18 @@
 import React from 'react';
 import { FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
-import avixamember from '../assets/img/content/avixamember.png';
-import ISO9001 from '../assets/img/content/Bureau veritas.png';
 import logo_sle_white from '../assets/img/content/logo-sle-white.png';
 
 const mapBogota = "https://www.google.com/maps/place/STARLIGHT+ELECTRONICS/@4.6770998,-74.0527814,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9b25f09168f7:0xeca1a3376e61515b!8m2!3d4.6770945!4d-74.0479105!16s%2Fg%2F11hz2qbxsm?entry=ttu";
-const mapVillavicencio = "https://www.google.com/maps/place/STARLIGHT+ELECTRONICS/@4.1367998,-73.6430509,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3e2f02192e245b:0x7f17c9e48e5d3ed5!8m2!3d4.1367998!4d-73.6430509!16s%2Fg%2F11zcghn9jq?hl=en-GB&entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D";
+const mapVillavicencio = "https://www.google.com/maps/place/STARLIGHT+ELECTRONICS/@4.1367998,-73.6430509,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3e2f02192e245b:0x7f17c9e48e5d3ed5!8m2!3d4.1367998!4d-73.6430509!16s%2Fg%2F11zcghn9jq?hl=en-GB&entry=ttu";
+
 export const Footer = () => {
   return (
     <footer className="bg-[#060d1f] border-t border-sky-900/30 mt-16 text-white">
       <div className="container mx-auto px-8 md:px-14 lg:px-24 py-14">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-14">
 
-          {/* Columna 1 - Logo centrado + texto justificado + redes */}
+          {/* Columna 1 - Logo + redes */}
           <div className="flex flex-col items-center text-center">
             <img src={logo_sle_white} alt="Starlight Electronics" className="h-20 mb-5" />
             <p className="text-gray-400 text-sm leading-relaxed mb-6 text-justify">
@@ -78,19 +77,6 @@ export const Footer = () => {
                   <p className="text-white font-semibold text-sm group-hover:text-sky-300 transition duration-200">ventas@starlightelectronics.com</p>
                 </div>
               </a>
-            </div>
-          </div>
-
-          {/* Columna 4 - Certificaciones */}
-          <div className="flex flex-col items-center">
-            <h4 className="text-sky-400 font-bold text-xs uppercase tracking-widest mb-6 text-center">Certificaciones</h4>
-            <div className="flex flex-col gap-4 w-full items-center">
-              <div className="flex items-center justify-center mx-auto" style={{height: '70px', width: '180px'}}>
-                <img src={ISO9001} alt="ISO 9001:2015" className="max-h-14 max-w-full object-contain" />
-              </div>
-              <div className="bg-white rounded-xl p-3 flex items-center justify-center w-full" style={{height: '80px'}}>
-                <img src={avixamember} alt="Avixa Member" className="max-h-14 max-w-full object-contain" />
-              </div>
             </div>
           </div>
 
