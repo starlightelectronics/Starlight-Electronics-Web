@@ -40,7 +40,6 @@ const App = () => {
 							</div>
 						</div>
 						<TextInfo />
-						<FormContact />
 						<OurClients />
 						<Footer />
 					</div>
