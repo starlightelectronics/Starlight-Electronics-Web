@@ -27,7 +27,7 @@ export const OurClients = () => {
             <div className='font-bold sm:ml-5 md:ml-4 mb-4'>
                 <h2 id="galeria" className="text-center md:text-left md:text-3xl text-xl text-white">Nuestros <span className='text-sky-600'>clientes</span></h2>
             </div>
-            <div className="pb-5 pt-8 flex-wrap flex items-center gap-2 justify-center rounded-2xl bg-[#1a2e4a] border border-sky-800/30 my-auto">
+            <div className="pb-5 pt-8 flex-wrap flex items-center gap-2 justify-center rounded-2xl bg-white my-auto">
                 <AliceCarousel
                     autoPlay
                     responsive={responsive}
